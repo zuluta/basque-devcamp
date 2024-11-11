@@ -1,0 +1,115 @@
+/* article */
+
+.article-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 0px;
+    padding-bottom: 2px;
+    background: linear-gradient(to right top, #191a1d, #424650, #08080a);
+}
+
+.article-wrapper > .article-left {
+    display: grid;
+    align-content: start;
+    justify-content: left;
+    background: transparent;
+    padding-top: 47px;
+    padding-left: 44px;
+    min-width: 500px;
+}
+
+.article-left > .article-left-header {
+    color: #e8e8e9;
+    font-size: 1.9em;
+    font-weight: 350;
+    line-height: 1.10em;
+    letter-spacing: 0.16px;
+}
+
+.article-left > .article-left-header strong {
+    color: #fff;
+    font-weight: 550;
+}
+
+.article-left > .article-left-header img {
+    height: 0.95em;
+    background-color: transparent;
+}
+
+.article-left > .article-left-content {
+    color: #aeaeae;
+    font-size: 1.5em;
+    font-weight: 400;
+    line-height: 1.55em;
+    letter-spacing: -0.05px;
+    margin-top: 18px;
+}
+
+.article-left > .article-left-bottom {
+    display: flex;
+    margin-top: 32px;
+    gap: 13px;
+}
+
+.article-left-bottom > .article-btn-signup {
+    display: inline-block;
+    text-decoration: none;
+    border: none;
+    padding: 13.5px 20px;
+    border-radius: 3px;
+    color: #000;
+    font-size: 1.69em;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: #4bce79;
+}
+
+.article-left-bottom > .article-btn-signup:hover {
+    opacity: 0.75;
+}
+
+.article-left-bottom > .article-btn-more {
+    display: inline-block;
+    text-decoration: none;
+    border: none;
+    padding: 13.5px 18px;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 1.69em;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: #111;
+}
+
+.article-left-bottom > .article-btn-more:hover {
+    opacity: 0.75;
+}
+
+.article-wrapper > .article-right {
+    display: grid;
+    align-content: start;
+    justify-content: right;
+    background: transparent;
+    padding-top: 45px;
+    min-width: 450px;
+}
+
+.article-right > .article-right-header {
+    color: #fff;
+    text-indent: 10px;
+    font-size: 0.9em;
+}
+
+.article-right > .article-right-header strong {
+    color: #fff;
+    font-weight: 700;
+}
+
+.article-right > .article-right-header span {
+    color: #58cbf6;
+}
+
+.article-right > .article-right-content img {
+    width: 431px;
+    padding-top: 6px;
+}
