@@ -94,6 +94,8 @@ else:
 > **Podemos tener infinidad de condiciones anidadas pero en la medida de lo posible, procuraremos anidar lo menos posible.**
 
 ![GitHub Image](images/estructura_anidado.png)
+<br>
+
 
 ## 2. Tipos de bucle y para que sirven
 <p>En Python, los bucles se utilizan para repetir varias veces la ejecución de una parte de un programa.</p>
