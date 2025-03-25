@@ -20,6 +20,9 @@
 **1.1. Condicional simple con if:**
 <p>Podemos ver un ejemplo de una <strong>estructura condicional simple</strong> con el siguiente esquema.</p>
 
+> [!IMPORTANT]
+> **Puedes usar <code>if</code> solo una vez por bloque y no es obligatorio complementarlo con <code>else</code>.**
+
 ![GitHub Image](images/estructura_simple.png)
 
 <p>Podemos observar en el esquema que el rombo representa la condición y tenemos dos opciones que podemos tomar. Si la condición devuelve un resultado verdadero, ejecutará las opciones que se encuentren en su interior, si por el contrario es falso no realizará dicha acción.</p>
@@ -38,6 +41,9 @@ if edad >= 18:
 
 **1.2. Condicional alternativa con if else:**
 <p>Podemos ver un ejemplo de una <strong>estructura condicional compuesta</strong> con el siguiente esquema.</p>
+
+> [!IMPORTANT]
+> **Puedes usar <code>else</code> solo una vez por condición <code>if</code>.**
 
 ![GitHub Image](images/estructura_compuesta.png)
 
@@ -59,10 +65,14 @@ else:
 **1.3. Condicional encadenada con if elif else:**
 <p>Podemos ver un ejemplo de una <strong>estructura condicional encadenada</strong> con el siguiente esquema.</p>
 
-> [!TIP]
-> **el flujo de ejecucción se prioriza siempre de arriba hacia abajo.**
+> [!IMPORTANT]
+> **El flujo de ejecucción se prioriza siempre de arriba hacia abajo y puedes crear tantas <code>elif</code> que desees.**
 
 ![GitHub Image](images/estructura_encadenada.png)
+
+<p>Cuando se presentan mas de dos elecciónes a elegir entre <code>if</code> <code>elif</code> y <code>else</code>, se tomara como válida, solamente una de las 3 elecciones de la bifurcación. El flujo de ejecución se priorizara siempre de arriba hacia abajo.</p>
+
+<p>Vamos a volver a realizar el ejercicio anterior con una condiciónal mas, que sera la condicional <code>elif,</code>pero con la diferencia, de que si la edad es mayor o igual a 67 años, nos muestre un mensaje <code>Tengo 70 años y estoy jubilado.</code>. El resto de las condicionales se mantienen igual.</p>
 
 ```{python}
 edad = 70
@@ -71,12 +81,16 @@ if edad >= 67:
 elif edad >= 18:
     print(f'Soy mayor de edad porque tengo {edad} años.')
 else:
-    print(f'Soy menor de edad porque tengo {edad} años.')
+    print(f'Soy menor de edad porque tengo menos de {edad} años.')
 ```
 
-<p>A veces hay más de dos posibilidades y necesitamos más de dos ramas. Una forma de expresar tal cómputo es una condicional encadenada con <code>elif</code>. La ejecución entrara unicamente en una de las ramas dando prioridad de ejecución de arriba hacia abajo.</p>
+<p>Como vemos en el ejempo anterior, el uso de la condicional <code>elif</code> nos da la posibilidad de crear muchas condiciones sobre un mismo <coce>if</coce> ya que su uso no esta limitado. Recuerda que cuanto mas corto y menos condicionales tenga el bloque, mas legible sera el código.</p>
 <br>
 
+**1.4. Condicionales anidadas:**
+<p>Podemos ver un ejemplo de una <strong>estructura condicional anidado</strong> con el siguiente esquema.</p>
+
+![GitHub Image](images/estructura_anidado.png)
 
 ## 2. Tipos de bucle y para que sirven
 <p>En Python, los bucles se utilizan para repetir varias veces la ejecución de una parte de un programa.</p>
