@@ -32,5 +32,7 @@ lista_nombre = 'Jessica', 'Paul', 'George', 'Henry', 'Adán'
 nombre = 'Enrique'
 lista_nombre = 'Jessica', 'Paul', 'George', 'Henry', 'Adán'
 
-consulta = nombre in lista_nombre
-print(consulta) # nos devuelve verdadero o falso.
+if nombre in lista_nombre:
+    print(f'El nombre {nombre} si esta en la lista')
+else:
+    print(f'El nombre {nombre} no esta en la lista')
