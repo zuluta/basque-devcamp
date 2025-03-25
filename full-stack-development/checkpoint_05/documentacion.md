@@ -14,26 +14,33 @@
 <br>
 
 ## 1. ¿Qué es un condicional?
-<p>Hasta ahora, en el curso de Python, hemos visto cómo resolver los problemas más sencillos pero no podemos resolver todo utilizando estructuras secuenciales. Cuando tenemos que tomar una decisión aparecen las estructuras condicionales. Por ejemplo, en nuestra vida diaria hay momentos donde tenemos que decidir entre un pantalón u otro, un camino u otro. En estos casos es común resolver un problema combinando estructuras secuenciales y condicionales.</p>
+<p>Hasta ahora, hemos visto cómo resolver los problemas más sencillos pero no podemos resolver todo utilizando estructuras secuenciales. Cuando tenemos que tomar una decisión aparecen las estructuras condicionales. Por ejemplo, en nuestra vida diaria hay momentos donde tenemos que decidir entre un pantalón u otro, un camino u otro. En estos casos es común resolver un problema combinando estructuras secuenciales y condicionales.</p>
 
-<p>Podemos ver un ejemplo de una simple estructura condicional con el siguiente esquema</p>
-![GitHub Image](images/estructura_condicional.png)
+<p>Podemos ver un ejemplo de una <strong>estructura condicional simple</strong> con el siguiente esquema.</p>
+
+![GitHub Image](images/estructura_simple.png)
 
 <p>Podemos observar en el esquema que el rombo representa la condición y tenemos dos opciones que podemos tomar. Si la condición devuelve un resultado verdadero, ejecutará las opciones que se encuentren en su interior, si por el contrario es falso no realizará dicha acción.</p>
 
-<p>Para escribir programas útiles, casi siempre necesitamos la capacidad de comprobar ciertas condiciones y cambiar el comportamiento del programa como corresponda. Las sentencias condicionales nos dan esta capacidad. La forma más sencilla es la sentencia <code>if</code>.</p>
+<p>Vamos a ver el primer ejemplo y el mas simple con el <code>if</code>, le pasamos por variable <code>edad = 20</code>, si tiene 18 o mas años, muestra un mensaje <code>Soy mayor de edad porque tengo 18 o mas años.</code> y si tiene menos de 18 años, no nos muestra ningun mensaje.</p>
+<br>
 
-<p>El encabezado empieza con la palabra reservada <code>if</code> y termina con dos puntos <code>:</code>.</p>
-
-**1.1. Condicional:**
+**1.1. Condicional if:**
 
 ```{python}
 edad = 20
 if edad >= 18:
-    print(f'Soy mayor de edad porque tengo {edad} años.')
+    print(f'Soy mayor de edad porque tengo {edad} o mas años.')
 ```
 
-<p>La expresión que sigue a la sentencia <code>if</code> se llama condición. Si es verdadera, entonces la sentencia sangrada se ejecuta. Si no lo es, no pasa nada.</p>
+<p>La palabra clave <code>if</code> implica el inicio de una condición, seguidamente incluimos la condición y finalizamos la línea con el carácter <code>:</code>dos puntos.</p>
+<p>Una de las características de python que además ayuda a tener una estructura organizada es la indentación o sangrado de texto con cuatro espacios. Es decir, si queremos incluir una condición, el texto que deba ir en su interior debe ir con cuatro espacios con respecto al inicio de la palabra if.</p>
+<br>
+
+<p>Podemos ver un ejemplo de una <strong>estructura condicional compuesta</strong> con el siguiente esquema.</p>
+
+![GitHub Image](images/estructura_compuesta.png)
+
 
 **1.2. Condicional alternativa:**
 
