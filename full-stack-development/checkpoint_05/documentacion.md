@@ -90,6 +90,9 @@ else:
 **1.4. Condicionales anidadas:**
 <p>Podemos ver un ejemplo de una <strong>estructura condicional anidado</strong> con el siguiente esquema.</p>
 
+> [!IMPORTANT]
+> **Podemos tener infinidad de condiciones anidadas pero en la medida de lo posible, procuraremos anidar lo menos posible.**
+
 ![GitHub Image](images/estructura_anidado.png)
 
 ## 2. Tipos de bucle y para que sirven
