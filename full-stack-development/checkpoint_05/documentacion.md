@@ -97,6 +97,7 @@ else:
 <br>
 <br>
 
+
 ## 2. Tipos de bucle y para que sirven
 <p>En Python, los bucles se utilizan para repetir varias veces la ejecución de una parte de un programa.</p>
 <p>Hay dos tipos de bucles:</p>
@@ -187,7 +188,7 @@ print(resultado)
 
 # salida: Mi fecha de nacimiento es el 24 de Junio de 1985
 ```
-
+<br>
 
 
 ## 5. ¿Qué es una función Lambda?
@@ -210,7 +211,7 @@ print(resultado) # resultado: 10
 suma = lambda a, b: a + b
 print(suma(6, 4)) # resultado: 10
 ```
-
+<br>
 
 
 ## 6. ¿Qué es un paquete pip?
