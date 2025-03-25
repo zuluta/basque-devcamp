@@ -14,6 +14,13 @@
 <br>
 
 ## 1. ¿Qué es un condicional?
+<p>Hasta ahora, en el curso de Python, hemos visto cómo resolver los problemas más sencillos pero no podemos resolver todo utilizando estructuras secuenciales. Cuando tenemos que tomar una decisión aparecen las estructuras condicionales. Por ejemplo, en nuestra vida diaria hay momentos donde tenemos que decidir entre un pantalón u otro, un camino u otro. En estos casos es común resolver un problema combinando estructuras secuenciales y condicionales.</p>
+
+<p>Podemos ver un ejemplo de una simple estructura condicional con el siguiente esquema</p>
+![GitHub Image](images/estructura_condicional.png)
+
+<p>Podemos observar en el esquema que el rombo representa la condición y tenemos dos opciones que podemos tomar. Si la condición devuelve un resultado verdadero, ejecutará las opciones que se encuentren en su interior, si por el contrario es falso no realizará dicha acción.</p>
+
 <p>Para escribir programas útiles, casi siempre necesitamos la capacidad de comprobar ciertas condiciones y cambiar el comportamiento del programa como corresponda. Las sentencias condicionales nos dan esta capacidad. La forma más sencilla es la sentencia <code>if</code>.</p>
 
 <p>El encabezado empieza con la palabra reservada <code>if</code> y termina con dos puntos <code>:</code>.</p>
