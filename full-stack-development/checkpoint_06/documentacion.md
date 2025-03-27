@@ -40,9 +40,9 @@ class Cliente:
 Cliente()
 
 # salida:
-    # 88521596P
-    # Luis
-    # Mendoza
+    # DNI: 88521596P
+    # Nombre: Luis
+    # Apellido: Mendoza
 ```
 <br>
 
