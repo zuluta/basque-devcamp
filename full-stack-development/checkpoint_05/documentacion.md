@@ -29,7 +29,7 @@
 
 <p>Vamos a ver el primer ejemplo y el mas simple con el <code>if</code>, le pasamos por variable <code>edad = 20</code>, si tiene 18 o mas años, muestra un mensaje <code>Soy mayor de edad porque tengo 18 o mas años.</code> y si tiene menos de 18 años, no nos muestra ningun mensaje.</p>
 
-```{python}
+```python
 edad = 20
 if edad >= 18:
     print(f'Soy mayor de edad porque tengo {edad} o mas años.')
@@ -51,7 +51,7 @@ if edad >= 18:
 
 <p>Vamos a volver a realizar el ejercicio anterior pero, con la diferencia, de que si la edad es menor a 18 años, nos muestre un mensaje <code>Soy menor de edad porque tengo menos de 18 años.</code>.</p>
 
-```{python}
+```python
 edad = 16
 if edad >= 18:
     print(f'Soy mayor de edad porque tengo {edad} años.')
@@ -74,7 +74,7 @@ else:
 
 <p>Vamos a volver a realizar el ejercicio anterior con una condiciónal mas, que sera la condicional <code>elif,</code>pero con la diferencia, de que si la edad es mayor o igual a 67 años, nos muestre un mensaje <code>Tengo 70 años y estoy jubilado.</code>. El resto de las condicionales se mantienen igual.</p>
 
-```{python}
+```python
 edad = 70
 if edad >= 67:
     print(f'Tengo {edad} años y estoy jubilado.')
@@ -114,7 +114,7 @@ else:
 
 <p>Su sintaxis es la siguiente:</p>
 
-```{python}
+```python
 productos = ['manzana', 'pera', 'naranja', 'sandia', 'melon'] # esto es una lista
 for producto in productos:
     print(producto)
@@ -132,7 +132,7 @@ for producto in productos:
 
 <p>Su sintaxis es la siguiente:</p>
 
-```{python}
+```python
 i = 4
 while i < 7:
     print(i)
@@ -152,7 +152,7 @@ while i < 7:
 
 **3.1. Ejemplo tradicional:**
 
-```{python}
+```python
 lista_1 = [1, 2, 3, 4, 5]
 lista_2 = []
 for num in lista_1:
@@ -162,7 +162,7 @@ print(lista_2)
 
 **3.2. Ejemplo comprensión de listas:**
 
-```{python}
+```python
 lista_1 = [1, 2, 3, 4, 5]
 lista_2 = [num*num for num in lista_1]
 print(lista_2)
@@ -179,7 +179,7 @@ print(lista_2)
 
 En el ejemplo siguiente, <code>24</code>, <code>Junio</code> y <code>1985</code> son los argumentos que se le estan pasando en la llamada a la función.
 
-```{python}
+```python
 def fecha_nacimiento(dia, mes, anio):
     return f'Mi fecha de nacimiento es el {dia} de {mes} de {anio}'
 
@@ -197,7 +197,7 @@ print(resultado)
 
 **5.1. Función estandar:**
 
-```
+```python
 def sumar(a, b):
     return a + b
 
@@ -207,7 +207,7 @@ print(resultado) # resultado: 10
 
 **5.2. Función Lambda:**
 
-```
+```python
 suma = lambda a, b: a + b
 print(suma(6, 4)) # resultado: 10
 ```
