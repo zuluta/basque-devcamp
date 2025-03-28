@@ -19,7 +19,7 @@
 <p>Hasta ahora, hemos construido aplicaciones pequeñas de manera secuenciada y desorganizada. Esto no significa que lo hayamos hecho mal, lo que quiero decir es, que cuando empecemos a crear aplicaciones diámicas y sean mas complejas, necesitaremos mejorar la estructura del código, la organización y crear código reutilizable y facilitar su mantenimiento.</p>
 <br>
 
-### 1.1. Construir una clase de forma estática:
+### 1.1. Construir una clase de forma estática no es buena idea:
 
 > [!NOTE]
 > Las variables no son reutilizables ni tampoco permite pasarle argumentos.
@@ -235,5 +235,19 @@ print(cli_2.cuenta())
 💬 Es fundamental entender bien la estructura y la lógica de las clases para poder seguir avanzando y evitar estancamientos en el futuro.
 <br>
 <br>
+<br>
 
 ## 2. Introducción a los métodos dunder:
+
+<p>En programación orientada a objetos, los métodos dunder o métodos mágicos son funciones especiales que permiten definir comportamientos específicos para las clases. Estos métodos se llaman “mágicos” porque su nombre comienza y termina con dos guiones bajos (__).</p>
+
+> [!TIP]
+> Los métodos mágicos son una herramienta poderosa que permite definir comportamientos específicos para las clases en Python. Utilizarlos de forma adecuada puede hacer que nuestro código sea más fácil de entender y mantener.
+
+### 2.1. Tipos de métodos dunder:
+<p><code>__init__</code> Se utiliza para inicializar objetos y es invocado automáticamente cuando se crea una instancia de la clase.</p>
+<p><code>__str__</code> Se utiliza para representar el objeto en forma de cadena de texto.</p>
+<p><code>__len__</code> Permite determinar la longitud de un objeto.</p>
+
+<p>Existen muchos otros métodos mágicos que pueden ser útiles, como <code>__add__</code> (para sumar objetos), <code>__eq__</code> (para comparar igualdad), <code>__lt__</code> (para comparar menor que), entre otros. Sin embargo, es importante tener en cuenta que no siempre es necesario utilizar estos métodos y que su uso variará dependiendo de cada caso específico.</p>
+
