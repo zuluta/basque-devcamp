@@ -167,7 +167,7 @@ print(cli_2.cuenta())
 ```
 <br>
 
-### 1.5. Conceptos básicos en una clase:
+### 1.5. La estructura básica de una clase:
 
 <p>Llegados aqui, aprenderemos los conceptos básicos que construyen una clase. Trata de leer el código y entender lo que sucede en cada paso.</p>
 
