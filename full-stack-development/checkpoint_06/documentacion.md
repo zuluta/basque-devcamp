@@ -1,7 +1,7 @@
 
 # <p align="center">Checkpoint 06</p>
 
-## <p>📄 Documentación python 🐍</p>
+## <p>📄 Documentación Python 🐍</p>
 |Contenido    |
 |-----------------|
 |**1. Introducción al uso de clases** |
