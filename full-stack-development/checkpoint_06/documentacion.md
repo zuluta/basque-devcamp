@@ -315,13 +315,13 @@ print(len(l)) # Imprime 5
 def decorador(f):
 
     def funcion_nueva():
-        print("Funcionalidad extra")
+        print('Funcionalidad extra')
         f()
     return funcion_nueva
 
 @decorador
 def funcion_inicial():
-    print("Funcionalidad inicial")
+    print('Funcionalidad inicial')
 
 funcion_inicial()
 ```
@@ -332,7 +332,7 @@ funcion_inicial()
 ```python
 @decorador
 def funcion_inicial():
-    print("Funcionalidad inicial")
+    print('Funcionalidad inicial')
 
 funcion_inicial()
 ```
@@ -342,7 +342,7 @@ funcion_inicial()
 ```python
 def decorador(f):
     def funcion_nueva():
-        print("Funcionalidad extra")
+        print('Funcionalidad extra')
         f()
     return funcion_nueva
 ```
