@@ -19,10 +19,10 @@
 <p>Hasta ahora, hemos construido aplicaciones pequeñas de manera secuenciada y desorganizada. Esto no significa que lo hayamos hecho mal, lo que quiero decir es, que cuando empecemos a crear aplicaciones diámicas y sean mas complejas, necesitaremos mejorar la estructura del código, la organización y crear código reutilizable y facilitar su mantenimiento.</p>
 <br>
 
-### 1.1. Construir una clase de forma estática no es buena idea:
+### 1.1. Construir una clase de forma estática:
 
 > [!NOTE]
-> Las variables no son reutilizables ni tampoco permite pasarle argumentos.
+> Hay que evitar el mal uso de las clases, en este ejemplo, vemos que las variables no son reutilizables, tampoco podemos pasarle argumentos.
 
 [![Git Hub Image](images/01.class_descripcion.png)](#)
 <br>
