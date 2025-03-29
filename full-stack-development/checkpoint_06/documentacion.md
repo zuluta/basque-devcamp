@@ -5,7 +5,7 @@
 |Contenido    |
 |-----------------|
 |**1. Introducción al uso de clases** |
-|**2. Introducción a los métodos dunder**  |
+|**2. Métodos dunder**  |
 |**3. Decoradores** |
 |**4. -** |
 |**5. -** |
