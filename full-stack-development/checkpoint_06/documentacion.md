@@ -258,7 +258,7 @@ print(cli_2.cuenta())
 <p>Existen muchos otros métodos mágicos que pueden ser útiles, como <code>__add__</code> (para sumar objetos), <code>__eq__</code> (para comparar igualdad), <code>__lt__</code> (para comparar menor que), entre otros. Sin embargo, es importante tener en cuenta que no siempre es necesario utilizar estos métodos y que su uso variará dependiendo de cada caso específico.</p>
 <br>
 
-- **Ejemplo `__init__` 👇**
+- **Ejemplo `__init__`:**
 ```python
 class Persona:
     def __init__(self, nombre):
@@ -268,7 +268,7 @@ p = Persona('Juan')
 print(p.nombre)
 ```
 
-- **Ejemplo `__init__` con `__str_` 👇**
+- **Ejemplo `__init__` con `__str_`:**
 ```python
 class Persona:
     def __init__(self, nombre):
@@ -281,7 +281,7 @@ p = Persona('Juan')
 print(p)
 ```
 
-- **Ejemplo `__init__` con `__len__` 👇**
+- **Ejemplo `__init__` con `__len__`:**
 ```python
 class Lista:
     def __init__(self, elementos):
@@ -310,6 +310,9 @@ print(len(l)) # Imprime 5
 <br>
 
 [![Git Hub Image](images/01.decoradores.png)](#)
+<br>
+
+<p><strong>Código Python 👇</strong></p>
 
 ```python
 def decorador(f):
