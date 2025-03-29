@@ -19,7 +19,7 @@
 <p>Hasta ahora, hemos construido aplicaciones pequeñas de manera secuenciada y desorganizada. Esto no significa que lo hayamos hecho mal, lo que quiero decir es, que cuando empecemos a crear aplicaciones diámicas y sean mas complejas, necesitaremos mejorar la estructura del código, la organización y crear código reutilizable y facilitar su mantenimiento.</p>
 <br>
 
-### 1.1. Construir una clase de forma estática:
+### 1.1. Clase estática:
 
 > [!NOTE]
 > Hay que evitar el mal uso de las clases, en este ejemplo, vemos que las variables no son reutilizables, tampoco podemos pasarle argumentos.
@@ -54,7 +54,7 @@ Cliente()
 - ❌ Reutilizable.
 <br>
 
-### 1.2. Construir una clase de forma dinámica:
+### 1.2. Clase dinámica:
 
 <p>La manera recomendada de contruir aplicaciónes con <strong>código reutilizable</strong> y <strong>organizada</strong>, es con el uso de las <strong>clases</strong>. Al principio, es normal que te sientas perdido con todo esto de las clases, pero no te preocupes, todos hemos pasado por esta etapa.</p>
 
@@ -93,7 +93,7 @@ Cliente('96452178K', 'Maribel', '')
 ```
 <br>
 
-### 1.3. Construir objetos con una clase de forma dinámica:
+### 1.3. Crear objetos con clase dinámica:
 >[!TIP]
 >Antes del auge de la POO, la programación estaba dominada por el paradigma procedimental. Este enfoque estructuraba los programas como una serie de instrucciones secuenciales y dependía en gran medida de funciones y datos globales. Si bien este modelo era efectivo para problemas simples, se volvió difícil de manejar a medida que los sistemas se hicieron más complejos debido a la falta de separación clara entre los datos y las operaciones.
 <br>
@@ -132,7 +132,7 @@ print(f'DNI: {cli_2.dni}\nNombre: {cli_2.nombre}')
 ```
 <br>
 
-### 1.4. Construir métodos dentro de una clase de forma dinámica:
+### 1.4. Métodos dentro de una clase:
 <p>En este ejemplo, vamos a crear un <strong>método normal</strong> llamado <code>cuenta</code>, el <strong>primer atributo</strong> obligatorio se llama <code>self</code>, seguido pondremos nuestros <strong>atributos</strong> opcionales separadas por una <code>,</code>coma y cerramos la linea con <code>:</code> dos puntos.</p>
 
 <p>Dentro del método, <strong>indentamos</strong> con 4 espacios para empezar a escribir nuestro <strong>código de ejecución</strong>. En este caso, vamos a emplear <code>return</code> para retornar un mensaje que ponga <strong>Cuenta: El cliente ????????? tiene cuenta</strong>. Con esto, ya tendriamos nuestra clase completado.</p>
@@ -167,7 +167,7 @@ print(cli_2.cuenta())
 ```
 <br>
 
-### 1.5. La estructura básica de una clase:
+### 1.5. Estructura básica de una clase:
 
 <p>Llegados aqui, aprenderemos los conceptos básicos que construyen una clase. Trata de leer el código y entender lo que sucede en cada paso.</p>
 
