@@ -93,7 +93,7 @@ Cliente('96452178K', 'Maribel', '')
 ```
 <br>
 
-### 1.3. Crear objetos con clase dinámica:
+### 1.3. Crear objetos con clase:
 >[!TIP]
 >Antes del auge de la POO, la programación estaba dominada por el paradigma procedimental. Este enfoque estructuraba los programas como una serie de instrucciones secuenciales y dependía en gran medida de funciones y datos globales. Si bien este modelo era efectivo para problemas simples, se volvió difícil de manejar a medida que los sistemas se hicieron más complejos debido a la falta de separación clara entre los datos y las operaciones.
 <br>
