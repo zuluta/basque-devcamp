@@ -6,12 +6,13 @@
 |-----------------|
 |**1. Introducción al uso de clases** |
 |**2. Introducción a los métodos dunder**  |
-|**3. -** |
+|**3. Decoradores** |
 |**4. -** |
 |**5. -** |
 |**6. -** |
 <br>
 <br>
+<hr>
 
 ## 1. Introducción al uso de clases
 <p>Python es un lenguaje orientado a objetos, no es necesario hacer uso de ellas para poder crear un programa. De hecho, hemos estado trabajando hasta ahora sin hacer mención a ellas ni emplearlas.</p>
@@ -21,8 +22,9 @@
 
 ### 1.1. Clase estática:
 
-> [!NOTE]
+> [!Caution]
 > Hay que evitar el mal uso de las clases, en este ejemplo, vemos que las variables no son reutilizables, tampoco podemos pasarle argumentos.
+<br>
 
 [![Git Hub Image](images/01.class_descripcion.png)](#)
 <br>
@@ -65,6 +67,7 @@ Cliente()
 
 > [!IMPORTANT]
 > Dentro de la clase, las variables pasan a llamarse <strong>atributos</strong>, el <strong>primer atributo obligatorio</strong> siempre sera <code>self</code>, las funciones pasan a llamarse <strong>métodos</strong>, nos permite pasarle <strong>argumentos</strong> y eso hace que el código sea <strong>reutilizable</strong>. Estas son las razones por el cual se crearon las clases en programación.
+<br>
 
 [![Git Hub Image](images/02.class_descripcion.png)](#)
 <br>
@@ -174,25 +177,25 @@ print(cli_2.cuenta())
 [![Git Hub Image](images/03.class_descripcion.png)](#)
 
 > [!NOTE]
-> 📚 **Descripción de conceptos:**
-
-1. <code>class</code> Declara una <strong>clase</strong>.
-2. <code>Cliente</code> Asigna un <strong>nombre</strong> a la clase, siempre en PascalCase y sin guiones bajos.
-3. <code>password = '1234'</code> Declara una <strong>variable de clase</strong>.
-4. <code>def</code> Declara un <strong>método</strong>.
-5. <code>\__init__</code> Lleva dos guiones al principio y al final del nombre, se le conoce como <strong>método dunder, especial o mágico</strong>.
-6. <code>self</code> Es el <strong>primer atributo obligatorio</strong> siempre.
-7. <code>dni</code>,<code>nombre</code>, <code>apellido</code> Se llaman <strong>atributos</strong> del método y van separados por una <code>,</code> coma.
-8. <code>self.dni</code> Declara una <strong>variable de instancia</strong>.
-9. <code>dni</code> Guarda el <strong>valor</strong> de la variable de instancia.
-10. <code>cuenta</code> Asigna un <strong>nombre</strong> al método.
-11. <code>self.password</code> <strong>Hace referencia</strong> a la variable de instancia para retornar su valor.
-12. <code>cli_1</code> Crea un <strong>objeto</strong>.
-13. <code>Cliente</code> <strong>Invoca</strong> a la clase desde cualquier parte de la aplicación.
-14. <code>'88521596P'</code>, <code>'Luis'</code>, <code>'Mendoza'</code> Se llaman <strong>argumentos</strong>.
-15. <code>Print</code> Es una función para <strong>imprimir</strong> en pantalla.
-16. <code>cli_1.cuenta</code> hace referencia al <strong>objeto</strong> <code>cli_1</code> para acceder a la clase y ejecutar el <strong>método</strong> <code>cuenta</code>.
-17. Visualizamos los datos en la pantalla.
+> **Descripción de conceptos:**
+>
+> 1. `class` Declara una <strong>clase</strong>.
+> 2. `Cliente` Asigna un <strong>nombre</strong> a la clase, siempre en PascalCase y sin guiones bajos.
+> 3. `password = '1234'` Declara una <strong>variable de clase</strong>.
+> 4. `def` Declara un <strong>método</strong>.
+> 5. `__init__` Lleva dos guiones al principio y al final del nombre, se le conoce como <strong>método dunder, especial o mágico</strong>.
+> 6. `self` Es el <strong>primer atributo obligatorio</strong> siempre.
+> 7. `dni`,<code>nombre</code>, <code>apellido</code> Se llaman <strong>atributos</strong> del método y van separados por una <code>,</code> coma.
+> 8. `self.dni` Declara una <strong>variable de instancia</strong>.
+> 9. `dni` Guarda el <strong>valor</strong> de la variable de instancia.
+> 10. `cuenta` Asigna un <strong>nombre</strong> al método.
+> 11. `self.password` <strong>Hace referencia</strong> a la variable de instancia para retornar su valor.
+> 12. `cli_1` Crea un <strong>objeto</strong>.
+> 13. `Cliente` <strong>Invoca</strong> a la clase desde cualquier parte de la aplicación.
+> 14. `'88521596P'`, <code>'Luis'</code>, <code>'Mendoza'</code> Se llaman <strong>argumentos</strong>.
+> 15. `Print` Es una función para <strong>imprimir</strong> en pantalla.
+> 16. `cli_1.cuenta` hace referencia al <strong>objeto</strong> <code>cli_1</code> para acceder a la clase y ejecutar el <strong>método</strong> <code>cuenta</code>.
+> 17. Visualizamos los datos en la pantalla.
 <br>
 
 <p><strong>Código Python 👇</strong></p>
@@ -236,6 +239,7 @@ print(cli_2.cuenta())
 <br>
 <br>
 <br>
+<hr>
 
 ## 2. Introducción a los métodos dunder:
 
@@ -243,11 +247,56 @@ print(cli_2.cuenta())
 
 > [!TIP]
 > Los métodos mágicos son una herramienta poderosa que permite definir comportamientos específicos para las clases en Python. Utilizarlos de forma adecuada puede hacer que nuestro código sea más fácil de entender y mantener.
+<br>
 
-### 2.1. Tipos de métodos dunder:
-<p><code>__init__</code> Se utiliza para inicializar objetos y es invocado automáticamente cuando se crea una instancia de la clase.</p>
-<p><code>__str__</code> Se utiliza para representar el objeto en forma de cadena de texto.</p>
-<p><code>__len__</code> Permite determinar la longitud de un objeto.</p>
+### 📚 **Tipos de métodos dunder:**
+
+- `__init__` Se utiliza para inicializar objetos y es invocado automáticamente cuando se crea una instancia de la clase.
+- `__str__` Se utiliza para representar el objeto en forma de cadena de texto.
+- `__len__` Permite determinar la longitud de un objeto.
 
 <p>Existen muchos otros métodos mágicos que pueden ser útiles, como <code>__add__</code> (para sumar objetos), <code>__eq__</code> (para comparar igualdad), <code>__lt__</code> (para comparar menor que), entre otros. Sin embargo, es importante tener en cuenta que no siempre es necesario utilizar estos métodos y que su uso variará dependiendo de cada caso específico.</p>
+<br>
 
+- **Ejemplo `__init__` 👇**
+```python
+class Persona:
+    def __init__(self, nombre):
+        self.nombre = nombre
+
+p = Persona('Juan')
+print(p.nombre)
+```
+
+- **Ejemplo `__init__` con `__str_` 👇**
+```python
+class Persona:
+    def __init__(self, nombre):
+        self.nombre = nombre
+
+    def __str__(self):
+        return f'Mi nombre es {self.nombre}'
+
+p = Persona('Juan')
+print(p)
+```
+
+- **Ejemplo `__init__` con `__len__` 👇**
+```python
+class Lista:
+    def __init__(self, elementos):
+        self.elementos = elementos
+
+    def __len__(self):
+        return len(self.elementos)
+
+l = Lista([1,2,3,4,5])
+print(len(l)) # Imprime 5
+```
+
+> [!NOTE]
+> El primer ejemplo y el segundo ejemplo tienen el mismo resultado, lo que hace el método dunder `__str__` es convertir el objeto en una cadena de texto.
+<br>
+<hr>
+
+## 3. Decoradores:
