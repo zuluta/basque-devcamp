@@ -251,9 +251,9 @@ print(cli_2.cuenta())
 
 ### 📚 **Tipos de métodos dunder:**
 
-- `__init__` Se utiliza para inicializar objetos y es invocado automáticamente cuando se crea una instancia de la clase.
-- `__str__` Se utiliza para representar el objeto en forma de cadena de texto.
-- `__len__` Permite determinar la longitud de un objeto.
+- `__init__`: Se utiliza para inicializar objetos y es invocado automáticamente cuando se crea una instancia de la clase.
+- `__str__`: Se utiliza para representar el objeto en forma de cadena de texto.
+- `__len__`: Permite determinar la longitud de un objeto.
 
 <p>Existen muchos otros métodos mágicos que pueden ser útiles, como <code>__add__</code> (para sumar objetos), <code>__eq__</code> (para comparar igualdad), <code>__lt__</code> (para comparar menor que), entre otros. Sin embargo, es importante tener en cuenta que no siempre es necesario utilizar estos métodos y que su uso variará dependiendo de cada caso específico.</p>
 <br>
