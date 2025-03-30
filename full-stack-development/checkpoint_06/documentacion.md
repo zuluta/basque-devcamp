@@ -377,3 +377,33 @@ Funcionalidad inicial
 <hr>
 
 ## 4. ¿Que es una API?
+
+[![Git Hub Image](images/01.api_rest.png)](#)
+
+<img src="images/01.api_rest.png" width="75%">
+
+<p>Una <strong>API</strong> es una (interfaz de programación de aplicaciones) que sigue un conjunto de restricciones arquitecturales basadas en HTTP. Esto significa que se puede acceder a los recursos a través de URLs, lo que hace que la API sea fácil de entender y utilizar. Podemos crear una API que haga literalmente cualquier cosa, desde dar clima hasta un catálogo completo de una tienda en línea.</p>
+
+> [!TIP]
+> El formato de intercambio de datos normalmente es JSON o XML, lo que permite que la API sea compatible con una amplia variedad de aplicaciones.
+<br>
+
+**Una API tiene dos componentes principales:**
+
+  - Recursos:
+
+    - Datos o información.
+
+  - Verbos HTTP:
+
+    - `GET` para consultar y leer.
+    - `POST` para crear.
+    - `PUT` para editar.
+    - `DELETE` para eliminar.
+
+> [!NOTE]
+> Los <strong>recursos</strong> son los datos o información que se pueden acceder a través de la API. Los <strong>verbos HTTP</strong> son las operaciones que se pueden realizar en esos recursos, como obtener <code>GET</code> un recurso, crear <code>POST</code> un recurso, actualizar <code>PUT</code> un recurso o eliminar <code>DELETE</code> un recurso.
+
+
+
+<p>Casi todas las aplicaciones utilizan APIs para conectarse con fuentes de datos corporativas, servicios de datos de terceros u otras aplicaciones.</p>
