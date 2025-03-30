@@ -297,6 +297,23 @@ print(len(l)) # Imprime 5
 > [!NOTE]
 > El primer ejemplo y el segundo ejemplo tienen el mismo resultado, lo que hace el método dunder `__str__` es convertir el objeto en una cadena de texto.
 <br>
+<br>
+
+###  2.1. ¿Qué método dunder se ejecuta automáticamente?
+
+<p>El método <code>__init__</code>, es un método especial que se <strong>ejecuta automáticamente</strong> al invocar la clase e inicializara los atributos del objeto que le ayamos creado. Es decir, es imposible de olvidarse llamarlo ya que se llamará automáticamente.</p>
+
+> [!IMPORTANT]
+> Es el primer método que se ejecuta dentro de una clase.
+<br>
+
+### 📝 Características:
+
+- El método `__init__` no puede retornar <code>return</code> datos, no devuelve nada.
+- El método `__init__` puede recibir parámetros que se utilizan para inicializar atributos de forma automática.
+- El método `__init__` es un constructor de instancias.
+- El método `__init__` es un método opcional, de todos modos es muy común declararlo.
+<br>
 <hr>
 
 ## 3. Decoradores:
