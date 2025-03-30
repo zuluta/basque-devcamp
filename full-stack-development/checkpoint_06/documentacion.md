@@ -9,7 +9,7 @@
 |**3. Decoradores** |
 |**4. ¿Que es una API?** |
 |**5. Características de MongoDB** |
-|**6. -** |
+|**6. ¿Qué es el polimorfismo?** |
 <br>
 <br>
 <hr>
@@ -455,3 +455,15 @@ Este formato tiene una API 👇
 <hr>
 
 ## 5. ¿Es MongoDB una base de datos SQL o NoSQL?
+
+<p><strong>MongoDB</strong> es una <strong>base de datos NoSQL</strong> orientada a documentos que apareció a mediados de la década de 2000. Se utiliza para almacenar volúmenes masivos de datos.</p>
+
+<p>A diferencia de una base de datos relacional SQL tradicional, MongoDB no se basa en tablas y columnas. Los datos se almacenan como colecciones y documentos.</p>
+
+<p>La arquitectura de MongoDB se basa en varios componentes principales. En primer lugar, «_id» es un campo obligatorio para cada documento. Representa un valor único y puede considerarse como la clave principal del documento para identificarlo dentro de la colección.</p>
+<br>
+<br>
+<hr>
+
+## 6. ¿Qué es el polimorfismo?
+
