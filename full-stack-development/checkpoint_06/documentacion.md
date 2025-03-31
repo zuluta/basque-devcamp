@@ -474,16 +474,16 @@ Este formato tiene una API 👇
 
 ```js
 {
-    "id": ObjectId("5cf0029caff5056591b0ce7d"),
+    "_id": ObjectId("5cf0029caff5056591b0ce7d"),
     "nombre": "Juan",
     "apellido": "Garcia",
 },
 {
-    "id": ObjectId("6sh5930rdee4058890b0ae5c"),
+    "_id": ObjectId("6sh5930rdee4058890b0ae5c"),
     "nombre": "Nerea",
     "apellido": "Larralde",
     "telefono": "666-666-444",
-    "direccion":    {
+    "direccion":  {
         "codigo_postal": "22222",
         "provincia": "Gipuzkoa",
         "pais": "España"
