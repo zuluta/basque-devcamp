@@ -517,7 +517,7 @@ Formato de una API 👇
   - **Insertar** un nuevo documento 👇
 ```js
 db.nombre_de_tu_base_de_datos.insert({
-    "nonbre": "Carlos",
+    "nombre": "Carlos",
     "apellido": "Garrido",
     "direccion": {
         "codigo_postal": "45210",
