@@ -410,7 +410,7 @@ Funcionalidad inicial
 
 <p>La información de la api no sale de la nada, necesita ser construido por alguien en formato diccionario. Se puede construir de manera manual o cargarle la información desde una base de datos. Cuando abrimos la url donde esta alojado el API, veremos un monton de datos en formato diccionario <code>{...}</code>. Puede contener anidamientos tanto de diccionarios como de listas en su interior.</p>
 
-Este formato tiene una API 👇
+Formato de una API 👇
 ```json
 {
   "id": 1,
@@ -493,6 +493,39 @@ Este formato tiene una API 👇
 
 > [!NOTE]
 > MongoDB almacena los datos en documentos flexibles al estilo JSON pero en binario <string>BSON</string>.
+<br>
+
+### 👨‍💻 Comandos para interactuar con la base de datos desde la terminal:
+  - Consultar todos los documentos que tenemos en la base de datos sin formatear la estructura:
+    - Código: <code>db.nombre_de_tu_base_de_datos.find()</code>.
+  - Consultar todos los documentos que tenemos en la base de datos con la estructura formateada:
+    - Código: <code>db.nombre_de_tu_base_de_datos.find().pretty()</code>.
+  - Consultar todos los documentos que coincidan con el valor del apellido:
+    - Código: <code>db.nombre_de_tu_base_de_datos.find({apellido: "Larralde"}).pretty()</code>.
+  - Consultar cuantos documentos coinciden con el valor del apellido:
+    - Código: <code>db.nombre_de_tu_base_de_datos.find({apellido: "Larralde"}).length()</code>.
+  - Consultar cuantos documentos coinciden con el valor del apellido utilizando Regex:
+    - Código: <code>db.nombre_de_tu_base_de_datos.find({apellido: /.*Larralde.*/i})</code>.
+  - Consultar en el documento si existe una clave o no:
+    - Código: <code>db.nombre_de_tu_base_de_datos.find({apellido: $exists: true})</code>.
+  - Eliminar todos los documentos que coincidan con el valor del apellido:
+    - <code>db.nombre_de_tu_base_de_datos.remove({apellido: "Larralde"})</code>.
+  - Eliminar un documento que coincida con el valor del apellido:
+    - <code>db.nombre_de_tu_base_de_datos.remove({apellido: "Larralde"}, 1)</code>.
+<br>
+
+  - Insertar un nuevo documento 👇
+```js
+db.nombre_de_tu_base_de_datos.insert({
+    "nonbre": "Carlos",
+    "apellido": "Garrido",
+    "direccion": {
+        "codigo_postal": "45210",
+        "provincia": "Gipuzkoa",
+        "pais": "España"
+    }
+});
+```
 <br>
 <br>
 <hr>
