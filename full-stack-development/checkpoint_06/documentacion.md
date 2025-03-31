@@ -467,10 +467,10 @@ Este formato tiene una API 👇
 
 > [!NOTE]
 > - <strong>Colecciones</strong>: Se refiere a un diccionario <code>{...}</code> o lista <code>[...]</code>.
-> - <strong>Documentos</strong>: Se refiere a la <code>clave: "valor"</code> dentro de un diccionario. 
+> - <strong>Documentos</strong>: Se refiere a la <code>"clave": "valor"</code> dentro de un diccionario. 
 <br>
 
-[![Git Hub Image](images/mongodb.png)](#)
+[![Git Hub Image](images/mongo_db.png)](#)
 
 ```js
 {
