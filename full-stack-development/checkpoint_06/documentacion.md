@@ -485,7 +485,7 @@ Este formato tiene una API 👇
     "telefono": "666-666-444",
     "direccion":    {
         "codigo_postal": "22222",
-        "provincia": "Guipuzkoa",
+        "provincia": "Gipuzkoa",
         "pais": "España"
     }
 }
