@@ -458,9 +458,41 @@ Este formato tiene una API 👇
 
 <p><strong>MongoDB</strong> es una <strong>base de datos NoSQL</strong> orientada a documentos que apareció a mediados de la década de 2000. Se utiliza para almacenar volúmenes masivos de datos.</p>
 
-<p>A diferencia de una base de datos relacional SQL tradicional, MongoDB no se basa en tablas y columnas. Los datos se almacenan como colecciones y documentos.</p>
+### ¿como se almacenan los datos?
 
-<p>La arquitectura de MongoDB se basa en varios componentes principales. En primer lugar, «_id» es un campo obligatorio para cada documento. Representa un valor único y puede considerarse como la clave principal del documento para identificarlo dentro de la colección.</p>
+<p>A diferencia de una base de datos relacional SQL tradicional, MongoDB no se basa en tablas y columnas. Los datos se almacenan como <strong>colecciones</strong> y <strong>documentos</strong>.</p>
+
+<p>La arquitectura de MongoDB se basa en varios componentes principales. En primer lugar, <strong>id</strong> es un campo obligatorio para cada documento. Representa un valor único y puede considerarse como la clave principal del documento para identificar al objeto dentro de la colección.</p>
+<br>
+
+> [!NOTE]
+> - <strong>Colecciones</strong>: Se refiere a un diccionario <code>{...}</code> o lista <code>[...]</code>.
+> - <strong>Documentos</strong>: Se refiere a la <code>clave: "valor"</code> dentro de un diccionario. 
+<br>
+
+[![Git Hub Image](images/mongodb.png)](#)
+
+```js
+{
+    "id": ObjectId("5cf0029caff5056591b0ce7d"),
+    "nombre": "Juan",
+    "apellido": "Garcia",
+},
+{
+    "id": ObjectId("6sh5930rdee4058890b0ae5c"),
+    "nombre": "Nerea",
+    "apellido": "Larralde",
+    "telefono": "666-666-444",
+    "direccion":    {
+        "codigo_postal": "22222",
+        "provincia": "Guipuzkoa",
+        "pais": "España"
+    }
+}
+```
+
+> [!NOTE]
+> MongoDB almacena los datos en documentos flexibles al estilo JSON pero en binario <string>BSON</string>.
 <br>
 <br>
 <hr>
