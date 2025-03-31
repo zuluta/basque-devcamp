@@ -496,25 +496,25 @@ Formato de una API 👇
 <br>
 
 ### 👨‍💻 Comandos para interactuar con la base de datos desde la terminal:
-  - Consultar todos los documentos que tenemos en la base de datos sin formatear la estructura:
-    - Código: <code>db.nombre_de_tu_base_de_datos.find()</code>.
-  - Consultar todos los documentos que tenemos en la base de datos con la estructura formateada:
-    - Código: <code>db.nombre_de_tu_base_de_datos.find().pretty()</code>.
-  - Consultar todos los documentos que coincidan con el valor del apellido:
-    - Código: <code>db.nombre_de_tu_base_de_datos.find({apellido: "Larralde"}).pretty()</code>.
-  - Consultar cuantos documentos coinciden con el valor del apellido:
-    - Código: <code>db.nombre_de_tu_base_de_datos.find({apellido: "Larralde"}).length()</code>.
-  - Consultar cuantos documentos coinciden con el valor del apellido utilizando Regex:
-    - Código: <code>db.nombre_de_tu_base_de_datos.find({apellido: /.*Larralde.*/i})</code>.
-  - Consultar en el documento si existe una clave o no:
-    - Código: <code>db.nombre_de_tu_base_de_datos.find({apellido: $exists: true})</code>.
-  - Eliminar todos los documentos que coincidan con el valor del apellido:
-    - <code>db.nombre_de_tu_base_de_datos.remove({apellido: "Larralde"})</code>.
-  - Eliminar un documento que coincida con el valor del apellido:
-    - <code>db.nombre_de_tu_base_de_datos.remove({apellido: "Larralde"}, 1)</code>.
+  - **Consultar** todos los documentos que tenemos en la base de datos sin formatear la estructura:
+    - Código: `db.nombre_de_tu_base_de_datos.find()`.
+  - **Consultar** todos los documentos que tenemos en la base de datos con la estructura formateada:
+    - Código: `db.nombre_de_tu_base_de_datos.find().pretty()`.
+  - **Consultar** todos los documentos que coincidan con el valor del apellido:
+    - Código: `db.nombre_de_tu_base_de_datos.find({apellido: "Larralde"}).pretty()`.
+  - **Consultar** cuantos documentos coinciden con el valor del apellido:
+    - Código: `db.nombre_de_tu_base_de_datos.find({apellido: "Larralde"}).length()`.
+  - **Consultar** cuantos documentos coinciden con el valor del apellido utilizando Regex:
+    - Código: `db.nombre_de_tu_base_de_datos.find({apellido: /.*Larralde.*/i})`.
+  - **Consultar** en el documento si existe una clave o no:
+    - Código: `db.nombre_de_tu_base_de_datos.find({apellido: $exists: true})`.
+  - **Eliminar** todos los documentos que coincidan con el valor del apellido:
+    - Código: `db.nombre_de_tu_base_de_datos.remove({apellido: "Larralde"})`.
+  - **Eliminar** un documento que coincida con el valor del apellido:
+    - Código: `db.nombre_de_tu_base_de_datos.remove({apellido: "Larralde"}, 1)`.
 <br>
 
-  - Insertar un nuevo documento 👇
+  - **Insertar** un nuevo documento 👇
 ```js
 db.nombre_de_tu_base_de_datos.insert({
     "nonbre": "Carlos",
