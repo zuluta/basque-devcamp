@@ -5,11 +5,11 @@
 |Contenido    |
 |-----------------|
 |**1. Introducción al uso de clases** |
-|**2. Métodos dunder**  |
-|**3. Decoradores** |
-|**4. ¿Que es una API?** |
-|**5. Características de MongoDB** |
-|**6. ¿Qué es el polimorfismo?** |
+|**2. ¿Qué es un método dunder?**  |
+|**3. ¿Qué es un decorador?** |
+|**4. ¿Qué es el polimorfismo?** |
+|**5. ¿Qué es una API?** |
+|**6. ¿Es MongoDB una base de datos SQL o NoSQL?** |
 <br>
 <br>
 <hr>
@@ -241,7 +241,7 @@ print(cli_2.cuenta())
 <br>
 <hr>
 
-## 2. Introducción a los métodos dunder:
+## 2. ¿Qué es un método dunder?
 
 <p>En programación orientada a objetos, los métodos dunder o métodos mágicos son funciones especiales que permiten definir comportamientos específicos para las clases. Estos métodos se llaman “mágicos” porque su nombre comienza y termina con dos guiones bajos (__).</p>
 
@@ -316,7 +316,7 @@ print(len(l)) # Imprime 5
 <br>
 <hr>
 
-## 3. Decoradores:
+## 3. ¿Qué es un decorador?
 
 <p>Los decoradores son funciones que toman otra función como argumento y anidan una nueva función para agregarle código extra sin alterar la existente.</p>
 
@@ -376,161 +376,7 @@ Funcionalidad inicial
 <br>
 <hr>
 
-## 4. ¿Que es una API?
-
-<p>Una <strong>API</strong> es una (interfaz de programación de aplicaciones) que sigue un conjunto de restricciones arquitecturales basadas en HTTP. Esto significa que se puede acceder a los recursos a través de URLs, lo que hace que la API sea fácil de entender y utilizar. Podemos crear una API que haga literalmente cualquier cosa, desde dar clima hasta un catálogo completo de una tienda en línea. Casi todas las aplicaciones utilizan APIs para conectarse con fuentes de datos corporativas, servicios de datos de terceros u otras aplicaciones.</p>
-
-
-> [!TIP]
-> El formato de intercambio de datos normalmente es JSON o XML, lo que permite que la API sea compatible con una amplia variedad de aplicaciones.
-<br>
-
-[![Git Hub Image](images/api_rest.png)](#)
-<br>
-<br>
-
-**Una API tiene dos componentes principales:**
-
-  - Recursos:
-
-    - Datos o información.
-
-  - Verbos HTTP:
-
-    - `GET` para consultar y leer.
-    - `POST` para crear.
-    - `PUT` para editar.
-    - `DELETE` para eliminar.
-
-> [!NOTE]
-> Los <strong>recursos</strong> son los datos o información que se pueden acceder a través de la API. Los <strong>verbos HTTP</strong> son las operaciones que se pueden realizar en esos recursos, como obtener <code>GET</code> un recurso, crear <code>POST</code> un recurso, actualizar <code>PUT</code> un recurso o eliminar <code>DELETE</code> un recurso.
-<br>
-
-### 4.1. ¿De donde obtine la API toda la información?
-
-<p>La información de la api no sale de la nada, necesita ser construido por alguien en formato diccionario. Se puede construir de manera manual o cargarle la información desde una base de datos. Cuando abrimos la url donde esta alojado el API, veremos un monton de datos en formato diccionario <code>{...}</code>. Puede contener anidamientos tanto de diccionarios como de listas en su interior.</p>
-
-Formato de una API 👇
-```json
-{
-  "id": 1,
-  "nombre": "Juan",
-  "apellido": "Garcia",
-  "pais": "España"
-},
-{
-  "id": 2,
-  "nombre": "Nerea",
-  "apellido": "Larralde",
-  "pais": "España"
-}
-```
-
-> [!TIP]
-> Puedes practicar con esta <strong>API de Rick and Morty</strong> https://rickandmortyapi.com/api/character/ utilizando la aplicación <strong>Postman</strong> https://www.postman.com/ para testear con APIs.
->
-> Si accede a `https://rickandmortyapi.com/api/character/131` por numero de id al personaje, nos devolvera un json con toda la información.
-<br>
-
-### 4.2. ¿Qué es Postman?
-
-<p>Se trata de una herramienta dirigida a desarrolladores web que permite realizar peticiones HTTP a cualquier API. Postman es muy útil a la hora de programar y hacer pruebas, puesto que nos ofrece la posibilidad de comprobar el correcto funcionamiento de nuestros desarrollos.</p>
-
-<p>Con esto no queremos decir que Postman sea una herramienta exclusiva para profesionales del entorno web, de hecho va a ser muy útil para todo aquel que tenga que interactuar con una API.</p>
-<br>
-
-**Envío de solicitudes:**
-
-  - Postman permite enviar solicitudes HTTP y HTTPS utilizando métodos como GET, POST, PUT y DELETE, entre otros. Los desarrolladores pueden especificar parámetros, encabezados y el cuerpo de la solicitud para simular diversas interacciones con una API.
-
-**Pruebas automatizadas:**
-
-  - Con Postman, los desarrolladores pueden crear y ejecutar pruebas automatizadas para verificar el comportamiento de una API. Esto ayuda a detectar errores de manera temprana y a garantizar que el software cumpla con los estándares de calidad.
-<br>
-
-> [!TIP]
-> API de testeo https://rickandmortyapi.com
-<br>
-<br>
-<hr>
-
-## 5. ¿Es MongoDB una base de datos SQL o NoSQL?
-
-<p><strong>MongoDB</strong> es una <strong>base de datos NoSQL</strong> orientada a documentos que apareció a mediados de la década de 2000. Se utiliza para almacenar volúmenes masivos de datos.</p>
-
-### ¿como se almacenan los datos?
-
-<p>A diferencia de una base de datos relacional SQL tradicional, MongoDB no se basa en tablas y columnas. Los datos se almacenan como <strong>colecciones</strong> y <strong>documentos</strong>.</p>
-
-<p>La arquitectura de MongoDB se basa en varios componentes principales. En primer lugar, <strong>id</strong> es un campo obligatorio para cada documento. Representa un valor único y puede considerarse como la clave principal del documento para identificar al objeto dentro de la colección.</p>
-<br>
-
-> [!NOTE]
-> - <strong>Colecciones</strong>: Se refiere a un diccionario <code>{...}</code> o lista <code>[...]</code>.
-> - <strong>Documentos</strong>: Se refiere a la <code>"clave": "valor"</code> dentro de un diccionario. 
-<br>
-
-[![Git Hub Image](images/mongo_db.png)](#)
-
-```js
-{
-    "_id": ObjectId("5cf0029caff5056591b0ce7d"),
-    "nombre": "Juan",
-    "apellido": "Garcia",
-},
-{
-    "_id": ObjectId("6sh5930rdee4058890b0ae5c"),
-    "nombre": "Nerea",
-    "apellido": "Larralde",
-    "telefono": "666-666-444",
-    "direccion":  {
-        "codigo_postal": "22222",
-        "provincia": "Gipuzkoa",
-        "pais": "España"
-    }
-}
-```
-
-> [!NOTE]
-> MongoDB almacena los datos en documentos flexibles al estilo JSON pero en binario <string>BSON</string>.
-<br>
-
-### 👨‍💻 Comandos para interactuar con la base de datos desde la terminal:
-  - **Consultar** todos los documentos que tenemos en la base de datos sin formatear la estructura:
-    - Código: `db.nombre_de_tu_base_de_datos.find()`.
-  - **Consultar** todos los documentos que tenemos en la base de datos con la estructura formateada:
-    - Código: `db.nombre_de_tu_base_de_datos.find().pretty()`.
-  - **Consultar** todos los documentos que coincidan con el valor del apellido:
-    - Código: `db.nombre_de_tu_base_de_datos.find({apellido: "Larralde"}).pretty()`.
-  - **Consultar** cuantos documentos coinciden con el valor del apellido:
-    - Código: `db.nombre_de_tu_base_de_datos.find({apellido: "Larralde"}).length()`.
-  - **Consultar** cuantos documentos coinciden con el valor del apellido utilizando Regex:
-    - Código: `db.nombre_de_tu_base_de_datos.find({apellido: /.*Larralde.*/i})`.
-  - **Consultar** en el documento si existe una clave o no:
-    - Código: `db.nombre_de_tu_base_de_datos.find({apellido: $exists: true})`.
-  - **Eliminar** todos los documentos que coincidan con el valor del apellido:
-    - Código: `db.nombre_de_tu_base_de_datos.remove({apellido: "Larralde"})`.
-  - **Eliminar** un documento que coincida con el valor del apellido:
-    - Código: `db.nombre_de_tu_base_de_datos.remove({apellido: "Larralde"}, 1)`.
-<br>
-
-  - **Insertar** un nuevo documento 👇
-```js
-db.nombre_de_tu_base_de_datos.insert({
-    "nombre": "Carlos",
-    "apellido": "Garrido",
-    "direccion": {
-        "codigo_postal": "45210",
-        "provincia": "Gipuzkoa",
-        "pais": "España"
-    }
-});
-```
-<br>
-<br>
-<hr>
-
-## 6. ¿Qué es el polimorfismo?
+## 4. ¿Qué es el polimorfismo?
 
 <p>El polimorfismo tiene como objetivo cambiar la funcionalidad entre los métodos con el mismo nombre, en este ejemplo, tenemos tres clases, a los métodos les hemos asignado el mismo nombre <code>desplazamiento</code>. A pesar de que lleven el mismo nombre, los podemos diferenciar creando una nueva función y pasandole como atributo, por ejemplo <code>vehiculo</code>. El <code>vehiculo</code> tomara el valor de <code>mi_vehiculo</code> para hacer la mágia del polimorfismo. A la variable <code>mi_vehiculo</code>, podemos pasarle cualquiera de las tres clases, <code>Moto()</code>, <code>Coche()</code>, <code>Camion()</code>.</p>
 <br>
@@ -569,3 +415,162 @@ desplazamiento_vehiculo(mi_vehiculo)
 
 > [!NOTE]
 > El polimorfismo puede acceder a cualquiera de las clases y ejecutar métodos independientemente del nombre que tengan.
+<br>
+<br>
+<hr>
+
+## 5. ¿Qué es una API?
+
+<p>Una <strong>API</strong> es una (interfaz de programación de aplicaciones) que sigue un conjunto de restricciones arquitecturales basadas en HTTP. Esto significa que se puede acceder a los recursos a través de URLs, lo que hace que la API sea fácil de entender y utilizar. Podemos crear una API que haga literalmente cualquier cosa, desde dar clima hasta un catálogo completo de una tienda en línea. Casi todas las aplicaciones utilizan APIs para conectarse con fuentes de datos corporativas, servicios de datos de terceros u otras aplicaciones.</p>
+
+
+> [!TIP]
+> El formato de intercambio de datos normalmente es JSON o XML, lo que permite que la API sea compatible con una amplia variedad de aplicaciones.
+<br>
+
+[![Git Hub Image](images/api_rest.png)](#)
+<br>
+<br>
+
+**Una API tiene dos componentes principales:**
+
+  - Recursos:
+
+    - Datos o información.
+
+  - Verbos HTTP:
+
+    - `GET` para consultar y leer.
+    - `POST` para crear.
+    - `PUT` para editar.
+    - `DELETE` para eliminar.
+
+> [!NOTE]
+> Los <strong>recursos</strong> son los datos o información que se pueden acceder a través de la API. Los <strong>verbos HTTP</strong> son las operaciones que se pueden realizar en esos recursos, como obtener <code>GET</code> un recurso, crear <code>POST</code> un recurso, actualizar <code>PUT</code> un recurso o eliminar <code>DELETE</code> un recurso.
+<br>
+
+### 5.1. ¿De donde obtine la API toda la información?
+
+<p>La información de la api no sale de la nada, necesita ser construido por alguien en formato diccionario. Se puede construir de manera manual o cargarle la información desde una base de datos. Cuando abrimos la url donde esta alojado el API, veremos un monton de datos en formato diccionario <code>{...}</code>. Puede contener anidamientos tanto de diccionarios como de listas en su interior.</p>
+
+Formato de una API 👇
+```json
+{
+  "id": 1,
+  "nombre": "Juan",
+  "apellido": "Garcia",
+  "pais": "España"
+},
+{
+  "id": 2,
+  "nombre": "Nerea",
+  "apellido": "Larralde",
+  "pais": "España"
+}
+```
+
+> [!TIP]
+> Puedes practicar con esta <strong>API de Rick and Morty</strong> https://rickandmortyapi.com/api/character/ utilizando la aplicación <strong>Postman</strong> https://www.postman.com/ para testear con APIs.
+>
+> Si accede a `https://rickandmortyapi.com/api/character/131` por numero de id al personaje, nos devolvera un json con toda la información.
+<br>
+
+### 5.2. ¿Qué es Postman?
+
+<p>Se trata de una herramienta dirigida a desarrolladores web que permite realizar peticiones HTTP a cualquier API. Postman es muy útil a la hora de programar y hacer pruebas, puesto que nos ofrece la posibilidad de comprobar el correcto funcionamiento de nuestros desarrollos.</p>
+
+<p>Con esto no queremos decir que Postman sea una herramienta exclusiva para profesionales del entorno web, de hecho va a ser muy útil para todo aquel que tenga que interactuar con una API.</p>
+<br>
+
+**Envío de solicitudes:**
+
+  - Postman permite enviar solicitudes HTTP y HTTPS utilizando métodos como GET, POST, PUT y DELETE, entre otros. Los desarrolladores pueden especificar parámetros, encabezados y el cuerpo de la solicitud para simular diversas interacciones con una API.
+
+**Pruebas automatizadas:**
+
+  - Con Postman, los desarrolladores pueden crear y ejecutar pruebas automatizadas para verificar el comportamiento de una API. Esto ayuda a detectar errores de manera temprana y a garantizar que el software cumpla con los estándares de calidad.
+<br>
+
+> [!TIP]
+> API de testeo https://rickandmortyapi.com
+<br>
+<br>
+<hr>
+
+## 6. ¿Es MongoDB una base de datos SQL o NoSQL?
+
+<p><strong>MongoDB</strong> es una <strong>base de datos NoSQL</strong> orientada a documentos que apareció el año 2007. Se utiliza para almacenar volúmenes masivos de datos.</p>
+
+### ¿como se almacenan los datos?
+
+<p>A diferencia de una base de datos relacional SQL tradicional, MongoDB no se basa en tablas y columnas. Los datos se almacenan como <strong>colecciones</strong> y <strong>documentos</strong>.</p>
+
+<p>La arquitectura de MongoDB se basa en varios componentes principales. En primer lugar, la clave <strong>_id</strong> es un campo obligatorio para cada documento que se genera de forma automática. Representa un valor único y puede considerarse como la clave principal del documento para identificar al objeto dentro de la colección.</p>
+<br>
+
+> [!NOTE]
+> - <strong>Colecciones</strong>: Se refiere a un diccionario <code>{...}</code> o lista <code>[...]</code>.
+> - <strong>Documentos</strong>: Se refiere a la <code>"clave": "valor"</code> dentro de un diccionario. 
+<br>
+
+[![Git Hub Image](images/mongo_db.png)](#)
+
+```js
+{
+    "_id": ObjectId("5cf0029caff5056591b0ce7d"),
+    "nombre": "Juan",
+    "apellido": "Garcia",
+},
+{
+    "_id": ObjectId("6sh5930rdee4058890b0ae5c"),
+    "nombre": "Nerea",
+    "apellido": "Larralde",
+    "telefono": "666-666-444",
+    "direccion":  {
+        "codigo_postal": "22222",
+        "provincia": "Gipuzkoa",
+        "pais": "España"
+    }
+}
+```
+
+> [!NOTE]
+> MongoDB almacena los datos en documentos flexibles al estilo JSON pero los reconoce como <string>BSON</string>, esto vendria a ser un JSON binario.
+<br>
+
+### 👨‍💻 6.1. Comandos para interactuar con la base de datos desde la terminal
+
+<p>MQL es el lenguaje de consulta y manipulación de información que MongoDB nos provee por defecto (MongoDB Query Language). Las consultas de MongoDB se basan en el lenguaje de programación JavaScript con algunas diferencias leves.</p>
+<br>
+
+  - **Consultar** todos los documentos que tenemos en la base de datos sin formatear la estructura:
+    - Código: `db.nombre_de_tu_base_de_datos.find()`.
+  - **Consultar** todos los documentos que tenemos en la base de datos con la estructura formateada:
+    - Código: `db.nombre_de_tu_base_de_datos.find().pretty()`.
+  - **Consultar** todos los documentos que coincidan con el valor del apellido:
+    - Código: `db.nombre_de_tu_base_de_datos.find({apellido: "Larralde"}).pretty()`.
+  - **Consultar** cuantos documentos coinciden con el valor del apellido:
+    - Código: `db.nombre_de_tu_base_de_datos.find({apellido: "Larralde"}).length()`.
+  - **Consultar** cuantos documentos coinciden con el valor del apellido utilizando Regex:
+    - Código: `db.nombre_de_tu_base_de_datos.find({apellido: /.*Larralde.*/i})`.
+  - **Consultar** en el documento si existe una clave o no:
+    - Código: `db.nombre_de_tu_base_de_datos.find({apellido: $exists: true})`.
+  - **Eliminar** todos los documentos que coincidan con el valor del apellido:
+    - Código: `db.nombre_de_tu_base_de_datos.remove({apellido: "Larralde"})`.
+  - **Eliminar** un documento que coincida con el valor del apellido:
+    - Código: `db.nombre_de_tu_base_de_datos.remove({apellido: "Larralde"}, 1)`.
+<br>
+
+  - **Insertar** un nuevo documento 👇
+```js
+db.nombre_de_tu_base_de_datos.insert({
+    "nombre": "Carlos",
+    "apellido": "Garrido",
+    "direccion": {
+        "codigo_postal": "45210",
+        "provincia": "Gipuzkoa",
+        "pais": "España"
+    }
+});
+```
+<br>
