@@ -574,3 +574,8 @@ db.nombre_de_tu_base_de_datos.insert({
 });
 ```
 <br>
+
+> [!TIP]
+> Descargar MongoDB desde https://www.mongodb.com/try/download/community.
+> 
+> Para más información, consulte en su [página oficial](https://www.mongodb.com/es).
