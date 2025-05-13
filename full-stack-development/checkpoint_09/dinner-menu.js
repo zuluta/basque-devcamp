@@ -211,9 +211,6 @@ const regexDesayuno = /^([0][6-9]|1[0-1]):[0-5][0-9]/g; // 06:00 a 11:59
 const regexComida = /^([1][2-7]):[0-5][0-9]/g; // 12:00 a 17:59
 const regexCena = /^([1][8-9]|2[0-3]):[0-5][0-9]/g; // 18:00 a 23:59
 
-// patron regex factura
-const regexPrecioSeleccion = /([...]{3}\s{1})(.*)[€]/g;
-
 
 
 // funcion para comer en restaurante
