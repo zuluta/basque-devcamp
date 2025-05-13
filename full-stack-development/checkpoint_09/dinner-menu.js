@@ -151,9 +151,9 @@ Nuestro horario de atención es de 06:00 a 23:59 horas de lunes a domingo.
 Introduzca una hora en formato 00:00 24h para reservar su mesa:`
 
 // mensaje de turno actual
-const msgTurnoDesayuno = '¡Estas en horario de desayuno!';
-const msgTurnoComida = '¡Estas en horario de comida!';
-const msgTurnoCena = '¡Estas en horario de cena!';
+const msgTurnoDesayuno = 'Preparando el desayuno...';
+const msgTurnoComida = 'Preparando la comida...';
+const msgTurnoCena = 'Preparando la cena...';
 
 // mensaje de menu seleccion
 const msgMenuPrimero = 'De primero tenemos lo siguiente:';
