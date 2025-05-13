@@ -41,7 +41,7 @@ const menuCena = {
     'segundo': {
         '1': '1. Pechuga de pollo con tomate ... 7.40€',
         '2': '2. Merluza en salsa verde ... 9.95€',
-        '3': '2. Brocheta de langostinos ... 10.50€'
+        '3': '3. Brocheta de langostinos ... 10.50€'
     }
 };
 
@@ -57,7 +57,7 @@ const menuPostre = {
 
 const menuBebida = {
     '1': '1. Agua ... 1.40€',
-    '2': '2. Sidra ... 2.95',
+    '2': '2. Sidra ... 2.95€',
     '3': '3. Vino tinto ... 3.95€'
 };
 
@@ -80,6 +80,9 @@ const msgMenuBebida = 'Para beber tenemos lo siguiente:';
 // mensaje de seleccione numero
 const msgSeleccioneNumero = 'Seleccione un número: ';
 const msgNumeroIncorrecto = '¡El número seleccionado no es correcto! vuelva a intentarlo.';
+
+// mensaje de factura disponible
+const msgFactura = '¡Ya tienes disponible tu factura!';
 
 // array de frases
 const arrayFrases = [
@@ -144,17 +147,9 @@ function restaurante() {
             // funcion para pedir el primer plato
             function primerPlato() {
 
-                console.log(`
-                    ${msgTurnoDesayuno}\n
-                    ${msgMenuPrimero}\n
-                    ${menuDesayuno.primero['1']}
-                    ${menuDesayuno.primero['2']}
-                    ${menuDesayuno.primero['3']}
-                `);
+                numeroPrimerPlato = prompt(`${msgTurnoDesayuno}\n\n${msgMenuPrimero}\n\n${menuDesayuno.primero['1']}\n${menuDesayuno.primero['2']}\n${menuDesayuno.primero['3']}\n\n${msgSeleccioneNumero}`);
 
-                numeroPrimerPlato = prompt(msgSeleccioneNumero);
-
-                if (numeroPrimerPlato >= '1' && numeroPrimerPlato <= '2') {
+                if (numeroPrimerPlato >= '1' && numeroPrimerPlato <= '3') {
 
                     seleccionadoPrimerPlato = menuDesayuno.primero[numeroPrimerPlato];
                     console.log(`Seleccionado: ${seleccionadoPrimerPlato}`);
@@ -169,16 +164,9 @@ function restaurante() {
             // funcion para pedir el segundo plato
             function segundoPlato() {
 
-                console.log(`
-                    ${msgMenuSegundo}\n
-                    ${menuDesayuno.segundo['1']}
-                    ${menuDesayuno.segundo['2']}
-                    ${menuDesayuno.segundo['3']}
-                `);
+                numeroSegundoPlato = prompt(`${msgTurnoDesayuno}\n\n${msgMenuSegundo}\n\n${menuDesayuno.segundo['1']}\n${menuDesayuno.segundo['2']}\n${menuDesayuno.segundo['3']}\n\n${msgSeleccioneNumero}`);
 
-                numeroSegundoPlato = prompt(msgSeleccioneNumero);
-
-                if (numeroSegundoPlato >= '1' && numeroSegundoPlato <= '2') {
+                if (numeroSegundoPlato >= '1' && numeroSegundoPlato <= '3') {
 
                     seleccionadoSegundoPlato = menuDesayuno.segundo[numeroSegundoPlato];
                     console.log(`Seleccionado: ${seleccionadoSegundoPlato}`);
@@ -193,18 +181,7 @@ function restaurante() {
             // funcion para pedir el postre
             function postre() {
 
-                console.log(`
-                    ${msgMenuPostre}\n
-                    ${menuPostre['1']}
-                    ${menuPostre['2']}
-                    ${menuPostre['3']}
-                    ${menuPostre['4']}
-                    ${menuPostre['5']}
-                    ${menuPostre['6']}
-                    ${menuPostre['7']}
-                `);
-
-                numeroPostre = prompt(msgSeleccioneNumero);
+                numeroPostre = prompt(`${msgTurnoDesayuno}\n\n${msgMenuPostre}\n\n${menuPostre['1']}\n${menuPostre['2']}\n${menuPostre['3']}\n${menuPostre['4']}\n${menuPostre['5']}\n${menuPostre['6']}\n${menuPostre['7']}\n\n${msgSeleccioneNumero}`);
 
                 if (numeroPostre >= '1' && numeroPostre <= '7') {
 
@@ -221,14 +198,7 @@ function restaurante() {
             // funcion para pedir la bebida
             function bebida() {
 
-                console.log(`
-                    ${msgMenuBebida}\n
-                    ${menuBebida['1']}
-                    ${menuBebida['2']}
-                    ${menuBebida['3']}
-                `);
-
-                numeroBebida = prompt(msgSeleccioneNumero);
+                numeroBebida = prompt(`${msgTurnoDesayuno}\n\n${msgMenuBebida}\n\n${menuBebida['1']}\n${menuBebida['2']}\n${menuBebida['3']}\n\n${msgSeleccioneNumero}`);
 
                 if (numeroBebida >= '1' && numeroBebida <= '3') {
 
@@ -248,17 +218,9 @@ function restaurante() {
             // funcion para pedir el primer plato
             function primerPlato() {
 
-                console.log(`
-                    ${msgTurnoComida}\n
-                    ${msgMenuPrimero}\n
-                    ${menuComida.primero['1']}
-                    ${menuComida.primero['2']}
-                    ${menuComida.primero['3']}
-                `);
+                numeroPrimerPlato = prompt(`${msgTurnoComida}\n\n${msgMenuPrimero}\n\n${menuComida.primero['1']}\n${menuComida.primero['2']}\n${menuComida.primero['3']}\n\n${msgSeleccioneNumero}`);
 
-                numeroPrimerPlato = prompt(msgSeleccioneNumero);
-
-                if (numeroPrimerPlato >= '1' && numeroPrimerPlato <= '2') {
+                if (numeroPrimerPlato >= '1' && numeroPrimerPlato <= '3') {
 
                     seleccionadoPrimerPlato = menuComida.primero[numeroPrimerPlato];
                     console.log(`Seleccionado: ${seleccionadoPrimerPlato}`);
@@ -273,16 +235,9 @@ function restaurante() {
             // funcion para pedir el segundo plato
             function segundoPlato() {
 
-                console.log(`
-                    ${msgMenuSegundo}\n
-                    ${menuComida.segundo['1']}
-                    ${menuComida.segundo['2']}
-                    ${menuComida.segundo['3']}
-                `);
+                numeroSegundoPlato = prompt(`${msgTurnoComida}\n\n${msgMenuSegundo}\n\n${menuComida.segundo['1']}\n${menuComida.segundo['2']}\n${menuComida.segundo['3']}\n\n${msgSeleccioneNumero}`);
 
-                numeroSegundoPlato = prompt(msgSeleccioneNumero);
-
-                if (numeroSegundoPlato >= '1' && numeroSegundoPlato <= '2') {
+                if (numeroSegundoPlato >= '1' && numeroSegundoPlato <= '3') {
 
                     seleccionadoSegundoPlato = menuComida.segundo[numeroSegundoPlato];
                     console.log(`Seleccionado: ${seleccionadoSegundoPlato}`);
@@ -297,18 +252,7 @@ function restaurante() {
             // funcion para pedir el postre
             function postre() {
 
-                console.log(`
-                    ${msgMenuPostre}\n
-                    ${menuPostre['1']}
-                    ${menuPostre['2']}
-                    ${menuPostre['3']}
-                    ${menuPostre['4']}
-                    ${menuPostre['5']}
-                    ${menuPostre['6']}
-                    ${menuPostre['7']}
-                `);
-
-                numeroPostre = prompt(msgSeleccioneNumero);
+                numeroPostre = prompt(`${msgTurnoComida}\n\n${msgMenuPostre}\n\n${menuPostre['1']}\n${menuPostre['2']}\n${menuPostre['3']}\n${menuPostre['4']}\n${menuPostre['5']}\n${menuPostre['6']}\n${menuPostre['7']}\n\n${msgSeleccioneNumero}`);
 
                 if (numeroPostre >= '1' && numeroPostre <= '7') {
 
@@ -325,14 +269,7 @@ function restaurante() {
             // funcion para pedir la bebida
             function bebida() {
 
-                console.log(`
-                    ${msgMenuBebida}\n
-                    ${menuBebida['1']}
-                    ${menuBebida['2']}
-                    ${menuBebida['3']}
-                `);
-
-                numeroBebida = prompt(msgSeleccioneNumero);
+                numeroBebida = prompt(`${msgTurnoComida}\n\n${msgMenuBebida}\n\n${menuBebida['1']}\n${menuBebida['2']}\n${menuBebida['3']}\n\n${msgSeleccioneNumero}`);
 
                 if (numeroBebida >= '1' && numeroBebida <= '3') {
 
@@ -352,15 +289,7 @@ function restaurante() {
             // funcion para pedir el primer plato
             function primerPlato() {
 
-                console.log(`
-                    ${msgTurnoCena}\n
-                    ${msgMenuPrimero}\n
-                    ${menuCena.primero['1']}
-                    ${menuCena.primero['2']}
-                    ${menuCena.primero['3']}
-                `);
-
-                numeroPrimerPlato = prompt(msgSeleccioneNumero);
+                numeroPrimerPlato = prompt(`${msgTurnoCena}\n\n${msgMenuPrimero}\n\n${menuCena.primero['1']}\n${menuCena.primero['2']}\n${menuCena.primero['3']}\n\n${msgSeleccioneNumero}`);
 
                 if (numeroPrimerPlato >= '1' && numeroPrimerPlato <= '3') {
 
@@ -377,14 +306,7 @@ function restaurante() {
             // funcion para pedir el segundo plato
             function segundoPlato() {
 
-                console.log(`
-                    ${msgMenuSegundo}\n
-                    ${menuCena.segundo['1']}
-                    ${menuCena.segundo['2']}
-                    ${menuCena.segundo['3']}
-                `);
-
-                numeroSegundoPlato = prompt(msgSeleccioneNumero);
+                numeroSegundoPlato = prompt(`${msgTurnoCena}\n\n${msgMenuSegundo}\n\n${menuCena.segundo['1']}\n${menuCena.segundo['2']}\n${menuCena.segundo['3']}\n\n${msgSeleccioneNumero}`);
 
                 if (numeroSegundoPlato >= '1' && numeroSegundoPlato <= '3') {
 
@@ -401,18 +323,7 @@ function restaurante() {
             // funcion para pedir el postre
             function postre() {
 
-                console.log(`
-                    ${msgMenuPostre}\n
-                    ${menuPostre['1']}
-                    ${menuPostre['2']}
-                    ${menuPostre['3']}
-                    ${menuPostre['4']}
-                    ${menuPostre['5']}
-                    ${menuPostre['6']}
-                    ${menuPostre['7']}
-                `);
-
-                numeroPostre = prompt(msgSeleccioneNumero);
+                numeroPostre = prompt(`${msgTurnoCena}\n\n${msgMenuPostre}\n\n${menuPostre['1']}\n${menuPostre['2']}\n${menuPostre['3']}\n${menuPostre['4']}\n${menuPostre['5']}\n${menuPostre['6']}\n${menuPostre['7']}\n\n${msgSeleccioneNumero}`);
 
                 if (numeroPostre >= '1' && numeroPostre <= '7') {
 
@@ -429,14 +340,7 @@ function restaurante() {
             // funcion para pedir la bebida
             function bebida() {
 
-                console.log(`
-                    ${msgMenuBebida}\n
-                    ${menuBebida['1']}
-                    ${menuBebida['2']}
-                    ${menuBebida['3']}
-                `);
-
-                numeroBebida = prompt(msgSeleccioneNumero);
+                numeroBebida = prompt(`${msgTurnoCena}\n\n${msgMenuBebida}\n\n${menuBebida['1']}\n${menuBebida['2']}\n${menuBebida['3']}\n\n${msgSeleccioneNumero}`);
 
                 if (numeroBebida >= '1' && numeroBebida <= '3') {
 
@@ -486,16 +390,10 @@ function factura() {
     const postre = parseFloat(filtradoPostre);
     const bebida = parseFloat(filtradoBebida);
 
-    const pagarTotal = primero + segundo + postre + bebida;
+    const menuTotal = primero + segundo + postre + bebida;
+    const pagarTotal = menuTotal.toFixed(2);
 
-    console.log('¡Ya tienes disponible tu factura!')
-    console.log(`
-        ${seleccionadoPrimerPlato}
-        ${seleccionadoSegundoPlato}
-        ${seleccionadoPostre}
-        ${seleccionadoBebida}\n
-        Total a pagar: ${pagarTotal}€
-        `);
+    alert(`${msgFactura}\n\n${seleccionadoPrimerPlato}\n${seleccionadoSegundoPlato}\n${seleccionadoPostre}\n${seleccionadoBebida}\n\nTotal a pagar: ${pagarTotal}€`);
 }
 
 
