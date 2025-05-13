@@ -61,6 +61,11 @@ const menuBebida = {
     '3': '3. Vino tinto ... 3.95€'
 };
 
+// mensaje de recepcion
+const msgRecepcion = `¡Bienvenido/a! Gracias por elegir DevCamp.
+Nuestro horario de atención es de 06:00 a 23:59 horas de lunes a domingo.
+Introduzca la hora en formato 00:00 24h para reservar su mesa:`
+
 // mensaje de turno actual
 const msgTurnoDesayuno = '¡Estas en horario de desayuno!';
 const msgTurnoComida = '¡Estas en horario de comida!';
@@ -122,12 +127,12 @@ const regexPrecioSeleccion = /([...]{3}\s{1})(.*)[€]/g;
 function restaurante() {
 
     // reservar mesa restaurante
-    const insertarHora = prompt('¡Bienvenido/a! Gracias por elegir DevCamp. Nuestro horario de atención es de 06:00 a 23:59 horas de lunes a domingo. Introduzca la hora en formato 00:00 24h para reservar su mesa: ');
+    const reservaMesa = prompt(`${msgRecepcion}`);
 
-    const restauranteAbierto = insertarHora.match(regexAbierto);
-    const servicioDesayuno = insertarHora.match(regexDesayuno);
-    const servicioComida = insertarHora.match(regexComida);
-    const servicioCena = insertarHora.match(regexCena);
+    const restauranteAbierto = reservaMesa.match(regexAbierto);
+    const servicioDesayuno = reservaMesa.match(regexDesayuno);
+    const servicioComida = reservaMesa.match(regexComida);
+    const servicioCena = reservaMesa.match(regexCena);
 
     // condicion horaria 06:00 a 23:59
     if (restauranteAbierto) {
