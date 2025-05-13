@@ -182,6 +182,9 @@ const msgFraseAleatoria_1 = arrayFrases[Math.floor(Math.random() * arrayFrases.l
 const msgFraseAleatoria_2 = arrayFrases[Math.floor(Math.random() * arrayFrases.length)];
 const msgFraseAleatoria_3 = arrayFrases[Math.floor(Math.random() * arrayFrases.length)];
 
+// hora de reserva
+let horaReservaMesa = '';
+
 // numeros de menu seleccionado
 let numeroPrimerPlato = '';
 let numeroSegundoPlato = '';
@@ -216,14 +219,14 @@ const regexCena = /^([1][8-9]|2[0-3]):[0-5][0-9]/g; // 18:00 a 23:59
 // funcion para comer en restaurante
 function restaurante() {
 
-    // reservar mesa restaurante
-    const reservaMesa = prompt(`${msgRecepcion}`);
+    // hora de reserva mesa
+    horaReservaMesa = prompt(`${msgRecepcion}`);
 
     // horario de servicio
-    const restauranteAbierto = reservaMesa.match(regexAbierto);
-    const servicioDesayuno = reservaMesa.match(regexDesayuno);
-    const servicioComida = reservaMesa.match(regexComida);
-    const servicioCena = reservaMesa.match(regexCena);
+    const restauranteAbierto = horaReservaMesa.match(regexAbierto);
+    const servicioDesayuno = horaReservaMesa.match(regexDesayuno);
+    const servicioComida = horaReservaMesa.match(regexComida);
+    const servicioCena = horaReservaMesa.match(regexCena);
 
     // condicion horaria 06:00 a 23:59
     if (restauranteAbierto) {
@@ -478,7 +481,7 @@ function factura() {
     // calcular precio total
     const pagarTotal = primero + segundo + postre + bebida;
 
-    alert(`${msgFactura}\n\n${descripcionPrimerPlato} ... ${precioPrimerPlato}€\n${descripcionSegundoPlato} ... ${precioSegundoPlato}€\n${descripcionPostre} ... ${precioPostre}€\n${descripcionBebida} ... ${precioBebida}€\n\nTotal a pagar: ${pagarTotal.toFixed(2)}€`);
+    alert(`${msgFactura}\n\nHora de reserva: ${horaReservaMesa}\n\n${descripcionPrimerPlato} ... ${precioPrimerPlato}€\n${descripcionSegundoPlato} ... ${precioSegundoPlato}€\n${descripcionPostre} ... ${precioPostre}€\n${descripcionBebida} ... ${precioBebida}€\n\nTotal a pagar: ${pagarTotal.toFixed(2)}€`);
 }
 
 
