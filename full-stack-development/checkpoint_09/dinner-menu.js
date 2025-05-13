@@ -478,7 +478,7 @@ function factura() {
     const postre = parseFloat(precioPostre);
     const bebida = parseFloat(precioBebida);
 
-    // precio menu a pagar
+    // calcular precio total
     const pagarTotal = primero + segundo + postre + bebida;
 
     alert(`${msgFactura}\n\n${descripcionPrimerPlato} ... ${precioPrimerPlato}€\n${descripcionSegundoPlato} ... ${precioSegundoPlato}€\n${descripcionPostre} ... ${precioPostre}€\n${descripcionBebida} ... ${precioBebida}€\n\nTotal a pagar: ${pagarTotal.toFixed(2)}€`);
