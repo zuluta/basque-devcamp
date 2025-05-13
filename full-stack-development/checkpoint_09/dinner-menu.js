@@ -166,7 +166,7 @@ const msgSeleccioneNumero = 'Seleccione un número: ';
 const msgNumeroIncorrecto = '¡El número seleccionado no es correcto! vuelva a intentarlo.';
 
 // mensaje de factura disponible
-const msgFactura = '¡Ya tienes disponible tu factura!';
+const msgFactura = '¡Ya tiene disponible su factura!';
 
 // array de frases
 const arrayFrases = [
