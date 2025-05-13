@@ -177,7 +177,7 @@ const arrayFrases = [
     '¡Este plato es un clásico!'
 ];
 
-// frase aleatoria
+// mensaje de frase aleatoria
 const fraseAleatoria_1 = arrayFrases[Math.floor(Math.random() * arrayFrases.length)];
 const fraseAleatoria_2 = arrayFrases[Math.floor(Math.random() * arrayFrases.length)];
 const fraseAleatoria_3 = arrayFrases[Math.floor(Math.random() * arrayFrases.length)];
