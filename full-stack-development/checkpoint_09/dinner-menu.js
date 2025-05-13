@@ -151,9 +151,9 @@ Nuestro horario de atención es de 06:00 a 23:59 horas de lunes a domingo.
 Introduzca una hora en formato 00:00 24h para reservar su mesa:`
 
 // mensaje de turno actual
-const msgTurnoDesayuno = 'Preparando el desayuno...';
-const msgTurnoComida = 'Preparando la comida...';
-const msgTurnoCena = 'Preparando la cena...';
+const msgTurnoDesayuno = 'Pide su desayuno...';
+const msgTurnoComida = 'Pide su comida...';
+const msgTurnoCena = 'Pide su cena...';
 
 // mensaje de menu seleccion
 const msgMenuPrimero = 'De primero tenemos lo siguiente:';
@@ -321,7 +321,7 @@ function restaurante() {
                     descripcionPrimerPlato = menu.comida.primero[numeroPrimerPlato].descripcion;
                     precioPrimerPlato = menu.comida.primero[numeroPrimerPlato].precio.toFixed(2);
 
-                    alert(`Seleccionado: ${descripcionPrimerPlato} ... ${precioPimerPlato}€\n\n${fraseAleatoria_1}`);
+                    alert(`Seleccionado: ${descripcionPrimerPlato} ... ${precioPrimerPlato}€\n\n${fraseAleatoria_1}`);
                     segundoPlato();
                 } else {
                     console.log(`${msgNumeroIncorrecto}`);
