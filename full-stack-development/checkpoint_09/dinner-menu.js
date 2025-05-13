@@ -248,7 +248,7 @@ function restaurante() {
                     alert(`Seleccionado: ${descripcionPrimerPlato} ... ${precioPrimerPlato}€\n\n${msgFraseAleatoria_1}`);
                     segundoPlato();
                 } else {
-                    console.log(`${msgNumeroIncorrecto}`);
+                    alert(`${msgNumeroIncorrecto}`);
                     primerPlato();
                 }
             }
@@ -266,7 +266,7 @@ function restaurante() {
                     alert(`Seleccionado: ${descripcionSegundoPlato} ... ${precioSegundoPlato}€\n\n${msgFraseAleatoria_2}`);
                     postre();
                 } else {
-                    console.log(`${msgNumeroIncorrecto}`);
+                    alert(`${msgNumeroIncorrecto}`);
                     segundoPlato();
                 }
             }
@@ -284,7 +284,7 @@ function restaurante() {
                     alert(`Seleccionado: ${descripcionPostre} ... ${precioPostre}€\n\n${msgFraseAleatoria_3}`);
                     bebida();
                 } else {
-                    console.log(`${msgNumeroIncorrecto}`);
+                    alert(`${msgNumeroIncorrecto}`);
                     postre();
                 }
             }
@@ -302,7 +302,7 @@ function restaurante() {
                     alert(`Seleccionado: ${descripcionBebida} ... ${precioBebida}€`);
                     factura();
                 } else {
-                    console.log(`${msgNumeroIncorrecto}`);
+                    alert(`${msgNumeroIncorrecto}`);
                     bebida();
                 }
             }
@@ -324,7 +324,7 @@ function restaurante() {
                     alert(`Seleccionado: ${descripcionPrimerPlato} ... ${precioPrimerPlato}€\n\n${msgFraseAleatoria_1}`);
                     segundoPlato();
                 } else {
-                    console.log(`${msgNumeroIncorrecto}`);
+                    alert(`${msgNumeroIncorrecto}`);
                     primerPlato();
                 }
             }
@@ -342,7 +342,7 @@ function restaurante() {
                     alert(`Seleccionado: ${descripcionSegundoPlato} ... ${precioSegundoPlato}€\n\n${msgFraseAleatoria_2}`);
                     postre();
                 } else {
-                    console.log(`${msgNumeroIncorrecto}`);
+                    alert(`${msgNumeroIncorrecto}`);
                     segundoPlato();
                 }
             }
@@ -360,7 +360,7 @@ function restaurante() {
                     alert(`Seleccionado: ${descripcionPostre} ... ${precioPostre}€\n\n${msgFraseAleatoria_3}`);
                     bebida();
                 } else {
-                    console.log(`${msgNumeroIncorrecto}`);
+                    alert(`${msgNumeroIncorrecto}`);
                     postre();
                 }
             }
@@ -378,7 +378,7 @@ function restaurante() {
                     alert(`Seleccionado: ${descripcionBebida} ... ${precioBebida}€`);
                     factura();
                 } else {
-                    console.log(`${msgNumeroIncorrecto}`);
+                    alert(`${msgNumeroIncorrecto}`);
                     bebida();
                 }
             }
@@ -400,7 +400,7 @@ function restaurante() {
                     alert(`Seleccionado: ${descripcionPrimerPlato} ... ${precioPrimerPlato}€\n\n${msgFraseAleatoria_1}`);
                     segundoPlato();
                 } else {
-                    console.log(`${msgNumeroIncorrecto}`);
+                    alert(`${msgNumeroIncorrecto}`);
                     primerPlato();
                 }
             }
@@ -418,7 +418,7 @@ function restaurante() {
                     alert(`Seleccionado: ${descripcionSegundoPlato} ... ${precioSegundoPlato}€\n\n${msgFraseAleatoria_2}`);
                     postre();
                 } else {
-                    console.log(`${msgNumeroIncorrecto}`);
+                    alert(`${msgNumeroIncorrecto}`);
                     segundoPlato();
                 }
             }
@@ -436,7 +436,7 @@ function restaurante() {
                     alert(`Seleccionado: ${descripcionPostre} ... ${precioPostre}€\n\n${msgFraseAleatoria_3}`);
                     bebida();
                 } else {
-                    console.log(`${msgNumeroIncorrecto}`);
+                    alert(`${msgNumeroIncorrecto}`);
                     postre();
                 }
             }
@@ -454,7 +454,7 @@ function restaurante() {
                     alert(`Seleccionado: ${descripcionBebida} ... ${precioBebida}€`);
                     factura();
                 } else {
-                    console.log(`${msgNumeroIncorrecto}`);
+                    alert(`${msgNumeroIncorrecto}`);
                     bebida();
                 }
             }
