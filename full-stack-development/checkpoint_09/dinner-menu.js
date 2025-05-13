@@ -5,145 +5,145 @@
 
 
 
-// menu restaurante
-const menuDesayuno = {
-    primero: {
+// lista de menus
+const menu = {
+    desayuno: {
+        primero: {
+            1: {
+                descripcion: '1. Batido con avena, plátano y fresas',
+                precio: 4.50
+            },
+            2: {
+                descripcion: '2. Pasta con atún',
+                precio: 3.95
+            },
+            3: {
+                descripcion: '3. Crema de verduras',
+                precio: 4.95
+            }
+        },
+        segundo: {
+            1: {
+                descripcion: '1. Pimientos rellenos de bacalao',
+                precio: 6.50
+            },
+            2: {
+                descripcion: '2. Pan de centeno con queso de cabra',
+                precio: 7.80
+            },
+            3: {
+                descripcion: '3. Tostada con aguacate',
+                precio: 5.80
+            }
+        }
+    },
+    comida: {
+        primero: {
+            1: {
+                descripcion: '1. Menestra de verduras',
+                precio: 5.60
+            },
+            2: {
+                descripcion: '2. Crema de calabaza',
+                precio: 4.80
+            },
+            3: {
+                descripcion: '3. Brócoli con ajo',
+                precio: 5.20
+            }
+        },
+        segundo: {
+            1: {
+                descripcion: '1. Merluza en salsa verde',
+                precio: 6.20
+            },
+            2: {
+                descripcion: '2. Solomillo de cerdo',
+                precio: 8.20
+            },
+            3: {
+                descripcion: '3. Salmón al papillote',
+                precio: 10.80
+            }
+        }
+    },
+    cena: {
+        primero: {
+            1: {
+                descripcion: '1. Borraja con langostinos',
+                precio: 4.50
+            },
+            2: {
+                descripcion: '2. Calabacines rellenos',
+                precio: 6.20
+            },
+            3: {
+                descripcion: '3. Espinacas con patata',
+                precio: 5.95
+            }
+        },
+        segundo: {
+            1: {
+                descripcion: '1. Pechuga de pollo con tomate',
+                precio: 7.40
+            },
+            2: {
+                descripcion: '2. Merluza en salsa verde',
+                precio: 9.95
+            },
+            3: {
+                descripcion: '3. Brocheta de langostinos',
+                precio: 10.50
+            }
+        }
+    },
+    postre: {
         1: {
-            descripcion: '1. Batido con avena, plátano y fresas',
-            precio: 4.50
+            descripcion: '1. Macedonia',
+            precio: 2.40
         },
         2: {
-            descripcion: '2. Pasta con atún',
+            descripcion: '2. Arroz con leche',
+            precio: 3.50
+        },
+        3: {
+            descripcion: '3. Natilla',
+            precio: 2.80
+        },
+        4: {
+            descripcion: '4. Flan casero',
+            precio: 2.50
+        },
+        5: {
+            descripcion: '5. Tarta de queso',
+            precio: 4.20
+        },
+        6: {
+            descripcion: '6. Tarta de manzana',
+            precio: 4.20
+        },
+        7: {
+            descripcion: '7. Tarta al whisky',
+            precio: 2.60
+        }
+    },
+    bebida: {
+        1: {
+            descripcion: '1. Agua',
+            precio: 1.60
+        },
+        2: {
+            descripcion: '2. Sidra',
             precio: 3.95
         },
         3: {
-            descripcion: '3. Crema de verduras',
-            precio: 4.95
-        }
-    },
-    segundo: {
-        1: {
-            descripcion: '1. Pimientos rellenos de bacalao',
-            precio: 6.50
-        },
-        2: {
-            descripcion: '2. Pan de centeno con queso de cabra',
-            precio: 7.80
-        },
-        3: {
-            descripcion: '3. Tostada con aguacate',
-            precio: 5.80
+            descripcion: '3. Vino tinto',
+            precio: 3.95
         }
     }
 };
 
-const menuComida = {
-    primero: {
-        1: {
-            descripcion: '1. Menestra de verduras',
-            precio: 5.60
-        },
-        2: {
-            descripcion: '2. Crema de calabaza',
-            precio: 4.80
-        },
-        3: {
-            descripcion: '3. Brócoli con ajo',
-            precio: 5.20
-        }
-    },
-    segundo: {
-        1: {
-            descripcion: '1. Merluza en salsa verde',
-            precio: 6.20
-        },
-        2: {
-            descripcion: '2. Solomillo de cerdo',
-            precio: 8.20
-        },
-        3: {
-            descripcion: '3. Salmón al papillote',
-            precio: 10.80
-        }
-    }
-};
 
-const menuCena = {
-    primero: {
-        1: {
-            descripcion: '1. Borraja con langostinos',
-            precio: 4.50
-        },
-        2: {
-            descripcion: '2. Calabacines rellenos',
-            precio: 6.20
-        },
-        3: {
-            descripcion: '3. Espinacas con patata',
-            precio: 5.95
-        }
-    },
-    segundo: {
-        1: {
-            descripcion: '1. Pechuga de pollo con tomate',
-            precio: 7.40
-        },
-        2: {
-            descripcion: '2. Merluza en salsa verde',
-            precio: 9.95
-        },
-        3: {
-            descripcion: '3. Brocheta de langostinos',
-            precio: 10.50
-        }
-    }
-};
-
-const menuPostre = {
-    1: {
-        descripcion: '1. Macedonia',
-        precio: 2.40
-    },
-    2: {
-        descripcion: '2. Arroz con leche',
-        precio: 3.50
-    },
-    3: {
-        descripcion: '3. Natilla',
-        precio: 2.80
-    },
-    4: {
-        descripcion: '4. Flan casero',
-        precio: 2.50
-    },
-    5: {
-        descripcion: '5. Tarta de queso',
-        precio: 4.20
-    },
-    6: {
-        descripcion: '6. Tarta de manzana',
-        precio: 4.20
-    },
-    7: {
-        descripcion: '7. Tarta al whisky',
-        precio: 2.60
-    }
-};
-
-const menuBebida = {
-    1: {
-        descripcion: '1. Agua',
-        precio: 1.60
-    },
-    2: {
-        descripcion: '2. Sidra',
-        precio: 3.95
-    },
-    3: {
-        descripcion: '3. Vino tinto',
-        precio: 3.95
-    }
-};
 
 // mensaje de recepcion
 const msgRecepcion = `¡Bienvenido/a! Gracias por elegir DevCamp.
@@ -238,12 +238,12 @@ function restaurante() {
             // funcion para pedir el primer plato
             function primerPlato() {
 
-                numeroPrimerPlato = prompt(`${msgTurnoDesayuno}\n\n${msgMenuPrimero}\n\n${menuDesayuno.primero[1].descripcion} ... ${menuDesayuno.primero[1].precio.toFixed(2)}€\n${menuDesayuno.primero[2].descripcion} ... ${menuDesayuno.primero[2].precio.toFixed(2)}€\n${menuDesayuno.primero[3].descripcion} ... ${menuDesayuno.primero[3].precio.toFixed(2)}€\n\n${msgSeleccioneNumero}`);
+                numeroPrimerPlato = prompt(`${msgTurnoDesayuno}\n\n${msgMenuPrimero}\n\n${menu.desayuno.primero[1].descripcion} ... ${menu.desayuno.primero[1].precio.toFixed(2)}€\n${menu.desayuno.primero[2].descripcion} ... ${menu.desayuno.primero[2].precio.toFixed(2)}€\n${menu.desayuno.primero[3].descripcion} ... ${menu.desayuno.primero[3].precio.toFixed(2)}€\n\n${msgSeleccioneNumero}`);
 
                 if (numeroPrimerPlato >= '1' && numeroPrimerPlato <= '3') {
 
-                    descripcionPrimerPlato = menuDesayuno.primero[numeroPrimerPlato].descripcion;
-                    precioPrimerPlato = menuDesayuno.primero[numeroPrimerPlato].precio.toFixed(2);
+                    descripcionPrimerPlato = menu.desayuno.primero[numeroPrimerPlato].descripcion;
+                    precioPrimerPlato = menu.desayuno.primero[numeroPrimerPlato].precio.toFixed(2);
                     
                     alert(`Seleccionado: ${descripcionPrimerPlato} ... ${precioPrimerPlato}€\n\n${fraseAleatoria_1}`);
                     segundoPlato();
@@ -256,12 +256,12 @@ function restaurante() {
             // funcion para pedir el segundo plato
             function segundoPlato() {
 
-                numeroSegundoPlato = prompt(`${msgTurnoDesayuno}\n\n${msgMenuSegundo}\n\n${menuDesayuno.segundo[1].descripcion} ... ${menuDesayuno.segundo[1].precio.toFixed(2)}€\n${menuDesayuno.segundo[2].descripcion} ... ${menuDesayuno.segundo[2].precio.toFixed(2)}€\n${menuDesayuno.segundo[3].descripcion} ... ${menuDesayuno.segundo[3].precio.toFixed(2)}€\n\n${msgSeleccioneNumero}`);
+                numeroSegundoPlato = prompt(`${msgTurnoDesayuno}\n\n${msgMenuSegundo}\n\n${menu.desayuno.segundo[1].descripcion} ... ${menu.desayuno.segundo[1].precio.toFixed(2)}€\n${menu.desayuno.segundo[2].descripcion} ... ${menu.desayuno.segundo[2].precio.toFixed(2)}€\n${menu.desayuno.segundo[3].descripcion} ... ${menu.desayuno.segundo[3].precio.toFixed(2)}€\n\n${msgSeleccioneNumero}`);
 
                 if (numeroSegundoPlato >= '1' && numeroSegundoPlato <= '3') {
 
-                    descripcionSegundoPlato = menuDesayuno.segundo[numeroSegundoPlato].descripcion;
-                    precioSegundoPlato = menuDesayuno.segundo[numeroSegundoPlato].precio.toFixed(2);
+                    descripcionSegundoPlato = menu.desayuno.segundo[numeroSegundoPlato].descripcion;
+                    precioSegundoPlato = menu.desayuno.segundo[numeroSegundoPlato].precio.toFixed(2);
 
                     alert(`Seleccionado: ${descripcionSegundoPlato} ... ${precioSegundoPlato}€\n\n${fraseAleatoria_2}`);
                     postre();
@@ -274,12 +274,12 @@ function restaurante() {
             // funcion para pedir el postre
             function postre() {
 
-                numeroPostre = prompt(`${msgTurnoDesayuno}\n\n${msgMenuPostre}\n\n${menuPostre[1].descripcion} ... ${menuPostre[1].precio.toFixed(2)}€\n${menuPostre[2].descripcion} ... ${menuPostre[2].precio.toFixed(2)}€\n${menuPostre[3].descripcion} ... ${menuPostre[3].precio.toFixed(2)}€\n${menuPostre[4].descripcion} ... ${menuPostre[4].precio.toFixed(2)}€\n${menuPostre[5].descripcion} ... ${menuPostre[5].precio.toFixed(2)}€\n${menuPostre[6].descripcion} ... ${menuPostre[6].precio.toFixed(2)}€\n${menuPostre[7].descripcion} ... ${menuPostre[7].precio.toFixed(2)}€\n\n${msgSeleccioneNumero}`);
+                numeroPostre = prompt(`${msgTurnoDesayuno}\n\n${msgMenuPostre}\n\n${menu.postre[1].descripcion} ... ${menu.postre[1].precio.toFixed(2)}€\n${menu.postre[2].descripcion} ... ${menu.postre[2].precio.toFixed(2)}€\n${menu.postre[3].descripcion} ... ${menu.postre[3].precio.toFixed(2)}€\n${menu.postre[4].descripcion} ... ${menu.postre[4].precio.toFixed(2)}€\n${menu.postre[5].descripcion} ... ${menu.postre[5].precio.toFixed(2)}€\n${menu.postre[6].descripcion} ... ${menu.postre[6].precio.toFixed(2)}€\n${menu.postre[7].descripcion} ... ${menu.postre[7].precio.toFixed(2)}€\n\n${msgSeleccioneNumero}`);
 
                 if (numeroPostre >= '1' && numeroPostre <= '7') {
 
-                    descripcionPostre = menuPostre[numeroPostre].descripcion;
-                    precioPostre = menuPostre[numeroPostre].precio.toFixed(2);
+                    descripcionPostre = menu.postre[numeroPostre].descripcion;
+                    precioPostre = menu.postre[numeroPostre].precio.toFixed(2);
 
                     alert(`Seleccionado: ${descripcionPostre} ... ${precioPostre}€\n\n${fraseAleatoria_3}`);
                     bebida();
@@ -292,12 +292,12 @@ function restaurante() {
             // funcion para pedir la bebida
             function bebida() {
 
-                numeroBebida = prompt(`${msgTurnoDesayuno}\n\n${msgMenuBebida}\n\n${menuBebida[1].descripcion} ... ${menuBebida[1].precio.toFixed(2)}€\n${menuBebida[2].descripcion} ... ${menuBebida[2].precio.toFixed(2)}€\n${menuBebida[3].descripcion} ... ${menuBebida[3].precio.toFixed(2)}€\n\n${msgSeleccioneNumero}`);
+                numeroBebida = prompt(`${msgTurnoDesayuno}\n\n${msgMenuBebida}\n\n${menu.bebida[1].descripcion} ... ${menu.bebida[1].precio.toFixed(2)}€\n${menu.bebida[2].descripcion} ... ${menu.bebida[2].precio.toFixed(2)}€\n${menu.bebida[3].descripcion} ... ${menu.bebida[3].precio.toFixed(2)}€\n\n${msgSeleccioneNumero}`);
 
                 if (numeroBebida >= '1' && numeroBebida <= '3') {
 
-                    descripcionBebida = menuBebida[numeroBebida].descripcion;
-                    precioBebida = menuBebida[numeroBebida].precio.toFixed(2);
+                    descripcionBebida = menu.bebida[numeroBebida].descripcion;
+                    precioBebida = menu.bebida[numeroBebida].precio.toFixed(2);
 
                     alert(`Seleccionado: ${descripcionBebida} ... ${precioBebida}€`);
                     factura();
@@ -314,12 +314,12 @@ function restaurante() {
             // funcion para pedir el primer plato
             function primerPlato() {
 
-                numeroPrimerPlato = prompt(`${msgTurnoComida}\n\n${msgMenuPrimero}\n\n${menuComida.primero[1].descripcion} ... ${menuComida.primero[1].precio.toFixed(2)}€\n${menuComida.primero[2].descripcion} ... ${menuComida.primero[2].precio.toFixed(2)}€\n${menuComida.primero[3].descripcion} ... ${menuComida.primero[3].precio.toFixed(2)}€\n\n${msgSeleccioneNumero}`);
+                numeroPrimerPlato = prompt(`${msgTurnoComida}\n\n${msgMenuPrimero}\n\n${menu.comida.primero[1].descripcion} ... ${menu.comida.primero[1].precio.toFixed(2)}€\n${menu.comida.primero[2].descripcion} ... ${menu.comida.primero[2].precio.toFixed(2)}€\n${menu.comida.primero[3].descripcion} ... ${menu.comida.primero[3].precio.toFixed(2)}€\n\n${msgSeleccioneNumero}`);
 
                 if (numeroPrimerPlato >= '1' && numeroPrimerPlato <= '3') {
 
-                    descripcionPrimerPlato = menuComida.primero[numeroPrimerPlato].descripcion;
-                    precioPrimerPlato = menuComida.primero[numeroPrimerPlato].precio.toFixed(2);
+                    descripcionPrimerPlato = menu.comida.primero[numeroPrimerPlato].descripcion;
+                    precioPrimerPlato = menu.comida.primero[numeroPrimerPlato].precio.toFixed(2);
 
                     alert(`Seleccionado: ${descripcionPrimerPlato} ... ${precioPimerPlato}€\n\n${fraseAleatoria_1}`);
                     segundoPlato();
@@ -332,12 +332,12 @@ function restaurante() {
             // funcion para pedir el segundo plato
             function segundoPlato() {
 
-                numeroSegundoPlato = prompt(`${msgTurnoComida}\n\n${msgMenuSegundo}\n\n${menuComida.segundo[1].descripcion} ... ${menuComida.segundo[1].precio.toFixed(2)}€\n${menuComida.segundo[2].descripcion} ... ${menuComida.segundo[2].precio.toFixed(2)}€\n${menuComida.segundo[3].descripcion} ... ${menuComida.segundo[3].precio.toFixed(2)}€\n\n${msgSeleccioneNumero}`);
+                numeroSegundoPlato = prompt(`${msgTurnoComida}\n\n${msgMenuSegundo}\n\n${menu.comida.segundo[1].descripcion} ... ${menu.comida.segundo[1].precio.toFixed(2)}€\n${menu.comida.segundo[2].descripcion} ... ${menu.comida.segundo[2].precio.toFixed(2)}€\n${menu.comida.segundo[3].descripcion} ... ${menu.comida.segundo[3].precio.toFixed(2)}€\n\n${msgSeleccioneNumero}`);
 
                 if (numeroSegundoPlato >= '1' && numeroSegundoPlato <= '3') {
 
-                    descripcionSegundoPlato = menuComida.segundo[numeroSegundoPlato].descripcion;
-                    precioSegundoPlato = menuComida.segundo[numeroSegundoPlato].precio.toFixed(2);
+                    descripcionSegundoPlato = menu.comida.segundo[numeroSegundoPlato].descripcion;
+                    precioSegundoPlato = menu.comida.segundo[numeroSegundoPlato].precio.toFixed(2);
 
                     alert(`Seleccionado: ${descripcionSegundoPlato} ... ${precioSegundoPlato}€\n\n${fraseAleatoria_2}`);
                     postre();
@@ -350,12 +350,12 @@ function restaurante() {
             // funcion para pedir el postre
             function postre() {
 
-                numeroPostre = prompt(`${msgTurnoComida}\n\n${msgMenuPostre}\n\n${menuPostre[1].descripcion} ... ${menuPostre[1].precio.toFixed(2)}€\n${menuPostre[2].descripcion} ... ${menuPostre[2].precio.toFixed(2)}€\n${menuPostre[3].descripcion} ... ${menuPostre[3].precio.toFixed(2)}€\n${menuPostre[4].descripcion} ... ${menuPostre[4].precio.toFixed(2)}€\n${menuPostre[5].descripcion} ... ${menuPostre[5].precio.toFixed(2)}€\n${menuPostre[6].descripcion} ... ${menuPostre[6].precio.toFixed(2)}€\n${menuPostre[7].descripcion} ... ${menuPostre[7].precio.toFixed(2)}€\n\n${msgSeleccioneNumero}`);
+                numeroPostre = prompt(`${msgTurnoComida}\n\n${msgMenuPostre}\n\n${menu.postre[1].descripcion} ... ${menu.postre[1].precio.toFixed(2)}€\n${menu.postre[2].descripcion} ... ${menu.postre[2].precio.toFixed(2)}€\n${menu.postre[3].descripcion} ... ${menu.postre[3].precio.toFixed(2)}€\n${menu.postre[4].descripcion} ... ${menu.postre[4].precio.toFixed(2)}€\n${menu.postre[5].descripcion} ... ${menu.postre[5].precio.toFixed(2)}€\n${menu.postre[6].descripcion} ... ${menu.postre[6].precio.toFixed(2)}€\n${menu.postre[7].descripcion} ... ${menu.postre[7].precio.toFixed(2)}€\n\n${msgSeleccioneNumero}`);
 
                 if (numeroPostre >= '1' && numeroPostre <= '7') {
 
-                    descripcionPostre = menuPostre[numeroPostre].descripcion;
-                    precioPostre = menuPostre[numeroPostre].precio.toFixed(2);
+                    descripcionPostre = menu.postre[numeroPostre].descripcion;
+                    precioPostre = menu.postre[numeroPostre].precio.toFixed(2);
 
                     alert(`Seleccionado: ${descripcionPostre} ... ${precioPostre}€\n\n${fraseAleatoria_3}`);
                     bebida();
@@ -368,12 +368,12 @@ function restaurante() {
             // funcion para pedir la bebida
             function bebida() {
 
-                numeroBebida = prompt(`${msgTurnoComida}\n\n${msgMenuBebida}\n\n${menuBebida[1].descripcion} ... ${menuBebida[1].precio.toFixed(2)}€\n${menuBebida[2].descripcion} ... ${menuBebida[2].precio.toFixed(2)}€\n${menuBebida[3].descripcion} ... ${menuBebida[3].precio.toFixed(2)}€\n\n${msgSeleccioneNumero}`);
+                numeroBebida = prompt(`${msgTurnoComida}\n\n${msgMenuBebida}\n\n${menu.bebida[1].descripcion} ... ${menu.bebida[1].precio.toFixed(2)}€\n${menu.bebida[2].descripcion} ... ${menu.bebida[2].precio.toFixed(2)}€\n${menu.bebida[3].descripcion} ... ${menu.bebida[3].precio.toFixed(2)}€\n\n${msgSeleccioneNumero}`);
 
                 if (numeroBebida >= '1' && numeroBebida <= '3') {
 
-                    descripcionBebida = menuBebida[numeroBebida].descripcion;
-                    precioBebida = menuBebida[numeroBebida].precio.toFixed(2);
+                    descripcionBebida = menu.bebida[numeroBebida].descripcion;
+                    precioBebida = menu.bebida[numeroBebida].precio.toFixed(2);
 
                     alert(`Seleccionado: ${descripcionBebida} ... ${precioBebida}€`);
                     factura();
@@ -390,12 +390,12 @@ function restaurante() {
             // funcion para pedir el primer plato
             function primerPlato() {
 
-                numeroPrimerPlato = prompt(`${msgTurnoCena}\n\n${msgMenuPrimero}\n\n${menuCena.primero[1].descripcion} ... ${menuCena.primero[1].precio.toFixed(2)}€\n${menuCena.primero[2].descripcion} ... ${menuCena.primero[2].precio.toFixed(2)}€\n${menuCena.primero[3].descripcion} ... ${menuCena.primero[3].precio.toFixed(2)}€\n\n${msgSeleccioneNumero}`);
+                numeroPrimerPlato = prompt(`${msgTurnoCena}\n\n${msgMenuPrimero}\n\n${menu.cena.primero[1].descripcion} ... ${menu.cena.primero[1].precio.toFixed(2)}€\n${menu.cena.primero[2].descripcion} ... ${menu.cena.primero[2].precio.toFixed(2)}€\n${menu.cena.primero[3].descripcion} ... ${menu.cena.primero[3].precio.toFixed(2)}€\n\n${msgSeleccioneNumero}`);
 
                 if (numeroPrimerPlato >= '1' && numeroPrimerPlato <= '3') {
 
-                    descripcionPrimerPlato = menuCena.primero[numeroPrimerPlato].descripcion;
-                    precioPrimerPlato = menuCena.primero[numeroPrimerPlato].precio.toFixed(2);
+                    descripcionPrimerPlato = menu.cena.primero[numeroPrimerPlato].descripcion;
+                    precioPrimerPlato = menu.cena.primero[numeroPrimerPlato].precio.toFixed(2);
 
                     alert(`Seleccionado: ${descripcionPrimerPlato} ... ${precioPrimerPlato}€\n\n${fraseAleatoria_1}`);
                     segundoPlato();
@@ -408,12 +408,12 @@ function restaurante() {
             // funcion para pedir el segundo plato
             function segundoPlato() {
 
-                numeroSegundoPlato = prompt(`${msgTurnoCena}\n\n${msgMenuSegundo}\n\n${menuCena.segundo[1].descripcion} ... ${menuCena.segundo[1].precio.toFixed(2)}€\n${menuCena.segundo[2].descripcion} ... ${menuCena.segundo[2].precio.toFixed(2)}€\n${menuCena.segundo[3].descripcion} ... ${menuCena.segundo[3].precio.toFixed(2)}€\n\n${msgSeleccioneNumero}`);
+                numeroSegundoPlato = prompt(`${msgTurnoCena}\n\n${msgMenuSegundo}\n\n${menu.cena.segundo[1].descripcion} ... ${menu.cena.segundo[1].precio.toFixed(2)}€\n${menu.cena.segundo[2].descripcion} ... ${menu.cena.segundo[2].precio.toFixed(2)}€\n${menu.cena.segundo[3].descripcion} ... ${menu.cena.segundo[3].precio.toFixed(2)}€\n\n${msgSeleccioneNumero}`);
 
                 if (numeroSegundoPlato >= '1' && numeroSegundoPlato <= '3') {
 
-                    descripcionSegundoPlato = menuCena.segundo[numeroSegundoPlato].descripcion;
-                    precioSegundoPlato = menuCena.segundo[numeroSegundoPlato].precio.toFixed(2);
+                    descripcionSegundoPlato = menu.cena.segundo[numeroSegundoPlato].descripcion;
+                    precioSegundoPlato = menu.cena.segundo[numeroSegundoPlato].precio.toFixed(2);
 
                     alert(`Seleccionado: ${descripcionSegundoPlato} ... ${precioSegundoPlato}€\n\n${fraseAleatoria_2}`);
                     postre();
@@ -426,12 +426,12 @@ function restaurante() {
             // funcion para pedir el postre
             function postre() {
 
-                numeroPostre = prompt(`${msgTurnoCena}\n\n${msgMenuPostre}\n\n${menuPostre[1].descripcion} ... ${menuPostre[1].precio.toFixed(2)}€\n${menuPostre[2].descripcion} ... ${menuPostre[2].precio.toFixed(2)}€\n${menuPostre[3].descripcion} ... ${menuPostre[3].precio.toFixed(2)}€\n${menuPostre[4].descripcion} ... ${menuPostre[4].precio.toFixed(2)}€\n${menuPostre[5].descripcion} ... ${menuPostre[5].precio.toFixed(2)}€\n${menuPostre[6].descripcion} ... ${menuPostre[6].precio.toFixed(2)}€\n${menuPostre[7].descripcion} ... ${menuPostre[7].precio.toFixed(2)}€\n\n${msgSeleccioneNumero}`);
+                numeroPostre = prompt(`${msgTurnoCena}\n\n${msgMenuPostre}\n\n${menu.postre[1].descripcion} ... ${menu.postre[1].precio.toFixed(2)}€\n${menu.postre[2].descripcion} ... ${menu.postre[2].precio.toFixed(2)}€\n${menu.postre[3].descripcion} ... ${menu.postre[3].precio.toFixed(2)}€\n${menu.postre[4].descripcion} ... ${menu.postre[4].precio.toFixed(2)}€\n${menu.postre[5].descripcion} ... ${menu.postre[5].precio.toFixed(2)}€\n${menu.postre[6].descripcion} ... ${menu.postre[6].precio.toFixed(2)}€\n${menu.postre[7].descripcion} ... ${menu.postre[7].precio.toFixed(2)}€\n\n${msgSeleccioneNumero}`);
 
                 if (numeroPostre >= '1' && numeroPostre <= '7') {
 
-                    descripcionPostre = menuPostre[numeroPostre].descripcion;
-                    precioPostre = menuPostre[numeroPostre].precio.toFixed(2);
+                    descripcionPostre = menu.postre[numeroPostre].descripcion;
+                    precioPostre = menu.postre[numeroPostre].precio.toFixed(2);
 
                     alert(`Seleccionado: ${descripcionPostre} ... ${precioPostre}€\n\n${fraseAleatoria_3}`);
                     bebida();
@@ -444,12 +444,12 @@ function restaurante() {
             // funcion para pedir la bebida
             function bebida() {
 
-                numeroBebida = prompt(`${msgTurnoCena}\n\n${msgMenuBebida}\n\n${menuBebida[1].descripcion} ... ${menuBebida[1].precio.toFixed(2)}€\n${menuBebida[2].descripcion} ... ${menuBebida[2].precio.toFixed(2)}€\n${menuBebida[3].descripcion} ... ${menuBebida[3].precio.toFixed(2)}€\n\n${msgSeleccioneNumero}`);
+                numeroBebida = prompt(`${msgTurnoCena}\n\n${msgMenuBebida}\n\n${menu.bebida[1].descripcion} ... ${menu.bebida[1].precio.toFixed(2)}€\n${menu.bebida[2].descripcion} ... ${menu.bebida[2].precio.toFixed(2)}€\n${menu.bebida[3].descripcion} ... ${menu.bebida[3].precio.toFixed(2)}€\n\n${msgSeleccioneNumero}`);
 
                 if (numeroBebida >= '1' && numeroBebida <= '3') {
 
-                    descripcionBebida = menuBebida[numeroBebida].descripcion;
-                    precioBebida = menuBebida[numeroBebida].precio.toFixed(2);
+                    descripcionBebida = menu.bebida[numeroBebida].descripcion;
+                    precioBebida = menu.bebida[numeroBebida].precio.toFixed(2);
 
                     alert(`Seleccionado: ${descripcionBebida} ... ${precioBebida}€`);
                     factura();
