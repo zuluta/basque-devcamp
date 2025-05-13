@@ -482,6 +482,7 @@ function factura() {
     const pagarTotal = primero + segundo + postre + bebida;
 
     alert(`${msgFactura}\n\nHora de reserva: ${horaReservaMesa}\n\n${descripcionPrimerPlato} ... ${precioPrimerPlato}€\n${descripcionSegundoPlato} ... ${precioSegundoPlato}€\n${descripcionPostre} ... ${precioPostre}€\n${descripcionBebida} ... ${precioBebida}€\n\nTotal a pagar: ${pagarTotal.toFixed(2)}€`);
+    alert('¡Gracias por reservar con DevCamp!');
 }
 
 
