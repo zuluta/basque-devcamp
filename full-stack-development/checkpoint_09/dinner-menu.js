@@ -178,9 +178,9 @@ const arrayFrases = [
 ];
 
 // mensaje de frase aleatoria
-const fraseAleatoria_1 = arrayFrases[Math.floor(Math.random() * arrayFrases.length)];
-const fraseAleatoria_2 = arrayFrases[Math.floor(Math.random() * arrayFrases.length)];
-const fraseAleatoria_3 = arrayFrases[Math.floor(Math.random() * arrayFrases.length)];
+const msgFraseAleatoria_1 = arrayFrases[Math.floor(Math.random() * arrayFrases.length)];
+const msgFraseAleatoria_2 = arrayFrases[Math.floor(Math.random() * arrayFrases.length)];
+const msgFraseAleatoria_3 = arrayFrases[Math.floor(Math.random() * arrayFrases.length)];
 
 // numeros de menu seleccionado
 let numeroPrimerPlato = '';
@@ -242,7 +242,7 @@ function restaurante() {
                     descripcionPrimerPlato = menu.desayuno.primero[numeroPrimerPlato].descripcion;
                     precioPrimerPlato = menu.desayuno.primero[numeroPrimerPlato].precio.toFixed(2);
                     
-                    alert(`Seleccionado: ${descripcionPrimerPlato} ... ${precioPrimerPlato}€\n\n${fraseAleatoria_1}`);
+                    alert(`Seleccionado: ${descripcionPrimerPlato} ... ${precioPrimerPlato}€\n\n${msgFraseAleatoria_1}`);
                     segundoPlato();
                 } else {
                     console.log(`${msgNumeroIncorrecto}`);
@@ -260,7 +260,7 @@ function restaurante() {
                     descripcionSegundoPlato = menu.desayuno.segundo[numeroSegundoPlato].descripcion;
                     precioSegundoPlato = menu.desayuno.segundo[numeroSegundoPlato].precio.toFixed(2);
 
-                    alert(`Seleccionado: ${descripcionSegundoPlato} ... ${precioSegundoPlato}€\n\n${fraseAleatoria_2}`);
+                    alert(`Seleccionado: ${descripcionSegundoPlato} ... ${precioSegundoPlato}€\n\n${msgFraseAleatoria_2}`);
                     postre();
                 } else {
                     console.log(`${msgNumeroIncorrecto}`);
@@ -278,7 +278,7 @@ function restaurante() {
                     descripcionPostre = menu.postre[numeroPostre].descripcion;
                     precioPostre = menu.postre[numeroPostre].precio.toFixed(2);
 
-                    alert(`Seleccionado: ${descripcionPostre} ... ${precioPostre}€\n\n${fraseAleatoria_3}`);
+                    alert(`Seleccionado: ${descripcionPostre} ... ${precioPostre}€\n\n${msgFraseAleatoria_3}`);
                     bebida();
                 } else {
                     console.log(`${msgNumeroIncorrecto}`);
@@ -318,7 +318,7 @@ function restaurante() {
                     descripcionPrimerPlato = menu.comida.primero[numeroPrimerPlato].descripcion;
                     precioPrimerPlato = menu.comida.primero[numeroPrimerPlato].precio.toFixed(2);
 
-                    alert(`Seleccionado: ${descripcionPrimerPlato} ... ${precioPrimerPlato}€\n\n${fraseAleatoria_1}`);
+                    alert(`Seleccionado: ${descripcionPrimerPlato} ... ${precioPrimerPlato}€\n\n${msgFraseAleatoria_1}`);
                     segundoPlato();
                 } else {
                     console.log(`${msgNumeroIncorrecto}`);
@@ -336,7 +336,7 @@ function restaurante() {
                     descripcionSegundoPlato = menu.comida.segundo[numeroSegundoPlato].descripcion;
                     precioSegundoPlato = menu.comida.segundo[numeroSegundoPlato].precio.toFixed(2);
 
-                    alert(`Seleccionado: ${descripcionSegundoPlato} ... ${precioSegundoPlato}€\n\n${fraseAleatoria_2}`);
+                    alert(`Seleccionado: ${descripcionSegundoPlato} ... ${precioSegundoPlato}€\n\n${msgFraseAleatoria_2}`);
                     postre();
                 } else {
                     console.log(`${msgNumeroIncorrecto}`);
@@ -354,7 +354,7 @@ function restaurante() {
                     descripcionPostre = menu.postre[numeroPostre].descripcion;
                     precioPostre = menu.postre[numeroPostre].precio.toFixed(2);
 
-                    alert(`Seleccionado: ${descripcionPostre} ... ${precioPostre}€\n\n${fraseAleatoria_3}`);
+                    alert(`Seleccionado: ${descripcionPostre} ... ${precioPostre}€\n\n${msgFraseAleatoria_3}`);
                     bebida();
                 } else {
                     console.log(`${msgNumeroIncorrecto}`);
@@ -394,7 +394,7 @@ function restaurante() {
                     descripcionPrimerPlato = menu.cena.primero[numeroPrimerPlato].descripcion;
                     precioPrimerPlato = menu.cena.primero[numeroPrimerPlato].precio.toFixed(2);
 
-                    alert(`Seleccionado: ${descripcionPrimerPlato} ... ${precioPrimerPlato}€\n\n${fraseAleatoria_1}`);
+                    alert(`Seleccionado: ${descripcionPrimerPlato} ... ${precioPrimerPlato}€\n\n${msgFraseAleatoria_1}`);
                     segundoPlato();
                 } else {
                     console.log(`${msgNumeroIncorrecto}`);
@@ -412,7 +412,7 @@ function restaurante() {
                     descripcionSegundoPlato = menu.cena.segundo[numeroSegundoPlato].descripcion;
                     precioSegundoPlato = menu.cena.segundo[numeroSegundoPlato].precio.toFixed(2);
 
-                    alert(`Seleccionado: ${descripcionSegundoPlato} ... ${precioSegundoPlato}€\n\n${fraseAleatoria_2}`);
+                    alert(`Seleccionado: ${descripcionSegundoPlato} ... ${precioSegundoPlato}€\n\n${msgFraseAleatoria_2}`);
                     postre();
                 } else {
                     console.log(`${msgNumeroIncorrecto}`);
@@ -430,7 +430,7 @@ function restaurante() {
                     descripcionPostre = menu.postre[numeroPostre].descripcion;
                     precioPostre = menu.postre[numeroPostre].precio.toFixed(2);
 
-                    alert(`Seleccionado: ${descripcionPostre} ... ${precioPostre}€\n\n${fraseAleatoria_3}`);
+                    alert(`Seleccionado: ${descripcionPostre} ... ${precioPostre}€\n\n${msgFraseAleatoria_3}`);
                     bebida();
                 } else {
                     console.log(`${msgNumeroIncorrecto}`);
