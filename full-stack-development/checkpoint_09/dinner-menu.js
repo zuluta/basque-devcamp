@@ -390,6 +390,7 @@ function factura() {
     const postre = parseFloat(filtradoPostre);
     const bebida = parseFloat(filtradoBebida);
 
+    // precio menu final
     const menuTotal = primero + segundo + postre + bebida;
     const pagarTotal = menuTotal.toFixed(2);
 
