@@ -83,7 +83,7 @@ const arrayFrases = [
     '¡Elegiste un plato muy sabroso!',
     '¡Buena elección!',
     '¡Este plato es un clásico!'
-]
+];
 
 // frase aleatoria
 const fraseAleatoria_1 = arrayFrases[Math.floor(Math.random() * arrayFrases.length)];
@@ -121,24 +121,24 @@ const regexPrecioSeleccion = /([...]{3}\s{1})(.*)[€]/g;
 // funcion para comer en restaurante
 function restaurante() {
 
-    // reservar hora restaurante
+    // reservar mesa restaurante
     const insertarHora = prompt('¡Bienvenido/a! Gracias por elegir DevCamp. Nuestro horario de atención es de 06:00 a 23:59 horas de lunes a domingo. Introduzca la hora en formato 00:00 24h para reservar su mesa: ');
-    
+
     const restauranteAbierto = insertarHora.match(regexAbierto);
     const servicioDesayuno = insertarHora.match(regexDesayuno);
     const servicioComida = insertarHora.match(regexComida);
     const servicioCena = insertarHora.match(regexCena);
-    
-    // condicion de acceso 06:00 a 23:59
+
+    // condicion horaria 06:00 a 23:59
     if (restauranteAbierto) {
-    
+
         // condicion horaria 06:00 a 11:59
         if (servicioDesayuno) {
             primerPlato();
-            
+
+            // funcion para pedir el primer plato
             function primerPlato() {
-        
-                // pide el primer plato
+
                 console.log(`
                     ${msgTurnoDesayuno}\n
                     ${msgMenuPrimero}\n
@@ -146,11 +146,11 @@ function restaurante() {
                     ${menuDesayuno.primero['2']}
                     ${menuDesayuno.primero['3']}
                 `);
-            
+
                 numeroPrimerPlato = prompt(msgSeleccioneNumero);
-                
+
                 if (numeroPrimerPlato >= '1' && numeroPrimerPlato <= '2') {
-                    
+
                     seleccionadoPrimerPlato = menuDesayuno.primero[numeroPrimerPlato];
                     console.log(`Seleccionado: ${seleccionadoPrimerPlato}`);
                     console.log(fraseAleatoria_1);
@@ -160,21 +160,21 @@ function restaurante() {
                     primerPlato();
                 }
             }
-        
+
+            // funcion para pedir el segundo plato
             function segundoPlato() {
-                
-                // pide el segundo plato
+
                 console.log(`
                     ${msgMenuSegundo}\n
                     ${menuDesayuno.segundo['1']}
                     ${menuDesayuno.segundo['2']}
                     ${menuDesayuno.segundo['3']}
                 `);
-                
+
                 numeroSegundoPlato = prompt(msgSeleccioneNumero);
-                
+
                 if (numeroSegundoPlato >= '1' && numeroSegundoPlato <= '2') {
-                    
+
                     seleccionadoSegundoPlato = menuDesayuno.segundo[numeroSegundoPlato];
                     console.log(`Seleccionado: ${seleccionadoSegundoPlato}`);
                     console.log(fraseAleatoria_2);
@@ -184,10 +184,10 @@ function restaurante() {
                     segundoPlato();
                 }
             }
-        
+
+            // funcion para pedir el postre
             function postre() {
-    
-                // pide el postre
+
                 console.log(`
                     ${msgMenuPostre}\n
                     ${menuPostre['1']}
@@ -198,11 +198,11 @@ function restaurante() {
                     ${menuPostre['6']}
                     ${menuPostre['7']}
                 `);
-            
+
                 numeroPostre = prompt(msgSeleccioneNumero);
-                
+
                 if (numeroPostre >= '1' && numeroPostre <= '7') {
-                    
+
                     seleccionadoPostre = menuPostre[numeroPostre];
                     console.log(`Seleccionado: ${seleccionadoPostre}`);
                     console.log(fraseAleatoria_3);
@@ -212,21 +212,21 @@ function restaurante() {
                     postre();
                 }
             }
-        
+
+            // funcion para pedir la bebida
             function bebida() {
-                
-                // Si seleccionaste el postre, pide la bebida
+
                 console.log(`
                     ${msgMenuBebida}\n
                     ${menuBebida['1']}
                     ${menuBebida['2']}
                     ${menuBebida['3']}
                 `);
-            
+
                 numeroBebida = prompt(msgSeleccioneNumero);
-            
+
                 if (numeroBebida >= '1' && numeroBebida <= '3') {
-                    
+
                     seleccionadoBebida = menuBebida[numeroBebida];
                     console.log(`Seleccionado: ${seleccionadoBebida}`);
                     factura();
@@ -235,14 +235,14 @@ function restaurante() {
                     bebida();
                 }
             }
-    
+
         // condicion horaria 12:00 a 17:59
         } else if (servicioComida) {
             primerPlato();
-            
+
+            // funcion para pedir el primer plato
             function primerPlato() {
-        
-                // pide el primer plato
+
                 console.log(`
                     ${msgTurnoComida}\n
                     ${msgMenuPrimero}\n
@@ -250,11 +250,11 @@ function restaurante() {
                     ${menuComida.primero['2']}
                     ${menuComida.primero['3']}
                 `);
-            
+
                 numeroPrimerPlato = prompt(msgSeleccioneNumero);
-                
+
                 if (numeroPrimerPlato >= '1' && numeroPrimerPlato <= '2') {
-                    
+
                     seleccionadoPrimerPlato = menuComida.primero[numeroPrimerPlato];
                     console.log(`Seleccionado: ${seleccionadoPrimerPlato}`);
                     console.log(fraseAleatoria_1);
@@ -264,21 +264,21 @@ function restaurante() {
                     primerPlato();
                 }
             }
-        
+
+            // funcion para pedir el segundo plato
             function segundoPlato() {
-                
-                // pide el segundo plato
+
                 console.log(`
                     ${msgMenuSegundo}\n
                     ${menuComida.segundo['1']}
                     ${menuComida.segundo['2']}
                     ${menuComida.segundo['3']}
                 `);
-                
+
                 numeroSegundoPlato = prompt(msgSeleccioneNumero);
-                
+
                 if (numeroSegundoPlato >= '1' && numeroSegundoPlato <= '2') {
-                    
+
                     seleccionadoSegundoPlato = menuComida.segundo[numeroSegundoPlato];
                     console.log(`Seleccionado: ${seleccionadoSegundoPlato}`);
                     console.log(fraseAleatoria_2);
@@ -288,10 +288,10 @@ function restaurante() {
                     segundoPlato();
                 }
             }
-        
+
+            // funcion para pedir el postre
             function postre() {
-    
-                // pide el postre
+
                 console.log(`
                     ${msgMenuPostre}\n
                     ${menuPostre['1']}
@@ -302,11 +302,11 @@ function restaurante() {
                     ${menuPostre['6']}
                     ${menuPostre['7']}
                 `);
-            
+
                 numeroPostre = prompt(msgSeleccioneNumero);
-                
+
                 if (numeroPostre >= '1' && numeroPostre <= '7') {
-                    
+
                     seleccionadoPostre = menuPostre[numeroPostre];
                     console.log(`Seleccionado: ${seleccionadoPostre}`);
                     console.log(fraseAleatoria_3);
@@ -316,21 +316,21 @@ function restaurante() {
                     postre();
                 }
             }
-        
+
+            // funcion para pedir la bebida
             function bebida() {
-                
-                // Si seleccionaste el postre, pide la bebida
+
                 console.log(`
                     ${msgMenuBebida}\n
                     ${menuBebida['1']}
                     ${menuBebida['2']}
                     ${menuBebida['3']}
                 `);
-            
+
                 numeroBebida = prompt(msgSeleccioneNumero);
-            
+
                 if (numeroBebida >= '1' && numeroBebida <= '3') {
-                    
+
                     seleccionadoBebida = menuBebida[numeroBebida];
                     console.log(`Seleccionado: ${seleccionadoBebida}`);
                     factura();
@@ -339,14 +339,14 @@ function restaurante() {
                     bebida();
                 }
             }
-    
+
         // condicion horaria 18:00 a 23:59
         } else if (servicioCena) {
             primerPlato();
-            
+
+            // funcion para pedir el primer plato
             function primerPlato() {
-        
-                // pide el primer plato
+
                 console.log(`
                     ${msgTurnoCena}\n
                     ${msgMenuPrimero}\n
@@ -354,11 +354,11 @@ function restaurante() {
                     ${menuCena.primero['2']}
                     ${menuCena.primero['3']}
                 `);
-            
+
                 numeroPrimerPlato = prompt(msgSeleccioneNumero);
-                
-                if (numeroPrimerPlato >= '1' && numeroPrimerPlato <= '2') {
-                    
+
+                if (numeroPrimerPlato >= '1' && numeroPrimerPlato <= '3') {
+
                     seleccionadoPrimerPlato = menuCena.primero[numeroPrimerPlato];
                     console.log(`Seleccionado: ${seleccionadoPrimerPlato}`);
                     console.log(fraseAleatoria_1);
@@ -368,21 +368,21 @@ function restaurante() {
                     primerPlato();
                 }
             }
-        
+
+            // funcion para pedir el segundo plato
             function segundoPlato() {
-                
-                // pide el segundo plato
+
                 console.log(`
                     ${msgMenuSegundo}\n
                     ${menuCena.segundo['1']}
                     ${menuCena.segundo['2']}
                     ${menuCena.segundo['3']}
                 `);
-                
+
                 numeroSegundoPlato = prompt(msgSeleccioneNumero);
-                
-                if (numeroSegundoPlato >= '1' && numeroSegundoPlato <= '2') {
-                    
+
+                if (numeroSegundoPlato >= '1' && numeroSegundoPlato <= '3') {
+
                     seleccionadoSegundoPlato = menuCena.segundo[numeroSegundoPlato];
                     console.log(`Seleccionado: ${seleccionadoSegundoPlato}`);
                     console.log(fraseAleatoria_2);
@@ -392,10 +392,10 @@ function restaurante() {
                     segundoPlato();
                 }
             }
-        
+
+            // funcion para pedir el postre
             function postre() {
-    
-                // pide el postre
+
                 console.log(`
                     ${msgMenuPostre}\n
                     ${menuPostre['1']}
@@ -406,11 +406,11 @@ function restaurante() {
                     ${menuPostre['6']}
                     ${menuPostre['7']}
                 `);
-            
+
                 numeroPostre = prompt(msgSeleccioneNumero);
-                
+
                 if (numeroPostre >= '1' && numeroPostre <= '7') {
-                    
+
                     seleccionadoPostre = menuPostre[numeroPostre];
                     console.log(`Seleccionado: ${seleccionadoPostre}`);
                     console.log(fraseAleatoria_3);
@@ -420,21 +420,21 @@ function restaurante() {
                     postre();
                 }
             }
-        
+
+            // funcion para pedir la bebida
             function bebida() {
-                
-                // Si seleccionaste el postre, pide la bebida
+
                 console.log(`
                     ${msgMenuBebida}\n
                     ${menuBebida['1']}
                     ${menuBebida['2']}
                     ${menuBebida['3']}
                 `);
-            
+
                 numeroBebida = prompt(msgSeleccioneNumero);
-            
+
                 if (numeroBebida >= '1' && numeroBebida <= '3') {
-                    
+
                     seleccionadoBebida = menuBebida[numeroBebida];
                     console.log(`Seleccionado: ${seleccionadoBebida}`);
                     factura();
@@ -443,7 +443,7 @@ function restaurante() {
                     bebida();
                 }
             }
-    
+
         } else {
             console.log('¡No hay servicio disponible!');
         }
@@ -462,19 +462,19 @@ function factura() {
     const precioSegundoPlato = seleccionadoSegundoPlato.match(regexPrecioSeleccion);
     const precioPostre = seleccionadoPostre.match(regexPrecioSeleccion);
     const precioBebida = seleccionadoBebida.match(regexPrecioSeleccion);
-    
+
     // convertir array en string
     const strPrimero = precioPrimerPlato.toString();
     const strSegundo = precioSegundoPlato.toString();
     const strPostre = precioPostre.toString();
     const strBebida = precioBebida.toString();
-    
+
     // filtrado final para obtener el precio
     const filtradoPrimero = strPrimero.slice(4, -1);
     const filtradoSegundo = strSegundo.slice(4, -1);
     const filtradoPostre = strPostre.slice(4, -1);
     const filtradoBebida = strBebida.slice(4, -1);
-    
+
     // convertir string en numero
     const primero = parseFloat(filtradoPrimero);
     const segundo = parseFloat(filtradoSegundo);
