@@ -457,10 +457,10 @@ function restaurante() {
             }
 
         } else {
-            console.log('¡No hay servicio disponible!');
+            alert('¡No hay servicio disponible!');
         }
     } else {
-        console.log('¡Cerrado! Horario: 06:00 a 23:59 de lunes a domingo.');
+        alert('¡Cerrado! Horario: 06:00 a 23:59 de lunes a domingo.');
     }
 }
 
