@@ -64,7 +64,7 @@ const menuBebida = {
 // mensaje de recepcion
 const msgRecepcion = `¡Bienvenido/a! Gracias por elegir DevCamp.
 Nuestro horario de atención es de 06:00 a 23:59 horas de lunes a domingo.
-Introduzca la hora en formato 00:00 24h para reservar su mesa:`
+Introduzca una hora en formato 00:00 24h para reservar su mesa:`
 
 // mensaje de turno actual
 const msgTurnoDesayuno = '¡Estas en horario de desayuno!';
