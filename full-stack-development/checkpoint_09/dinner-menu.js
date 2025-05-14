@@ -216,6 +216,43 @@ const msgFraseAleatoria_3 = arrayFrases[Math.floor(Math.random() * arrayFrases.l
 
 
 
+// muestra el menu desayuno primer plato para pedir
+const menuDesayunoPrimerPlato = `${msgTurnoDesayuno}\n
+${msgMenuPrimero}\n
+${menu.desayuno.primero[1].descripcion} ... ${menu.desayuno.primero[1].precio.toFixed(2)}€
+${menu.desayuno.primero[2].descripcion} ... ${menu.desayuno.primero[2].precio.toFixed(2)}€
+${menu.desayuno.primero[3].descripcion} ... ${menu.desayuno.primero[3].precio.toFixed(2)}€\n
+${msgSeleccioneNumero}`;
+
+// muestra el menu desayuno segundo plato para pedir
+const menuDesayunoSegundoPlato = `${msgTurnoDesayuno}\n
+${msgMenuSegundo}\n
+${menu.desayuno.segundo[1].descripcion} ... ${menu.desayuno.segundo[1].precio.toFixed(2)}€
+${menu.desayuno.segundo[2].descripcion} ... ${menu.desayuno.segundo[2].precio.toFixed(2)}€
+${menu.desayuno.segundo[3].descripcion} ... ${menu.desayuno.segundo[3].precio.toFixed(2)}€\n
+${msgSeleccioneNumero}`;
+
+// muestra el menu desayuno postre para pedir
+const menuDesayunoPostre = `${msgTurnoDesayuno}\n
+${msgMenuPostre}\n\n${menu.postre[1].descripcion} ... ${menu.postre[1].precio.toFixed(2)}€
+${menu.postre[2].descripcion} ... ${menu.postre[2].precio.toFixed(2)}€
+${menu.postre[3].descripcion} ... ${menu.postre[3].precio.toFixed(2)}€
+${menu.postre[4].descripcion} ... ${menu.postre[4].precio.toFixed(2)}€
+${menu.postre[5].descripcion} ... ${menu.postre[5].precio.toFixed(2)}€
+${menu.postre[6].descripcion} ... ${menu.postre[6].precio.toFixed(2)}€
+${menu.postre[7].descripcion} ... ${menu.postre[7].precio.toFixed(2)}€\n
+${msgSeleccioneNumero}`;
+
+// muestra el menu desayuno bebida para pedir
+const menuDesayunoBebida = `${msgTurnoDesayuno}\n
+${msgMenuBebida}\n
+${menu.bebida[1].descripcion} ... ${menu.bebida[1].precio.toFixed(2)}€
+${menu.bebida[2].descripcion} ... ${menu.bebida[2].precio.toFixed(2)}€
+${menu.bebida[3].descripcion} ... ${menu.bebida[3].precio.toFixed(2)}€\n
+${msgSeleccioneNumero}`;
+
+
+
 // horario de servicio
 let horarioDesayuno = '';
 let horarioComida = '';
@@ -265,7 +302,7 @@ function prepararDesayuno() {
     // funcion para pedir el primer plato
     function primerPlato() {
 
-        numeroPrimerPlato = prompt(`${msgTurnoDesayuno}\n\n${msgMenuPrimero}\n\n${menu.desayuno.primero[1].descripcion} ... ${menu.desayuno.primero[1].precio.toFixed(2)}€\n${menu.desayuno.primero[2].descripcion} ... ${menu.desayuno.primero[2].precio.toFixed(2)}€\n${menu.desayuno.primero[3].descripcion} ... ${menu.desayuno.primero[3].precio.toFixed(2)}€\n\n${msgSeleccioneNumero}`);
+        numeroPrimerPlato = prompt(`${menuDesayunoPrimerPlato}`);
 
         if (numeroPrimerPlato !== null) {
 
@@ -290,7 +327,7 @@ function prepararDesayuno() {
     // funcion para pedir el segundo plato
     function segundoPlato() {
 
-        numeroSegundoPlato = prompt(`${msgTurnoDesayuno}\n\n${msgMenuSegundo}\n\n${menu.desayuno.segundo[1].descripcion} ... ${menu.desayuno.segundo[1].precio.toFixed(2)}€\n${menu.desayuno.segundo[2].descripcion} ... ${menu.desayuno.segundo[2].precio.toFixed(2)}€\n${menu.desayuno.segundo[3].descripcion} ... ${menu.desayuno.segundo[3].precio.toFixed(2)}€\n\n${msgSeleccioneNumero}`);
+        numeroSegundoPlato = prompt(`${menuDesayunoSegundoPlato}`);
 
         if (numeroSegundoPlato !== null) {
 
@@ -315,7 +352,7 @@ function prepararDesayuno() {
     // funcion para pedir el postre
     function postre() {
 
-        numeroPostre = prompt(`${msgTurnoDesayuno}\n\n${msgMenuPostre}\n\n${menu.postre[1].descripcion} ... ${menu.postre[1].precio.toFixed(2)}€\n${menu.postre[2].descripcion} ... ${menu.postre[2].precio.toFixed(2)}€\n${menu.postre[3].descripcion} ... ${menu.postre[3].precio.toFixed(2)}€\n${menu.postre[4].descripcion} ... ${menu.postre[4].precio.toFixed(2)}€\n${menu.postre[5].descripcion} ... ${menu.postre[5].precio.toFixed(2)}€\n${menu.postre[6].descripcion} ... ${menu.postre[6].precio.toFixed(2)}€\n${menu.postre[7].descripcion} ... ${menu.postre[7].precio.toFixed(2)}€\n\n${msgSeleccioneNumero}`);
+        numeroPostre = prompt(`${menuDesayunoPostre}`);
 
         if (numeroPostre !== null) {
 
@@ -340,7 +377,7 @@ function prepararDesayuno() {
     // funcion para pedir la bebida
     function bebida() {
 
-        numeroBebida = prompt(`${msgTurnoDesayuno}\n\n${msgMenuBebida}\n\n${menu.bebida[1].descripcion} ... ${menu.bebida[1].precio.toFixed(2)}€\n${menu.bebida[2].descripcion} ... ${menu.bebida[2].precio.toFixed(2)}€\n${menu.bebida[3].descripcion} ... ${menu.bebida[3].precio.toFixed(2)}€\n\n${msgSeleccioneNumero}`);
+        numeroBebida = prompt(`${menuDesayunoBebida}`);
 
         if (numeroBebida !== null) {
 
