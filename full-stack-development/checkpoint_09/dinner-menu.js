@@ -189,6 +189,14 @@ const msgNumeroIncorrecto = '¡El número seleccionado no es correcto! vuelva a 
 const msgFactura = `¡Ya tiene disponible su factura!\n
 El menú incluye agua, pan y café.`;
 
+// mensaje de pedido registrado en sistema
+const msgPedidoRegistrado = `Su pedido ha sido registrado en nuestro sistema.
+¡Gracias por reservar con DevCamp!`;
+
+// mensaje de pedido cancelado
+const msgPedidoCancelado = `Su pedido ha sido cancelado de nuestro sistema.\n
+¡Gracias por su visita!`;
+
 // mensaje de cancelar reserva
 const msgCancelarReserva = 'Si no puede asistir, cancele su reserva llamando al 666-666-666.';
 
@@ -275,7 +283,7 @@ function prepararDesayuno() {
             }
 
         } else {
-            alert('¡Gracias por su visita!');
+            alert(`${msgPedidoCancelado}`);
         }
     }
 
@@ -300,7 +308,7 @@ function prepararDesayuno() {
             }
 
         } else {
-            alert('¡Gracias por su visita!');
+            alert(`${msgPedidoCancelado}`);
         }
     }
 
@@ -325,7 +333,7 @@ function prepararDesayuno() {
             }
 
         } else {
-            alert('¡Gracias por su visita!');
+            alert(`${msgPedidoCancelado}`);
         }
     }
 
@@ -350,7 +358,7 @@ function prepararDesayuno() {
             }
 
         } else {
-            alert('¡Gracias por su visita!');
+            alert(`${msgPedidoCancelado}`);
         }
     }
 }
@@ -383,7 +391,7 @@ function prepararComida() {
             }
 
         } else {
-            alert('¡Gracias por su visita!');
+            alert(`${msgPedidoCancelado}`);
         }
     }
 
@@ -408,7 +416,7 @@ function prepararComida() {
             }
 
         } else {
-            alert('¡Gracias por su visita!');
+            alert(`${msgPedidoCancelado}`);
         }
     }
 
@@ -433,7 +441,7 @@ function prepararComida() {
             }
 
         } else {
-            alert('¡Gracias por su visita!');
+            alert(`${msgPedidoCancelado}`);
         }
     }
 
@@ -458,7 +466,7 @@ function prepararComida() {
             }
 
         } else {
-            alert('¡Gracias por su visita!');
+            alert(`${msgPedidoCancelado}`);
         }
     }
 }
@@ -491,7 +499,7 @@ function prepararCena() {
             }
 
         } else {
-            alert('¡Gracias por su visita!');
+            alert(`${msgPedidoCancelado}`);
         }
     }
 
@@ -516,7 +524,7 @@ function prepararCena() {
             }
 
         } else {
-            alert('¡Gracias por su visita!');
+            alert(`${msgPedidoCancelado}`);
         }
     }
 
@@ -541,7 +549,7 @@ function prepararCena() {
             }
 
         } else {
-            alert('¡Gracias por su visita!');
+            alert(`${msgPedidoCancelado}`);
         }
     }
 
@@ -566,7 +574,7 @@ function prepararCena() {
             }
 
         } else {
-            alert('¡Gracias por su visita!');
+            alert(`${msgPedidoCancelado}`);
         }
     }
 }
@@ -586,7 +594,7 @@ function factura() {
     const pagarTotal = primero + segundo + postre + bebida;
 
     alert(`${msgFactura}\n\n${descripcionPrimerPlato} ... ${precioPrimerPlato}€\n${descripcionSegundoPlato} ... ${precioSegundoPlato}€\n${descripcionPostre} ... ${precioPostre}€\n${descripcionBebida} ... ${precioBebida}€\n\nTotal a pagar: ${pagarTotal.toFixed(2)}€`);
-    alert(`¡Gracias por reservar con DevCamp!\n\nNos vemos a las ${horaReservada} horas.\n\n${msgCancelarReserva}`);
+    alert(`${msgPedidoRegistrado}\n\nNos vemos a las ${horaReservada} horas.\n\n${msgCancelarReserva}`);
 }
 
 
