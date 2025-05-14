@@ -129,7 +129,7 @@ const menu = {
     },
     bebida: {
         1: {
-            descripcion: '1. Agua',
+            descripcion: '1. Refresco',
             precio: 1.60
         },
         2: {
@@ -147,7 +147,7 @@ const menu = {
 
 // mensaje de recepcion
 const msgRecepcion = `¡Hola! 👋 Bienvenido a DevCamp.\n
-Nuestro horario es de 06:00h a 23:59h, de lunes a domingo.\n
+Nuestro horario es de 08:00h a 22:00h, de lunes a domingo.\n
 ¡Gracias por elegirnos para tu próxima comida! 🍷\n
 Nuestro agente virtual te guiara en todo el proceso de pedido.\n
 Por favor, pulse Aceptar para continuar.`
@@ -162,8 +162,8 @@ const msgHorarioIncorrecto = '¡El horario introducido no es correcto! Vuelva a 
 
 // mensaje de restaurante cerrado
 const msgRestauranteCerrado = `Estimado cliente,
-En estos momentos el restaurante se encuentra cerrado.
-Horario de apertura: 06:00 a 23:59 de lunes a domingo.
+En estos momentos el restaurante se encuentra cerrado.\n
+Nuestro horario es de 08:00h a 22:00h, de lunes a domingo.\n
 Disculpe las molestias.
 ¡Gracias!`;
 
@@ -171,9 +171,9 @@ Disculpe las molestias.
 const msgNoHayServicio = '¡No hay servicio disponible!'
 
 // mensaje de turno
-const msgTurnoDesayuno = 'Está pidiendo el desayuno.';
-const msgTurnoComida = 'Está pidiendo la comida.';
-const msgTurnoCena = 'Está pidiendo la cena.';
+const msgTurnoDesayuno = 'El desayuno incluye agua, pan y café.';
+const msgTurnoComida = 'La comida incluye agua, pan y café.';
+const msgTurnoCena = 'La cena incluye agua, pan y café.';
 
 // mensaje de menu seleccion
 const msgMenuPrimero = 'De primero tenemos lo siguiente:';
@@ -186,7 +186,11 @@ const msgSeleccioneNumero = 'Seleccione un número y pulse Aceptar.';
 const msgNumeroIncorrecto = '¡El número seleccionado no es correcto! vuelva a intentarlo.';
 
 // mensaje de factura disponible
-const msgFactura = '¡Ya tiene disponible su factura!';
+const msgFactura = `¡Ya tiene disponible su factura!\n
+El menú incluye agua, pan y café.`;
+
+// mensaje de cancelar reserva
+const msgCancelarReserva = 'Si no puede asistir, cancele su reserva llamando al 666-666-666.';
 
 // array de frases
 const arrayFrases = [
@@ -235,13 +239,13 @@ let precioBebida = '';
 // patron regex horario de 00:00 a 23:59
 const regexValidarFormatoHorario = /^([01][0-9]|2[0-3]):[0-5][0-9]/g;
 
-// patron regex restaurante abierto de 06:00 a 23:59
-const regexAbierto = /^([0][6-9]|1[0-9]|2[0-3]):[0-5][0-9]/g;
+// patron regex restaurante abierto de 08:00 a 22:00
+const regexAbierto = /^([0][8-9]|1[0-9]|2[0-1]):[0-5][0-9]|22:00/g;
 
 // patron regex turno
-const regexDesayuno = /^([0][6-9]|1[0-1]):[0-5][0-9]/g; // 06:00 a 11:59
+const regexDesayuno = /^([0][8-9]|1[0-1]):[0-5][0-9]/g; // 08:00 a 11:59
 const regexComida = /^([1][2-7]):[0-5][0-9]/g; // 12:00 a 17:59
-const regexCena = /^([1][8-9]|2[0-3]):[0-5][0-9]/g; // 18:00 a 23:59
+const regexCena = /^([1][8-9]|2[0-3]):[0-5][0-9]|22:00/g; // 18:00 a 22:00
 
 
 
@@ -582,7 +586,7 @@ function factura() {
     const pagarTotal = primero + segundo + postre + bebida;
 
     alert(`${msgFactura}\n\n${descripcionPrimerPlato} ... ${precioPrimerPlato}€\n${descripcionSegundoPlato} ... ${precioSegundoPlato}€\n${descripcionPostre} ... ${precioPostre}€\n${descripcionBebida} ... ${precioBebida}€\n\nTotal a pagar: ${pagarTotal.toFixed(2)}€`);
-    alert(`¡Gracias por reservar con DevCamp!\n\nNos vemos a las ${horaReservada} horas.\n\nSi no puede asistir, cancele su reserva llamando al 666-666-666.`);
+    alert(`¡Gracias por reservar con DevCamp!\n\nNos vemos a las ${horaReservada} horas.\n\n${msgCancelarReserva}`);
 }
 
 
