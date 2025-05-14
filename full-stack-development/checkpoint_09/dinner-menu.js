@@ -151,9 +151,9 @@ Nuestro horario de atención es de 06:00 a 23:59 horas de lunes a domingo.
 Introduzca una hora en formato 00:00 24h para reservar su mesa:`
 
 // mensaje de turno
-const msgTurnoDesayuno = 'Está pidiendo su desayuno...';
-const msgTurnoComida = 'Está pidiendo su comida...';
-const msgTurnoCena = 'Está pidiendo su cena...';
+const msgTurnoDesayuno = 'Está pidiendo el desayuno.';
+const msgTurnoComida = 'Está pidiendo la comida.';
+const msgTurnoCena = 'Está pidiendo la cena.';
 
 // mensaje de menu seleccion
 const msgMenuPrimero = 'De primero tenemos lo siguiente:';
@@ -498,43 +498,49 @@ function factura() {
 
 
 
-// funcion para restauranteDevcamp
+// funcion para restaurante devcamp
 function restauranteDevcamp() {
 
-    // hora reservada
+    // hora de reserva
     horaReservada = prompt(`${msgRecepcion}`);
 
     // validar formato horario
     const formatoHorarioCorrecto = horaReservada.match(regexValidarFormatoHorario);
 
-    // horario de restaurante
-    const restauranteAbierto = horaReservada.match(regexAbierto);
+    if (formatoHorarioCorrecto) {
 
-    // horario de servicio
-    horarioDesayuno = horaReservada.match(regexDesayuno);
-    horarioComida = horaReservada.match(regexComida);
-    horarioCena = horaReservada.match(regexCena);
+        // horario de restaurante
+        const restauranteAbierto = horaReservada.match(regexAbierto);
 
-    // condicion horaria 06:00 a 23:59
-    if (formatoHorarioCorrecto && restauranteAbierto) {
+        // horario de servicio
+        horarioDesayuno = horaReservada.match(regexDesayuno);
+        horarioComida = horaReservada.match(regexComida);
+        horarioCena = horaReservada.match(regexCena);
 
-        // condicion horaria 06:00 a 11:59
-        if (horarioDesayuno) {
-            prepararDesayuno();
+        // condicion horaria 06:00 a 23:59
+        if (restauranteAbierto) {
 
-        // condicion horaria 12:00 a 17:59
-        } else if (horarioComida) {
-            prepararComida();
+            // condicion horaria 06:00 a 11:59
+            if (horarioDesayuno) {
+                prepararDesayuno();
 
-        // condicion horaria 18:00 a 23:59
-        } else if (horarioCena) {
-            prepararCena();
+            // condicion horaria 12:00 a 17:59
+            } else if (horarioComida) {
+                prepararComida();
 
+            // condicion horaria 18:00 a 23:59
+            } else if (horarioCena) {
+                prepararCena();
+
+            } else {
+                alert('¡No hay servicio disponible!');
+            }
         } else {
-            alert('¡No hay servicio disponible!');
+            alert(`Estimado cliente, el restaurante se encuentra cerrado.\nHorario de apertura: 06:00 a 23:59 de lunes a domingo.\nDisculpe las molestias.\n¡Gracias!`);
         }
     } else {
-        alert('¡Cerrado! Horario: 06:00 a 23:59 de lunes a domingo.');
+        alert('¡El horario seleccionado no es correcto! vuelva a intentarlo.');
+        restauranteDevcamp();
     }
 }
 
