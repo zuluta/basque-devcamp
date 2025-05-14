@@ -514,7 +514,7 @@ function factura() {
 // funcion para restaurante devcamp
 function restauranteDevcamp() {
 
-    // hora de reserva
+    // introducir hora
     horaReservada = prompt(`${msgRecepcion}`);
 
     // validar formato horario
