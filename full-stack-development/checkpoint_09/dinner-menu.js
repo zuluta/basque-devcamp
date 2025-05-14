@@ -241,14 +241,14 @@ const regexCena = /^([1][8-9]|2[0-3]):[0-5][0-9]/g; // 18:00 a 23:59
 // funcion para preparar el desayuno
 function prepararDesayuno() {
 
-    // condicion horaria 06:00 a 11:59
-    if (horarioDesayuno) {
-        primerPlato();
+    primerPlato();
 
-        // funcion para pedir el primer plato
-        function primerPlato() {
+    // funcion para pedir el primer plato
+    function primerPlato() {
 
-            numeroPrimerPlato = prompt(`${msgTurnoDesayuno}\n\n${msgMenuPrimero}\n\n${menu.desayuno.primero[1].descripcion} ... ${menu.desayuno.primero[1].precio.toFixed(2)}€\n${menu.desayuno.primero[2].descripcion} ... ${menu.desayuno.primero[2].precio.toFixed(2)}€\n${menu.desayuno.primero[3].descripcion} ... ${menu.desayuno.primero[3].precio.toFixed(2)}€\n\n${msgSeleccioneNumero}`);
+        numeroPrimerPlato = prompt(`${msgTurnoDesayuno}\n\n${msgMenuPrimero}\n\n${menu.desayuno.primero[1].descripcion} ... ${menu.desayuno.primero[1].precio.toFixed(2)}€\n${menu.desayuno.primero[2].descripcion} ... ${menu.desayuno.primero[2].precio.toFixed(2)}€\n${menu.desayuno.primero[3].descripcion} ... ${menu.desayuno.primero[3].precio.toFixed(2)}€\n\n${msgSeleccioneNumero}`);
+
+        if (numeroPrimerPlato !== null) {
 
             if (numeroPrimerPlato >= '1' && numeroPrimerPlato <= '3') {
 
@@ -257,16 +257,23 @@ function prepararDesayuno() {
                 
                 alert(`Ha seleccionado:\n${descripcionPrimerPlato} ... ${precioPrimerPlato}€\n\n${msgFraseAleatoria_1}`);
                 segundoPlato();
+
             } else {
                 alert(`${msgNumeroIncorrecto}`);
                 primerPlato();
             }
+
+        } else {
+            alert('¡Gracias por su visita!');
         }
+    }
 
-        // funcion para pedir el segundo plato
-        function segundoPlato() {
+    // funcion para pedir el segundo plato
+    function segundoPlato() {
 
-            numeroSegundoPlato = prompt(`${msgTurnoDesayuno}\n\n${msgMenuSegundo}\n\n${menu.desayuno.segundo[1].descripcion} ... ${menu.desayuno.segundo[1].precio.toFixed(2)}€\n${menu.desayuno.segundo[2].descripcion} ... ${menu.desayuno.segundo[2].precio.toFixed(2)}€\n${menu.desayuno.segundo[3].descripcion} ... ${menu.desayuno.segundo[3].precio.toFixed(2)}€\n\n${msgSeleccioneNumero}`);
+        numeroSegundoPlato = prompt(`${msgTurnoDesayuno}\n\n${msgMenuSegundo}\n\n${menu.desayuno.segundo[1].descripcion} ... ${menu.desayuno.segundo[1].precio.toFixed(2)}€\n${menu.desayuno.segundo[2].descripcion} ... ${menu.desayuno.segundo[2].precio.toFixed(2)}€\n${menu.desayuno.segundo[3].descripcion} ... ${menu.desayuno.segundo[3].precio.toFixed(2)}€\n\n${msgSeleccioneNumero}`);
+
+        if (numeroSegundoPlato !== null) {
 
             if (numeroSegundoPlato >= '1' && numeroSegundoPlato <= '3') {
 
@@ -275,16 +282,23 @@ function prepararDesayuno() {
 
                 alert(`Ha seleccionado:\n${descripcionSegundoPlato} ... ${precioSegundoPlato}€\n\n${msgFraseAleatoria_2}`);
                 postre();
+
             } else {
                 alert(`${msgNumeroIncorrecto}`);
                 segundoPlato();
             }
+
+        } else {
+            alert('¡Gracias por su visita!');
         }
+    }
 
-        // funcion para pedir el postre
-        function postre() {
+    // funcion para pedir el postre
+    function postre() {
 
-            numeroPostre = prompt(`${msgTurnoDesayuno}\n\n${msgMenuPostre}\n\n${menu.postre[1].descripcion} ... ${menu.postre[1].precio.toFixed(2)}€\n${menu.postre[2].descripcion} ... ${menu.postre[2].precio.toFixed(2)}€\n${menu.postre[3].descripcion} ... ${menu.postre[3].precio.toFixed(2)}€\n${menu.postre[4].descripcion} ... ${menu.postre[4].precio.toFixed(2)}€\n${menu.postre[5].descripcion} ... ${menu.postre[5].precio.toFixed(2)}€\n${menu.postre[6].descripcion} ... ${menu.postre[6].precio.toFixed(2)}€\n${menu.postre[7].descripcion} ... ${menu.postre[7].precio.toFixed(2)}€\n\n${msgSeleccioneNumero}`);
+        numeroPostre = prompt(`${msgTurnoDesayuno}\n\n${msgMenuPostre}\n\n${menu.postre[1].descripcion} ... ${menu.postre[1].precio.toFixed(2)}€\n${menu.postre[2].descripcion} ... ${menu.postre[2].precio.toFixed(2)}€\n${menu.postre[3].descripcion} ... ${menu.postre[3].precio.toFixed(2)}€\n${menu.postre[4].descripcion} ... ${menu.postre[4].precio.toFixed(2)}€\n${menu.postre[5].descripcion} ... ${menu.postre[5].precio.toFixed(2)}€\n${menu.postre[6].descripcion} ... ${menu.postre[6].precio.toFixed(2)}€\n${menu.postre[7].descripcion} ... ${menu.postre[7].precio.toFixed(2)}€\n\n${msgSeleccioneNumero}`);
+
+        if (numeroPostre !== null) {
 
             if (numeroPostre >= '1' && numeroPostre <= '7') {
 
@@ -293,16 +307,23 @@ function prepararDesayuno() {
 
                 alert(`Ha seleccionado:\n${descripcionPostre} ... ${precioPostre}€\n\n${msgFraseAleatoria_3}`);
                 bebida();
+
             } else {
                 alert(`${msgNumeroIncorrecto}`);
                 postre();
             }
+
+        } else {
+            alert('¡Gracias por su visita!');
         }
+    }
 
-        // funcion para pedir la bebida
-        function bebida() {
+    // funcion para pedir la bebida
+    function bebida() {
 
-            numeroBebida = prompt(`${msgTurnoDesayuno}\n\n${msgMenuBebida}\n\n${menu.bebida[1].descripcion} ... ${menu.bebida[1].precio.toFixed(2)}€\n${menu.bebida[2].descripcion} ... ${menu.bebida[2].precio.toFixed(2)}€\n${menu.bebida[3].descripcion} ... ${menu.bebida[3].precio.toFixed(2)}€\n\n${msgSeleccioneNumero}`);
+        numeroBebida = prompt(`${msgTurnoDesayuno}\n\n${msgMenuBebida}\n\n${menu.bebida[1].descripcion} ... ${menu.bebida[1].precio.toFixed(2)}€\n${menu.bebida[2].descripcion} ... ${menu.bebida[2].precio.toFixed(2)}€\n${menu.bebida[3].descripcion} ... ${menu.bebida[3].precio.toFixed(2)}€\n\n${msgSeleccioneNumero}`);
+
+        if (numeroBebida !== null) {
 
             if (numeroBebida >= '1' && numeroBebida <= '3') {
 
@@ -311,13 +332,15 @@ function prepararDesayuno() {
 
                 alert(`Ha seleccionado:\n${descripcionBebida} ... ${precioBebida}€`);
                 factura();
+
             } else {
                 alert(`${msgNumeroIncorrecto}`);
                 bebida();
             }
+
+        } else {
+            alert('¡Gracias por su visita!');
         }
-    } else {
-        alert(`${msgNoHayServicio}`);
     }
 }
 
@@ -326,14 +349,14 @@ function prepararDesayuno() {
 // funcion para preparar la comida
 function prepararComida() {
 
-    // condicion horaria 12:00 a 17:59
-    if (horarioComida) {
-        primerPlato();
+    primerPlato();
 
-        // funcion para pedir el primer plato
-        function primerPlato() {
+    // funcion para pedir el primer plato
+    function primerPlato() {
 
-            numeroPrimerPlato = prompt(`${msgTurnoComida}\n\n${msgMenuPrimero}\n\n${menu.comida.primero[1].descripcion} ... ${menu.comida.primero[1].precio.toFixed(2)}€\n${menu.comida.primero[2].descripcion} ... ${menu.comida.primero[2].precio.toFixed(2)}€\n${menu.comida.primero[3].descripcion} ... ${menu.comida.primero[3].precio.toFixed(2)}€\n\n${msgSeleccioneNumero}`);
+        numeroPrimerPlato = prompt(`${msgTurnoComida}\n\n${msgMenuPrimero}\n\n${menu.comida.primero[1].descripcion} ... ${menu.comida.primero[1].precio.toFixed(2)}€\n${menu.comida.primero[2].descripcion} ... ${menu.comida.primero[2].precio.toFixed(2)}€\n${menu.comida.primero[3].descripcion} ... ${menu.comida.primero[3].precio.toFixed(2)}€\n\n${msgSeleccioneNumero}`);
+
+        if (numeroPrimerPlato !== null) {
 
             if (numeroPrimerPlato >= '1' && numeroPrimerPlato <= '3') {
 
@@ -342,16 +365,23 @@ function prepararComida() {
 
                 alert(`Ha seleccionado:\n${descripcionPrimerPlato} ... ${precioPrimerPlato}€\n\n${msgFraseAleatoria_1}`);
                 segundoPlato();
+
             } else {
                 alert(`${msgNumeroIncorrecto}`);
                 primerPlato();
             }
+
+        } else {
+            alert('¡Gracias por su visita!');
         }
+    }
 
-        // funcion para pedir el segundo plato
-        function segundoPlato() {
+    // funcion para pedir el segundo plato
+    function segundoPlato() {
 
-            numeroSegundoPlato = prompt(`${msgTurnoComida}\n\n${msgMenuSegundo}\n\n${menu.comida.segundo[1].descripcion} ... ${menu.comida.segundo[1].precio.toFixed(2)}€\n${menu.comida.segundo[2].descripcion} ... ${menu.comida.segundo[2].precio.toFixed(2)}€\n${menu.comida.segundo[3].descripcion} ... ${menu.comida.segundo[3].precio.toFixed(2)}€\n\n${msgSeleccioneNumero}`);
+        numeroSegundoPlato = prompt(`${msgTurnoComida}\n\n${msgMenuSegundo}\n\n${menu.comida.segundo[1].descripcion} ... ${menu.comida.segundo[1].precio.toFixed(2)}€\n${menu.comida.segundo[2].descripcion} ... ${menu.comida.segundo[2].precio.toFixed(2)}€\n${menu.comida.segundo[3].descripcion} ... ${menu.comida.segundo[3].precio.toFixed(2)}€\n\n${msgSeleccioneNumero}`);
+
+        if (numeroSegundoPlato !== null) {
 
             if (numeroSegundoPlato >= '1' && numeroSegundoPlato <= '3') {
 
@@ -360,16 +390,23 @@ function prepararComida() {
 
                 alert(`Ha seleccionado:\n${descripcionSegundoPlato} ... ${precioSegundoPlato}€\n\n${msgFraseAleatoria_2}`);
                 postre();
+
             } else {
                 alert(`${msgNumeroIncorrecto}`);
                 segundoPlato();
             }
+
+        } else {
+            alert('¡Gracias por su visita!');
         }
+    }
 
-        // funcion para pedir el postre
-        function postre() {
+    // funcion para pedir el postre
+    function postre() {
 
-            numeroPostre = prompt(`${msgTurnoComida}\n\n${msgMenuPostre}\n\n${menu.postre[1].descripcion} ... ${menu.postre[1].precio.toFixed(2)}€\n${menu.postre[2].descripcion} ... ${menu.postre[2].precio.toFixed(2)}€\n${menu.postre[3].descripcion} ... ${menu.postre[3].precio.toFixed(2)}€\n${menu.postre[4].descripcion} ... ${menu.postre[4].precio.toFixed(2)}€\n${menu.postre[5].descripcion} ... ${menu.postre[5].precio.toFixed(2)}€\n${menu.postre[6].descripcion} ... ${menu.postre[6].precio.toFixed(2)}€\n${menu.postre[7].descripcion} ... ${menu.postre[7].precio.toFixed(2)}€\n\n${msgSeleccioneNumero}`);
+        numeroPostre = prompt(`${msgTurnoComida}\n\n${msgMenuPostre}\n\n${menu.postre[1].descripcion} ... ${menu.postre[1].precio.toFixed(2)}€\n${menu.postre[2].descripcion} ... ${menu.postre[2].precio.toFixed(2)}€\n${menu.postre[3].descripcion} ... ${menu.postre[3].precio.toFixed(2)}€\n${menu.postre[4].descripcion} ... ${menu.postre[4].precio.toFixed(2)}€\n${menu.postre[5].descripcion} ... ${menu.postre[5].precio.toFixed(2)}€\n${menu.postre[6].descripcion} ... ${menu.postre[6].precio.toFixed(2)}€\n${menu.postre[7].descripcion} ... ${menu.postre[7].precio.toFixed(2)}€\n\n${msgSeleccioneNumero}`);
+
+        if (numeroPostre !== null) {
 
             if (numeroPostre >= '1' && numeroPostre <= '7') {
 
@@ -378,16 +415,23 @@ function prepararComida() {
 
                 alert(`Ha seleccionado:\n${descripcionPostre} ... ${precioPostre}€\n\n${msgFraseAleatoria_3}`);
                 bebida();
+
             } else {
                 alert(`${msgNumeroIncorrecto}`);
                 postre();
             }
+
+        } else {
+            alert('¡Gracias por su visita!');
         }
+    }
 
-        // funcion para pedir la bebida
-        function bebida() {
+    // funcion para pedir la bebida
+    function bebida() {
 
-            numeroBebida = prompt(`${msgTurnoComida}\n\n${msgMenuBebida}\n\n${menu.bebida[1].descripcion} ... ${menu.bebida[1].precio.toFixed(2)}€\n${menu.bebida[2].descripcion} ... ${menu.bebida[2].precio.toFixed(2)}€\n${menu.bebida[3].descripcion} ... ${menu.bebida[3].precio.toFixed(2)}€\n\n${msgSeleccioneNumero}`);
+        numeroBebida = prompt(`${msgTurnoComida}\n\n${msgMenuBebida}\n\n${menu.bebida[1].descripcion} ... ${menu.bebida[1].precio.toFixed(2)}€\n${menu.bebida[2].descripcion} ... ${menu.bebida[2].precio.toFixed(2)}€\n${menu.bebida[3].descripcion} ... ${menu.bebida[3].precio.toFixed(2)}€\n\n${msgSeleccioneNumero}`);
+
+        if (numeroBebida !== null) {
 
             if (numeroBebida >= '1' && numeroBebida <= '3') {
 
@@ -396,13 +440,15 @@ function prepararComida() {
 
                 alert(`Ha seleccionado:\n${descripcionBebida} ... ${precioBebida}€`);
                 factura();
+
             } else {
                 alert(`${msgNumeroIncorrecto}`);
                 bebida();
             }
+
+        } else {
+            alert('¡Gracias por su visita!');
         }
-    } else {
-        alert(`${msgNoHayServicio}`);
     }
 }
 
@@ -411,14 +457,14 @@ function prepararComida() {
 // funcion para preparar la cena
 function prepararCena() {
 
-    // condicion horaria 18:00 a 23:59
-    if (horarioCena) {
-        primerPlato();
+    primerPlato();
 
-        // funcion para pedir el primer plato
-        function primerPlato() {
+    // funcion para pedir el primer plato
+    function primerPlato() {
 
-            numeroPrimerPlato = prompt(`${msgTurnoCena}\n\n${msgMenuPrimero}\n\n${menu.cena.primero[1].descripcion} ... ${menu.cena.primero[1].precio.toFixed(2)}€\n${menu.cena.primero[2].descripcion} ... ${menu.cena.primero[2].precio.toFixed(2)}€\n${menu.cena.primero[3].descripcion} ... ${menu.cena.primero[3].precio.toFixed(2)}€\n\n${msgSeleccioneNumero}`);
+        numeroPrimerPlato = prompt(`${msgTurnoCena}\n\n${msgMenuPrimero}\n\n${menu.cena.primero[1].descripcion} ... ${menu.cena.primero[1].precio.toFixed(2)}€\n${menu.cena.primero[2].descripcion} ... ${menu.cena.primero[2].precio.toFixed(2)}€\n${menu.cena.primero[3].descripcion} ... ${menu.cena.primero[3].precio.toFixed(2)}€\n\n${msgSeleccioneNumero}`);
+
+        if (numeroPrimerPlato !== null) {
 
             if (numeroPrimerPlato >= '1' && numeroPrimerPlato <= '3') {
 
@@ -427,16 +473,23 @@ function prepararCena() {
 
                 alert(`Ha seleccionado:\n${descripcionPrimerPlato} ... ${precioPrimerPlato}€\n\n${msgFraseAleatoria_1}`);
                 segundoPlato();
+
             } else {
                 alert(`${msgNumeroIncorrecto}`);
                 primerPlato();
             }
+
+        } else {
+            alert('¡Gracias por su visita!');
         }
+    }
 
-        // funcion para pedir el segundo plato
-        function segundoPlato() {
+    // funcion para pedir el segundo plato
+    function segundoPlato() {
 
-            numeroSegundoPlato = prompt(`${msgTurnoCena}\n\n${msgMenuSegundo}\n\n${menu.cena.segundo[1].descripcion} ... ${menu.cena.segundo[1].precio.toFixed(2)}€\n${menu.cena.segundo[2].descripcion} ... ${menu.cena.segundo[2].precio.toFixed(2)}€\n${menu.cena.segundo[3].descripcion} ... ${menu.cena.segundo[3].precio.toFixed(2)}€\n\n${msgSeleccioneNumero}`);
+        numeroSegundoPlato = prompt(`${msgTurnoCena}\n\n${msgMenuSegundo}\n\n${menu.cena.segundo[1].descripcion} ... ${menu.cena.segundo[1].precio.toFixed(2)}€\n${menu.cena.segundo[2].descripcion} ... ${menu.cena.segundo[2].precio.toFixed(2)}€\n${menu.cena.segundo[3].descripcion} ... ${menu.cena.segundo[3].precio.toFixed(2)}€\n\n${msgSeleccioneNumero}`);
+
+        if (numeroSegundoPlato !== null) {
 
             if (numeroSegundoPlato >= '1' && numeroSegundoPlato <= '3') {
 
@@ -445,16 +498,23 @@ function prepararCena() {
 
                 alert(`Ha seleccionado:\n${descripcionSegundoPlato} ... ${precioSegundoPlato}€\n\n${msgFraseAleatoria_2}`);
                 postre();
+
             } else {
                 alert(`${msgNumeroIncorrecto}`);
                 segundoPlato();
             }
+
+        } else {
+            alert('¡Gracias por su visita!');
         }
+    }
 
-        // funcion para pedir el postre
-        function postre() {
+    // funcion para pedir el postre
+    function postre() {
 
-            numeroPostre = prompt(`${msgTurnoCena}\n\n${msgMenuPostre}\n\n${menu.postre[1].descripcion} ... ${menu.postre[1].precio.toFixed(2)}€\n${menu.postre[2].descripcion} ... ${menu.postre[2].precio.toFixed(2)}€\n${menu.postre[3].descripcion} ... ${menu.postre[3].precio.toFixed(2)}€\n${menu.postre[4].descripcion} ... ${menu.postre[4].precio.toFixed(2)}€\n${menu.postre[5].descripcion} ... ${menu.postre[5].precio.toFixed(2)}€\n${menu.postre[6].descripcion} ... ${menu.postre[6].precio.toFixed(2)}€\n${menu.postre[7].descripcion} ... ${menu.postre[7].precio.toFixed(2)}€\n\n${msgSeleccioneNumero}`);
+        numeroPostre = prompt(`${msgTurnoCena}\n\n${msgMenuPostre}\n\n${menu.postre[1].descripcion} ... ${menu.postre[1].precio.toFixed(2)}€\n${menu.postre[2].descripcion} ... ${menu.postre[2].precio.toFixed(2)}€\n${menu.postre[3].descripcion} ... ${menu.postre[3].precio.toFixed(2)}€\n${menu.postre[4].descripcion} ... ${menu.postre[4].precio.toFixed(2)}€\n${menu.postre[5].descripcion} ... ${menu.postre[5].precio.toFixed(2)}€\n${menu.postre[6].descripcion} ... ${menu.postre[6].precio.toFixed(2)}€\n${menu.postre[7].descripcion} ... ${menu.postre[7].precio.toFixed(2)}€\n\n${msgSeleccioneNumero}`);
+
+        if (numeroPostre !== null) {
 
             if (numeroPostre >= '1' && numeroPostre <= '7') {
 
@@ -463,16 +523,23 @@ function prepararCena() {
 
                 alert(`Ha seleccionado:\n${descripcionPostre} ... ${precioPostre}€\n\n${msgFraseAleatoria_3}`);
                 bebida();
+
             } else {
                 alert(`${msgNumeroIncorrecto}`);
                 postre();
             }
+
+        } else {
+            alert('¡Gracias por su visita!');
         }
+    }
 
-        // funcion para pedir la bebida
-        function bebida() {
+    // funcion para pedir la bebida
+    function bebida() {
 
-            numeroBebida = prompt(`${msgTurnoCena}\n\n${msgMenuBebida}\n\n${menu.bebida[1].descripcion} ... ${menu.bebida[1].precio.toFixed(2)}€\n${menu.bebida[2].descripcion} ... ${menu.bebida[2].precio.toFixed(2)}€\n${menu.bebida[3].descripcion} ... ${menu.bebida[3].precio.toFixed(2)}€\n\n${msgSeleccioneNumero}`);
+        numeroBebida = prompt(`${msgTurnoCena}\n\n${msgMenuBebida}\n\n${menu.bebida[1].descripcion} ... ${menu.bebida[1].precio.toFixed(2)}€\n${menu.bebida[2].descripcion} ... ${menu.bebida[2].precio.toFixed(2)}€\n${menu.bebida[3].descripcion} ... ${menu.bebida[3].precio.toFixed(2)}€\n\n${msgSeleccioneNumero}`);
+
+        if (numeroBebida !== null) {
 
             if (numeroBebida >= '1' && numeroBebida <= '3') {
 
@@ -481,13 +548,15 @@ function prepararCena() {
 
                 alert(`Ha seleccionado:\n${descripcionBebida} ... ${precioBebida}€`);
                 factura();
+
             } else {
                 alert(`${msgNumeroIncorrecto}`);
                 bebida();
             }
+
+        } else {
+            alert('¡Gracias por su visita!');
         }
-    } else {
-        alert(`${msgNoHayServicio}`);
     }
 }
 
@@ -517,43 +586,48 @@ function restauranteDevcamp() {
     // hora de reserva
     horaReservada = prompt(`${msgRecepcion}`);
 
-    // validar formato horario
-    const formatoHorarioCorrecto = horaReservada.match(regexValidarFormatoHorario);
+    if (horaReservada !== null) {
 
-    if (formatoHorarioCorrecto) {
+        // validar formato horario
+        const formatoHorarioCorrecto = horaReservada.match(regexValidarFormatoHorario);
 
-        // horario de restaurante
-        const restauranteAbierto = horaReservada.match(regexAbierto);
+        if (formatoHorarioCorrecto) {
 
-        // horario de servicio
-        horarioDesayuno = horaReservada.match(regexDesayuno);
-        horarioComida = horaReservada.match(regexComida);
-        horarioCena = horaReservada.match(regexCena);
+            // horario de restaurante
+            const restauranteAbierto = horaReservada.match(regexAbierto);
 
-        // condicion horaria 06:00 a 23:59
-        if (restauranteAbierto) {
+            // horario de servicio
+            horarioDesayuno = horaReservada.match(regexDesayuno);
+            horarioComida = horaReservada.match(regexComida);
+            horarioCena = horaReservada.match(regexCena);
 
-            // condicion horaria 06:00 a 11:59
-            if (horarioDesayuno) {
-                prepararDesayuno();
+            // condicion horaria 06:00 a 23:59
+            if (restauranteAbierto) {
 
-            // condicion horaria 12:00 a 17:59
-            } else if (horarioComida) {
-                prepararComida();
+                // condicion horaria 06:00 a 11:59
+                if (horarioDesayuno) {
+                    prepararDesayuno();
 
-            // condicion horaria 18:00 a 23:59
-            } else if (horarioCena) {
-                prepararCena();
+                // condicion horaria 12:00 a 17:59
+                } else if (horarioComida) {
+                    prepararComida();
 
+                // condicion horaria 18:00 a 23:59
+                } else if (horarioCena) {
+                    prepararCena();
+
+                } else {
+                    alert(`${msgNoHayServicio}`);
+                }
             } else {
-                alert(`${msgNoHayServicio}`);
+                alert(`${msgRestauranteCerrado}`);
             }
         } else {
-            alert(`${msgRestauranteCerrado}`);
+            alert(`${msgHorarioIncorrecto}`);
+            restauranteDevcamp();
         }
     } else {
-        alert(`${msgHorarioIncorrecto}`);
-        restauranteDevcamp();
+        alert('¡Gracias por su visita!');
     }
 }
 
