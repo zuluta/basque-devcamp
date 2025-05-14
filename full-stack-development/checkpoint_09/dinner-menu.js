@@ -150,6 +150,19 @@ const msgRecepcion = `¡Bienvenido/a! Gracias por elegir DevCamp.
 Nuestro horario de atención es de 06:00 a 23:59 horas de lunes a domingo.
 Introduzca una hora en formato 00:00 24h para reservar su mesa:`
 
+// mensaje de horario incorrecto
+const msgHorarioIncorrecto = '¡El horario introducido no es correcto! Vuelva a intentarlo.';
+
+// mensaje de restaurante cerrado
+const msgRestauranteCerrado = `Estimado cliente,
+En estos momentos el restaurante se encuentra cerrado.
+Horario de apertura: 06:00 a 23:59 de lunes a domingo.
+Disculpe las molestias.
+¡Gracias!`;
+
+// mensaje de no hay servicio
+const msgNoHayServicio = '¡No hay servicio disponible!'
+
 // mensaje de turno
 const msgTurnoDesayuno = 'Está pidiendo el desayuno.';
 const msgTurnoComida = 'Está pidiendo la comida.';
@@ -304,7 +317,7 @@ function prepararDesayuno() {
             }
         }
     } else {
-        alert('¡No hay servicio disponible!');
+        alert(`${msgNoHayServicio}`);
     }
 }
 
@@ -389,7 +402,7 @@ function prepararComida() {
             }
         }
     } else {
-        alert('¡No hay servicio disponible!');
+        alert(`${msgNoHayServicio}`);
     }
 }
 
@@ -474,7 +487,7 @@ function prepararCena() {
             }
         }
     } else {
-        alert('¡No hay servicio disponible!');
+        alert(`${msgNoHayServicio}`);
     }
 }
 
@@ -533,13 +546,13 @@ function restauranteDevcamp() {
                 prepararCena();
 
             } else {
-                alert('¡No hay servicio disponible!');
+                alert(`${msgNoHayServicio}`);
             }
         } else {
-            alert(`Estimado cliente, el restaurante se encuentra cerrado.\nHorario de apertura: 06:00 a 23:59 de lunes a domingo.\nDisculpe las molestias.\n¡Gracias!`);
+            alert(`${msgRestauranteCerrado}`);
         }
     } else {
-        alert('¡El horario seleccionado no es correcto! vuelva a intentarlo.');
+        alert(`${msgHorarioIncorrecto}`);
         restauranteDevcamp();
     }
 }
