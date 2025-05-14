@@ -581,8 +581,8 @@ function factura() {
     // calcular precio total
     const pagarTotal = primero + segundo + postre + bebida;
 
-    alert(`${msgFactura}\n\nHora de reserva: ${horaReservada}\n\n${descripcionPrimerPlato} ... ${precioPrimerPlato}€\n${descripcionSegundoPlato} ... ${precioSegundoPlato}€\n${descripcionPostre} ... ${precioPostre}€\n${descripcionBebida} ... ${precioBebida}€\n\nTotal a pagar: ${pagarTotal.toFixed(2)}€`);
-    alert('¡Gracias por reservar con DevCamp!');
+    alert(`${msgFactura}\n\n${descripcionPrimerPlato} ... ${precioPrimerPlato}€\n${descripcionSegundoPlato} ... ${precioSegundoPlato}€\n${descripcionPostre} ... ${precioPostre}€\n${descripcionBebida} ... ${precioBebida}€\n\nTotal a pagar: ${pagarTotal.toFixed(2)}€`);
+    alert(`¡Gracias por reservar con DevCamp!\n\nNos vemos a las ${horaReservada} horas.\n\nSi no puede asistir, cancele su reserva llamando al 666-666-666.`);
 }
 
 
