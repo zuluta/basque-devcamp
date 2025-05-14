@@ -146,9 +146,16 @@ const menu = {
 
 
 // mensaje de recepcion
-const msgRecepcion = `¡Bienvenido/a! Gracias por elegir DevCamp.
-Nuestro horario de atención es de 06:00 a 23:59 horas de lunes a domingo.
-Introduzca una hora en formato 00:00 24h para reservar su mesa:`
+const msgRecepcion = `¡Hola! 👋 Bienvenido a DevCamp.\n
+Nuestro horario es de 06:00h a 23:59h, de lunes a domingo.\n
+¡Gracias por elegirnos para tu próxima comida! 🍷\n
+Nuestro agente virtual te guiara en todo el proceso de pedido.\n
+Por favor, pulse Aceptar para continuar.`
+
+const msgReservaHora = `¡Hola! Soy Carlos de DevCamp.
+¿A que hora quiere reservar su mesa?\n
+El formato debe ser en 24 horas -> 00:00.\n
+Introduzca una hora y pulse Aceptar.`
 
 // mensaje de horario incorrecto
 const msgHorarioIncorrecto = '¡El horario introducido no es correcto! Vuelva a intentarlo.';
@@ -175,7 +182,7 @@ const msgMenuPostre = 'De postre tenemos lo siguiente:';
 const msgMenuBebida = 'Para beber tenemos lo siguiente:';
 
 // mensaje de seleccione numero
-const msgSeleccioneNumero = 'Seleccione un número: ';
+const msgSeleccioneNumero = 'Seleccione un número y pulse Aceptar.';
 const msgNumeroIncorrecto = '¡El número seleccionado no es correcto! vuelva a intentarlo.';
 
 // mensaje de factura disponible
@@ -583,8 +590,9 @@ function factura() {
 // funcion para restaurante devcamp
 function restauranteDevcamp() {
 
-    // hora de reserva
-    horaReservada = prompt(`${msgRecepcion}`);
+    // recepcion y hora de reserva
+    alert(`${msgRecepcion}`);
+    horaReservada = prompt(`${msgReservaHora}`);
 
     if (horaReservada !== null) {
 
