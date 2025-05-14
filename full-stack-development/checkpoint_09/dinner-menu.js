@@ -255,7 +255,7 @@ function prepararDesayuno() {
                 descripcionPrimerPlato = menu.desayuno.primero[numeroPrimerPlato].descripcion;
                 precioPrimerPlato = menu.desayuno.primero[numeroPrimerPlato].precio.toFixed(2);
                 
-                alert(`Seleccionado: ${descripcionPrimerPlato} ... ${precioPrimerPlato}€\n\n${msgFraseAleatoria_1}`);
+                alert(`Ha seleccionado:\n${descripcionPrimerPlato} ... ${precioPrimerPlato}€\n\n${msgFraseAleatoria_1}`);
                 segundoPlato();
             } else {
                 alert(`${msgNumeroIncorrecto}`);
@@ -273,7 +273,7 @@ function prepararDesayuno() {
                 descripcionSegundoPlato = menu.desayuno.segundo[numeroSegundoPlato].descripcion;
                 precioSegundoPlato = menu.desayuno.segundo[numeroSegundoPlato].precio.toFixed(2);
 
-                alert(`Seleccionado: ${descripcionSegundoPlato} ... ${precioSegundoPlato}€\n\n${msgFraseAleatoria_2}`);
+                alert(`Ha seleccionado:\n${descripcionSegundoPlato} ... ${precioSegundoPlato}€\n\n${msgFraseAleatoria_2}`);
                 postre();
             } else {
                 alert(`${msgNumeroIncorrecto}`);
@@ -291,7 +291,7 @@ function prepararDesayuno() {
                 descripcionPostre = menu.postre[numeroPostre].descripcion;
                 precioPostre = menu.postre[numeroPostre].precio.toFixed(2);
 
-                alert(`Seleccionado: ${descripcionPostre} ... ${precioPostre}€\n\n${msgFraseAleatoria_3}`);
+                alert(`Ha seleccionado:\n${descripcionPostre} ... ${precioPostre}€\n\n${msgFraseAleatoria_3}`);
                 bebida();
             } else {
                 alert(`${msgNumeroIncorrecto}`);
@@ -309,7 +309,7 @@ function prepararDesayuno() {
                 descripcionBebida = menu.bebida[numeroBebida].descripcion;
                 precioBebida = menu.bebida[numeroBebida].precio.toFixed(2);
 
-                alert(`Seleccionado: ${descripcionBebida} ... ${precioBebida}€`);
+                alert(`Ha seleccionado:\n${descripcionBebida} ... ${precioBebida}€`);
                 factura();
             } else {
                 alert(`${msgNumeroIncorrecto}`);
@@ -340,7 +340,7 @@ function prepararComida() {
                 descripcionPrimerPlato = menu.comida.primero[numeroPrimerPlato].descripcion;
                 precioPrimerPlato = menu.comida.primero[numeroPrimerPlato].precio.toFixed(2);
 
-                alert(`Seleccionado: ${descripcionPrimerPlato} ... ${precioPrimerPlato}€\n\n${msgFraseAleatoria_1}`);
+                alert(`Ha seleccionado:\n${descripcionPrimerPlato} ... ${precioPrimerPlato}€\n\n${msgFraseAleatoria_1}`);
                 segundoPlato();
             } else {
                 alert(`${msgNumeroIncorrecto}`);
@@ -358,7 +358,7 @@ function prepararComida() {
                 descripcionSegundoPlato = menu.comida.segundo[numeroSegundoPlato].descripcion;
                 precioSegundoPlato = menu.comida.segundo[numeroSegundoPlato].precio.toFixed(2);
 
-                alert(`Seleccionado: ${descripcionSegundoPlato} ... ${precioSegundoPlato}€\n\n${msgFraseAleatoria_2}`);
+                alert(`Ha seleccionado:\n${descripcionSegundoPlato} ... ${precioSegundoPlato}€\n\n${msgFraseAleatoria_2}`);
                 postre();
             } else {
                 alert(`${msgNumeroIncorrecto}`);
@@ -376,7 +376,7 @@ function prepararComida() {
                 descripcionPostre = menu.postre[numeroPostre].descripcion;
                 precioPostre = menu.postre[numeroPostre].precio.toFixed(2);
 
-                alert(`Seleccionado: ${descripcionPostre} ... ${precioPostre}€\n\n${msgFraseAleatoria_3}`);
+                alert(`Ha seleccionado:\n${descripcionPostre} ... ${precioPostre}€\n\n${msgFraseAleatoria_3}`);
                 bebida();
             } else {
                 alert(`${msgNumeroIncorrecto}`);
@@ -394,7 +394,7 @@ function prepararComida() {
                 descripcionBebida = menu.bebida[numeroBebida].descripcion;
                 precioBebida = menu.bebida[numeroBebida].precio.toFixed(2);
 
-                alert(`Seleccionado: ${descripcionBebida} ... ${precioBebida}€`);
+                alert(`Ha seleccionado:\n${descripcionBebida} ... ${precioBebida}€`);
                 factura();
             } else {
                 alert(`${msgNumeroIncorrecto}`);
@@ -425,7 +425,7 @@ function prepararCena() {
                 descripcionPrimerPlato = menu.cena.primero[numeroPrimerPlato].descripcion;
                 precioPrimerPlato = menu.cena.primero[numeroPrimerPlato].precio.toFixed(2);
 
-                alert(`Seleccionado: ${descripcionPrimerPlato} ... ${precioPrimerPlato}€\n\n${msgFraseAleatoria_1}`);
+                alert(`Ha seleccionado:\n${descripcionPrimerPlato} ... ${precioPrimerPlato}€\n\n${msgFraseAleatoria_1}`);
                 segundoPlato();
             } else {
                 alert(`${msgNumeroIncorrecto}`);
@@ -443,7 +443,7 @@ function prepararCena() {
                 descripcionSegundoPlato = menu.cena.segundo[numeroSegundoPlato].descripcion;
                 precioSegundoPlato = menu.cena.segundo[numeroSegundoPlato].precio.toFixed(2);
 
-                alert(`Seleccionado: ${descripcionSegundoPlato} ... ${precioSegundoPlato}€\n\n${msgFraseAleatoria_2}`);
+                alert(`Ha seleccionado:\n${descripcionSegundoPlato} ... ${precioSegundoPlato}€\n\n${msgFraseAleatoria_2}`);
                 postre();
             } else {
                 alert(`${msgNumeroIncorrecto}`);
@@ -461,7 +461,7 @@ function prepararCena() {
                 descripcionPostre = menu.postre[numeroPostre].descripcion;
                 precioPostre = menu.postre[numeroPostre].precio.toFixed(2);
 
-                alert(`Seleccionado: ${descripcionPostre} ... ${precioPostre}€\n\n${msgFraseAleatoria_3}`);
+                alert(`Ha seleccionado:\n${descripcionPostre} ... ${precioPostre}€\n\n${msgFraseAleatoria_3}`);
                 bebida();
             } else {
                 alert(`${msgNumeroIncorrecto}`);
@@ -479,7 +479,7 @@ function prepararCena() {
                 descripcionBebida = menu.bebida[numeroBebida].descripcion;
                 precioBebida = menu.bebida[numeroBebida].precio.toFixed(2);
 
-                alert(`Seleccionado: ${descripcionBebida} ... ${precioBebida}€`);
+                alert(`Ha seleccionado:\n${descripcionBebida} ... ${precioBebida}€`);
                 factura();
             } else {
                 alert(`${msgNumeroIncorrecto}`);
@@ -514,7 +514,7 @@ function factura() {
 // funcion para restaurante devcamp
 function restauranteDevcamp() {
 
-    // introducir hora
+    // hora de reserva
     horaReservada = prompt(`${msgRecepcion}`);
 
     // validar formato horario
