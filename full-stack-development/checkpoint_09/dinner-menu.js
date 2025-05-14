@@ -40,29 +40,29 @@ const menu = {
     comida: {
         primero: {
             1: {
-                descripcion: '1. Menestra de verduras',
-                precio: 5.60
+                descripcion: '1. Lasaña de verduras',
+                precio: 6.00
             },
             2: {
-                descripcion: '2. Crema de calabaza',
-                precio: 4.80
+                descripcion: '2. Arroz negro con chipirones',
+                precio: 6.80
             },
             3: {
-                descripcion: '3. Brócoli con ajo',
-                precio: 5.20
+                descripcion: '3. Berenjena rellena de carne gratinada',
+                precio: 7.20
             }
         },
         segundo: {
             1: {
-                descripcion: '1. Merluza en salsa verde',
-                precio: 6.20
+                descripcion: '1. Solomillo con salsa roquefort',
+                precio: 9.30
             },
             2: {
-                descripcion: '2. Solomillo de cerdo',
+                descripcion: '2. Ternera guisada',
                 precio: 8.20
             },
             3: {
-                descripcion: '3. Salmón al papillote',
+                descripcion: '3. Redondo de pavo al horno con baicon',
                 precio: 10.80
             }
         }
@@ -70,36 +70,36 @@ const menu = {
     cena: {
         primero: {
             1: {
-                descripcion: '1. Borraja con langostinos',
-                precio: 4.50
+                descripcion: '1. Sopa de pescado',
+                precio: 7.50
             },
             2: {
-                descripcion: '2. Calabacines rellenos',
-                precio: 6.20
+                descripcion: '2. Ensalada templada de gulas',
+                precio: 7.90
             },
             3: {
-                descripcion: '3. Espinacas con patata',
-                precio: 5.95
+                descripcion: '3. Alcachofa salteada con jamón',
+                precio: 6.95
             }
         },
         segundo: {
             1: {
-                descripcion: '1. Pechuga de pollo con tomate',
-                precio: 7.40
+                descripcion: '1. Filete con patatas y pimientos del piquillo',
+                precio: 7.20
             },
             2: {
-                descripcion: '2. Merluza en salsa verde',
-                precio: 9.95
+                descripcion: '2. Merluza rebozada',
+                precio: 7.65
             },
             3: {
-                descripcion: '3. Brocheta de langostinos',
+                descripcion: '3. Trucha al horno rellena de jamón',
                 precio: 10.50
             }
         }
     },
     postre: {
         1: {
-            descripcion: '1. Macedonia',
+            descripcion: '1. Fruta de temporada',
             precio: 2.40
         },
         2: {
