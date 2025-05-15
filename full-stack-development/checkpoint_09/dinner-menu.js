@@ -192,8 +192,10 @@ const msgMenuBebida = 'Para beber tenemos lo siguiente:';
 const msgSeleccioneNumero = 'Seleccione un número y pulse Aceptar.';
 const msgNumeroIncorrecto = '¡El número seleccionado no es correcto! vuelva a intentarlo.';
 
-// mensaje de factura disponible
-const msgFactura = `¡Ya tiene disponible su factura!\n
+// mensaje de confirmar pedido
+const msgConfirmarPedido = `¡Enorabuena!
+Estas a un paso de completar el pedido.\n
+Resumen del pedido:\n
 El menú incluye agua, pan y café.`;
 
 // mensaje de pedido registrado en sistema
@@ -333,14 +335,15 @@ function prepararDesayuno() {
     // funcion para pedir el primer plato
     function primerPlato() {
         numeroPrimerPlato = prompt(`${msgTurnoDesayuno}\n\n${menuDesayunoPrimerPlato}`);
+        numeroSeleccionado = parseInt(numeroPrimerPlato);
 
         if (numeroPrimerPlato !== null) {
-            if (numeroPrimerPlato >= 1 && numeroPrimerPlato <= 3) {
+            if (numeroSeleccionado >= 1 && numeroSeleccionado <= 3) {
                 descripcionPrimerPlato = menu.desayuno.primero[numeroPrimerPlato].descripcion;
                 precioPrimerPlato = menu.desayuno.primero[numeroPrimerPlato].precio.toFixed(2);
                 alert(`Ha seleccionado:\n${descripcionPrimerPlato} ... ${precioPrimerPlato}€\n\n${msgFraseAleatoria_1}`);
                 segundoPlato();
-            } else if (numeroPrimerPlato == 0) {
+            } else if (numeroSeleccionado === 0) {
                 restauranteDevcamp();
             } else {
                 alert(msgNumeroIncorrecto);
@@ -354,14 +357,15 @@ function prepararDesayuno() {
     // funcion para pedir el segundo plato
     function segundoPlato() {
         numeroSegundoPlato = prompt(`${msgTurnoDesayuno}\n\n${menuDesayunoSegundoPlato}`);
+        numeroSeleccionado = parseInt(numeroSegundoPlato);
 
         if (numeroSegundoPlato !== null) {
-            if (numeroSegundoPlato >= 1 && numeroSegundoPlato <= 3) {
+            if (numeroSeleccionado >= 1 && numeroSeleccionado <= 3) {
                 descripcionSegundoPlato = menu.desayuno.segundo[numeroSegundoPlato].descripcion;
                 precioSegundoPlato = menu.desayuno.segundo[numeroSegundoPlato].precio.toFixed(2);
                 alert(`Ha seleccionado:\n${descripcionSegundoPlato} ... ${precioSegundoPlato}€\n\n${msgFraseAleatoria_2}`);
                 postre();
-            } else if (numeroSegundoPlato == 0) {
+            } else if (numeroSeleccionado === 0) {
                 primerPlato();
             } else {
                 alert(msgNumeroIncorrecto);
@@ -375,14 +379,15 @@ function prepararDesayuno() {
     // funcion para pedir el postre
     function postre() {
         numeroPostre = prompt(`${msgTurnoDesayuno}\n\n${menuPostre}`);
+        numeroSeleccionado = parseInt(numeroPostre);
 
         if (numeroPostre !== null) {
-            if (numeroPostre >= 1 && numeroPostre <= 7) {
+            if (numeroSeleccionado >= 1 && numeroSeleccionado <= 7) {
                 descripcionPostre = menu.postre[numeroPostre].descripcion;
                 precioPostre = menu.postre[numeroPostre].precio.toFixed(2);
                 alert(`Ha seleccionado:\n${descripcionPostre} ... ${precioPostre}€\n\n${msgFraseAleatoria_3}`);
                 bebida();
-            } else if (numeroPostre == 0) {
+            } else if (numeroSeleccionado === 0) {
                 segundoPlato();
             } else {
                 alert(msgNumeroIncorrecto);
@@ -396,14 +401,15 @@ function prepararDesayuno() {
     // funcion para pedir la bebida
     function bebida() {
         numeroBebida = prompt(`${msgTurnoDesayuno}\n\n${menuBebida}`);
+        numeroSeleccionado = parseInt(numeroBebida);
 
         if (numeroBebida !== null) {
-            if (numeroBebida >= 1 && numeroBebida <= 3) {
+            if (numeroSeleccionado >= 1 && numeroSeleccionado <= 3) {
                 descripcionBebida = menu.bebida[numeroBebida].descripcion;
                 precioBebida = menu.bebida[numeroBebida].precio.toFixed(2);
                 alert(`Ha seleccionado:\n${descripcionBebida} ... ${precioBebida}€`);
                 factura();
-            } else if (numeroBebida == 0) {
+            } else if (numeroSeleccionado === 0) {
                 postre();
             } else {
                 alert(msgNumeroIncorrecto);
@@ -424,14 +430,15 @@ function prepararComida() {
     // funcion para pedir el primer plato
     function primerPlato() {
         numeroPrimerPlato = prompt(`${msgTurnoComida}\n\n${menuComidaPrimerPlato}`);
+        numeroSeleccionado = parseInt(numeroPrimerPlato);
 
         if (numeroPrimerPlato !== null) {
-            if (numeroPrimerPlato >= 1 && numeroPrimerPlato <= 3) {
+            if (numeroSeleccionado >= 1 && numeroSeleccionado <= 3) {
                 descripcionPrimerPlato = menu.comida.primero[numeroPrimerPlato].descripcion;
                 precioPrimerPlato = menu.comida.primero[numeroPrimerPlato].precio.toFixed(2);
                 alert(`Ha seleccionado:\n${descripcionPrimerPlato} ... ${precioPrimerPlato}€\n\n${msgFraseAleatoria_1}`);
                 segundoPlato();
-            } else if (numeroPrimerPlato == 0) {
+            } else if (numeroSeleccionado === 0) {
                 restauranteDevcamp();
             } else {
                 alert(msgNumeroIncorrecto);
@@ -445,14 +452,15 @@ function prepararComida() {
     // funcion para pedir el segundo plato
     function segundoPlato() {
         numeroSegundoPlato = prompt(`${msgTurnoComida}\n\n${menuComidaSegundoPlato}`);
+        numeroSeleccionado = parseInt(numeroSegundoPlato);
 
         if (numeroSegundoPlato !== null) {
-            if (numeroSegundoPlato >= 1 && numeroSegundoPlato <= 3) {
+            if (numeroSeleccionado >= 1 && numeroSeleccionado <= 3) {
                 descripcionSegundoPlato = menu.comida.segundo[numeroSegundoPlato].descripcion;
                 precioSegundoPlato = menu.comida.segundo[numeroSegundoPlato].precio.toFixed(2);
                 alert(`Ha seleccionado:\n${descripcionSegundoPlato} ... ${precioSegundoPlato}€\n\n${msgFraseAleatoria_2}`);
                 postre();
-            } else if (numeroSegundoPlato == 0) {
+            } else if (numeroSeleccionado === 0) {
                 primerPlato();
             } else {
                 alert(msgNumeroIncorrecto);
@@ -466,14 +474,15 @@ function prepararComida() {
     // funcion para pedir el postre
     function postre() {
         numeroPostre = prompt(`${msgTurnoComida}\n\n${menuPostre}`);
+        numeroSeleccionado = parseInt(numeroPostre);
 
         if (numeroPostre !== null) {
-            if (numeroPostre >= 1 && numeroPostre <= 7) {
+            if (numeroSeleccionado >= 1 && numeroSeleccionado <= 7) {
                 descripcionPostre = menu.postre[numeroPostre].descripcion;
                 precioPostre = menu.postre[numeroPostre].precio.toFixed(2);
                 alert(`Ha seleccionado:\n${descripcionPostre} ... ${precioPostre}€\n\n${msgFraseAleatoria_3}`);
                 bebida();
-            } else if (numeroPostre == 0) {
+            } else if (numeroSeleccionado === 0) {
                 segundoPlato();
             } else {
                 alert(msgNumeroIncorrecto);
@@ -487,14 +496,15 @@ function prepararComida() {
     // funcion para pedir la bebida
     function bebida() {
         numeroBebida = prompt(`${msgTurnoComida}\n\n${menuBebida}`);
+        numeroSeleccionado = parseInt(numeroBebida);
 
         if (numeroBebida !== null) {
-            if (numeroBebida >= 1 && numeroBebida <= 3) {
+            if (numeroSeleccionado >= 1 && numeroSeleccionado <= 3) {
                 descripcionBebida = menu.bebida[numeroBebida].descripcion;
                 precioBebida = menu.bebida[numeroBebida].precio.toFixed(2);
                 alert(`Ha seleccionado:\n${descripcionBebida} ... ${precioBebida}€`);
                 factura();
-            } else if (numeroBebida == 0) {
+            } else if (numeroSeleccionado === 0) {
                 postre();
             } else {
                 alert(msgNumeroIncorrecto);
@@ -515,14 +525,15 @@ function prepararCena() {
     // funcion para pedir el primer plato
     function primerPlato() {
         numeroPrimerPlato = prompt(`${msgTurnoCena}\n\n${menuCenaPrimerPlato}`);
+        numeroSeleccionado = parseInt(numeroPrimerPlato);
 
         if (numeroPrimerPlato !== null) {
-            if (numeroPrimerPlato >= 1 && numeroPrimerPlato <= 3) {
+            if (numeroSeleccionado >= 1 && numeroSeleccionado <= 3) {
                 descripcionPrimerPlato = menu.cena.primero[numeroPrimerPlato].descripcion;
                 precioPrimerPlato = menu.cena.primero[numeroPrimerPlato].precio.toFixed(2);
                 alert(`Ha seleccionado:\n${descripcionPrimerPlato} ... ${precioPrimerPlato}€\n\n${msgFraseAleatoria_1}`);
                 segundoPlato();
-            } else if (numeroPrimerPlato == 0) {
+            } else if (numeroSeleccionado === 0) {
                 restauranteDevcamp();
             } else {
                 alert(msgNumeroIncorrecto);
@@ -536,14 +547,15 @@ function prepararCena() {
     // funcion para pedir el segundo plato
     function segundoPlato() {
         numeroSegundoPlato = prompt(`${msgTurnoCena}\n\n${menuCenaSegundoPlato}`);
+        numeroSeleccionado = parseInt(numeroSegundoPlato);
 
         if (numeroSegundoPlato !== null) {
-            if (numeroSegundoPlato >= 1 && numeroSegundoPlato <= 3) {
+            if (numeroSeleccionado >= 1 && numeroSeleccionado <= 3) {
                 descripcionSegundoPlato = menu.cena.segundo[numeroSegundoPlato].descripcion;
                 precioSegundoPlato = menu.cena.segundo[numeroSegundoPlato].precio.toFixed(2);
                 alert(`Ha seleccionado:\n${descripcionSegundoPlato} ... ${precioSegundoPlato}€\n\n${msgFraseAleatoria_2}`);
                 postre();
-            } else if (numeroSegundoPlato == 0) {
+            } else if (numeroSeleccionado === 0) {
                 primerPlato();
             } else {
                 alert(msgNumeroIncorrecto);
@@ -557,14 +569,15 @@ function prepararCena() {
     // funcion para pedir el postre
     function postre() {
         numeroPostre = prompt(`${msgTurnoCena}\n\n${menuPostre}`);
+        numeroSeleccionado = parseInt(numeroPostre);
 
         if (numeroPostre !== null) {
-            if (numeroPostre >= 1 && numeroPostre <= 7) {
+            if (numeroSeleccionado >= 1 && numeroSeleccionado <= 7) {
                 descripcionPostre = menu.postre[numeroPostre].descripcion;
                 precioPostre = menu.postre[numeroPostre].precio.toFixed(2);
                 alert(`Ha seleccionado:\n${descripcionPostre} ... ${precioPostre}€\n\n${msgFraseAleatoria_3}`);
                 bebida();
-            } else if (numeroPostre == 0) {
+            } else if (numeroSeleccionado === 0) {
                 segundoPlato();
             } else {
                 alert(msgNumeroIncorrecto);
@@ -578,14 +591,15 @@ function prepararCena() {
     // funcion para pedir la bebida
     function bebida() {
         numeroBebida = prompt(`${msgTurnoCena}\n\n${menuBebida}`);
+        numeroSeleccionado = parseInt(numeroBebida);
 
         if (numeroBebida !== null) {
-            if (numeroBebida >= 1 && numeroBebida <= 3) {
+            if (numeroSeleccionado >= 1 && numeroSeleccionado <= 3) {
                 descripcionBebida = menu.bebida[numeroBebida].descripcion;
                 precioBebida = menu.bebida[numeroBebida].precio.toFixed(2);
                 alert(`Ha seleccionado:\n${descripcionBebida} ... ${precioBebida}€`);
                 factura();
-            } else if (numeroBebida == 0) {
+            } else if (numeroSeleccionado === 0) {
                 postre();
             } else {
                 alert(msgNumeroIncorrecto);
@@ -603,7 +617,7 @@ function prepararCena() {
 function factura() {
 
 // Muestra el resumen de factura
-const resumenFactura = `${msgFactura}\n
+const resumenPedido = `${msgConfirmarPedido}\n
 ${descripcionPrimerPlato} ... ${precioPrimerPlato}€
 ${descripcionSegundoPlato} ... ${precioSegundoPlato}€
 ${descripcionPostre} ... ${precioPostre}€
@@ -618,8 +632,21 @@ ${descripcionBebida} ... ${precioBebida}€`;
     // calcular precio total
     const pagarTotal = primero + segundo + postre + bebida;
 
-    alert(`${resumenFactura}\n\nTotal a pagar: ${pagarTotal.toFixed(2)}€`);
-    alert(`${msgPedidoRegistrado}\n\nNos vemos a las ${horaReservada} horas.\n\n${msgCancelarReserva}`);
+    numeroFactura = prompt(`${resumenPedido}\n\nTotal a pagar: ${pagarTotal.toFixed(2)}€\n\n0. Volver atras\n1. Confirmar pedido\n\n${msgSeleccioneNumero}`);
+    numeroSeleccionado = parseInt(numeroFactura);
+
+    if (numeroFactura !== null) {
+        if (numeroSeleccionado === 1) {
+            alert(`${msgPedidoRegistrado}\n\nNos vemos a las ${horaReservada} horas.\n\n${msgCancelarReserva}`);
+        } else if (numeroSeleccionado === 0) {
+            bebida();
+        } else {
+            alert(msgNumeroIncorrecto);
+            factura();
+        }
+    } else {
+        alert(msgPedidoCancelado);
+    }
 }
 
 
