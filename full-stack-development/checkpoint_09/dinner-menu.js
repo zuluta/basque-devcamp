@@ -422,7 +422,7 @@ function prepararDesayuno() {
 
     // funcion para generar la factura
     function factura() {
-        // Muestra el resumen de factura
+        // muestra el resumen de pedido
         const resumenPedido = `${msgConfirmarPedido}\n\n${descripcionPrimerPlato} ... ${precioPrimerPlato}€\n${descripcionSegundoPlato} ... ${precioSegundoPlato}€\n${descripcionPostre} ... ${precioPostre}€\n${descripcionBebida} ... ${precioBebida}€`;
 
         // convertir string en numero
@@ -548,7 +548,7 @@ function prepararComida() {
 
     // funcion para generar factura
     function factura() {
-        // Muestra el resumen de factura
+        // muestra el resumen de pedido
         const resumenPedido = `${msgConfirmarPedido}\n\n${descripcionPrimerPlato} ... ${precioPrimerPlato}€\n${descripcionSegundoPlato} ... ${precioSegundoPlato}€\n${descripcionPostre} ... ${precioPostre}€\n${descripcionBebida} ... ${precioBebida}€`;
 
         // convertir string en numero
@@ -674,7 +674,7 @@ function prepararCena() {
 
     // funcion para generar factura
     function factura() {
-        // Muestra el resumen de factura
+        // muestra el resumen de pedido
         const resumenPedido = `${msgConfirmarPedido}\n\n${descripcionPrimerPlato} ... ${precioPrimerPlato}€\n${descripcionSegundoPlato} ... ${precioSegundoPlato}€\n${descripcionPostre} ... ${precioPostre}€\n${descripcionBebida} ... ${precioBebida}€`;
 
         // convertir string en numero
