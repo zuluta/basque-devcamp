@@ -694,7 +694,8 @@ function cenaFactura() {
 function restauranteDevcamp() {
     // recepcion y hora de reserva
     alert(msgRecepcion);
-    horaReservada = prompt(msgReservaHora);
+    const horaSeleccionada = prompt(msgReservaHora);
+    horaReservada = horaSeleccionada.substring(0, 5);
 
     if (horaReservada !== null) {
         // validar formato horario
