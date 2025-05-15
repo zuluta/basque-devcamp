@@ -321,7 +321,6 @@ const regexCena = /^([1][8-9]|2[0-3]):[0-5][0-9]|22:00/g; // 18:00 a 22:00
 
 // funcion para preparar el desayuno
 function prepararDesayuno() {
-
     primerPlato();
 
     // funcion para pedir el primer plato
@@ -405,7 +404,6 @@ function prepararDesayuno() {
 
 // funcion para preparar la comida
 function prepararComida() {
-
     primerPlato();
 
     // funcion para pedir el primer plato
@@ -489,7 +487,6 @@ function prepararComida() {
 
 // funcion para preparar la cena
 function prepararCena() {
-
     primerPlato();
 
     // funcion para pedir el primer plato
