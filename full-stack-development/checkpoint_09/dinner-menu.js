@@ -147,14 +147,17 @@ const menu = {
 
 // mensaje de recepcion
 const msgRecepcion = `¡Hola! 👋 Bienvenido a DevCamp.\n
-Nuestro horario es de 08:00h a 22:00h, de lunes a domingo.\n
+Prestamos servicio de lunes a domingo con los siguientes horarios:\n
+Desayuno: 08:00h. a 11:59h.
+Comida: 12:00h. a 17:59h.
+Cena: 18:00h. a 22:00h.\n
 ¡Gracias por elegirnos para tu próxima comida! 🍷\n
-Nuestro agente virtual te guiara en todo el proceso de pedido.\n
 Por favor, pulse Aceptar para continuar.`
 
-const msgReservaHora = `¡Hola! Soy Carlos de DevCamp.
+// mensaje de reservar hora
+const msgReservaHora = `Formato de horario en 24 horas.
+Ejemplo: 14:45\n\n
 ¿A que hora quiere reservar su mesa?\n
-El formato debe ser en 24 horas -> 00:00.\n
 Introduzca una hora y pulse Aceptar.`
 
 // mensaje de horario incorrecto
