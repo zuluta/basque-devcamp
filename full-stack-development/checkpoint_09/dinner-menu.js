@@ -196,7 +196,7 @@ const msgSeleccioneNumero = 'Seleccione un número y pulse Aceptar.';
 const msgNumeroIncorrecto = '¡El número seleccionado no es correcto! vuelva a intentarlo.';
 
 // mensaje de confirmar pedido
-const msgConfirmarPedido = `¡Enorabuena!
+const msgConfirmarPedido = `¡Enhorabuena!
 Estas a un paso de completar el pedido.\n
 Resumen del pedido:\n
 El menú incluye agua, pan y café.`;
