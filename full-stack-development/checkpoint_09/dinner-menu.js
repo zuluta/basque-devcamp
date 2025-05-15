@@ -164,8 +164,8 @@ Introduzca una hora y pulse Aceptar.`
 const msgHorarioIncorrecto = '¡El horario introducido no es correcto! Vuelva a intentarlo.';
 
 // mensaje de restaurante cerrado
-const msgRestauranteCerrado = `Estimado cliente,
-En estos momentos el restaurante se encuentra cerrado.\n
+const msgRestauranteCerrado = `Lo sentimos,
+A esta hora, el restaurante se encuentra cerrado.\n
 Nuestro horario es de 08:00h a 22:00h, de lunes a domingo.\n
 Disculpe las molestias.
 ¡Gracias!`;
