@@ -152,13 +152,13 @@ Desayuno: 08:00h. a 11:59h.
 Comida: 12:00h. a 17:59h.
 Cena: 18:00h. a 22:00h.\n
 ¡Gracias por elegirnos para tu próxima comida! 🍷\n
-Por favor, pulse Aceptar para continuar.`
+Por favor, pulse Aceptar para continuar.`;
 
 // mensaje de reservar hora
-const msgReservaHora = `Formato de horario en 24 horas.
+const msgReservaHora = `Introduzca una hora y pulse Aceptar.\n
+Formato de horario en 24 horas.
 Ejemplo: 14:45\n\n
-¿A que hora quiere reservar su mesa?\n
-Introduzca una hora y pulse Aceptar.`
+¿A que hora quiere reservar su mesa?`;
 
 // mensaje de horario incorrecto
 const msgHorarioIncorrecto = '¡El horario introducido no es correcto! Vuelva a intentarlo.';
@@ -171,7 +171,7 @@ Disculpe las molestias.
 ¡Gracias!`;
 
 // mensaje de no hay servicio
-const msgNoHayServicio = '¡No hay servicio disponible!'
+const msgNoHayServicio = '¡No hay servicio disponible!';
 
 // mensaje de volver atras
 const msgVolverAtras = `0. Volver atrás`;
@@ -262,43 +262,37 @@ let precioBebida = '';
 const menuDesayunoPrimerPlato = `${msgMenuPrimero}\n
 ${menu.desayuno.primero[1].descripcion} ... ${menu.desayuno.primero[1].precio.toFixed(2)}€
 ${menu.desayuno.primero[2].descripcion} ... ${menu.desayuno.primero[2].precio.toFixed(2)}€
-${menu.desayuno.primero[3].descripcion} ... ${menu.desayuno.primero[3].precio.toFixed(2)}€\n
-${msgSeleccioneNumero}`;
+${menu.desayuno.primero[3].descripcion} ... ${menu.desayuno.primero[3].precio.toFixed(2)}€\n`;
 
 // muestra el menu desayuno segundo plato
 const menuDesayunoSegundoPlato = `${msgMenuSegundo}\n
 ${menu.desayuno.segundo[1].descripcion} ... ${menu.desayuno.segundo[1].precio.toFixed(2)}€
 ${menu.desayuno.segundo[2].descripcion} ... ${menu.desayuno.segundo[2].precio.toFixed(2)}€
-${menu.desayuno.segundo[3].descripcion} ... ${menu.desayuno.segundo[3].precio.toFixed(2)}€\n
-${msgSeleccioneNumero}`;
+${menu.desayuno.segundo[3].descripcion} ... ${menu.desayuno.segundo[3].precio.toFixed(2)}€\n`;
 
 // muestra el menu de comida primer plato
 const menuComidaPrimerPlato = `${msgMenuPrimero}\n
 ${menu.comida.primero[1].descripcion} ... ${menu.comida.primero[1].precio.toFixed(2)}€
 ${menu.comida.primero[2].descripcion} ... ${menu.comida.primero[2].precio.toFixed(2)}€
-${menu.comida.primero[3].descripcion} ... ${menu.comida.primero[3].precio.toFixed(2)}€\n
-${msgSeleccioneNumero}`;
+${menu.comida.primero[3].descripcion} ... ${menu.comida.primero[3].precio.toFixed(2)}€\n`;
 
 // muestra el menu de comida segundo plato
 const menuComidaSegundoPlato = `${msgMenuSegundo}\n
 ${menu.comida.segundo[1].descripcion} ... ${menu.comida.segundo[1].precio.toFixed(2)}€
 ${menu.comida.segundo[2].descripcion} ... ${menu.comida.segundo[2].precio.toFixed(2)}€
-${menu.comida.segundo[3].descripcion} ... ${menu.comida.segundo[3].precio.toFixed(2)}€\n
-${msgSeleccioneNumero}`;
+${menu.comida.segundo[3].descripcion} ... ${menu.comida.segundo[3].precio.toFixed(2)}€\n`;
 
 // muestra el menu de cena primer plato
 const menuCenaPrimerPlato = `${msgMenuPrimero}\n
 ${menu.cena.primero[1].descripcion} ... ${menu.cena.primero[1].precio.toFixed(2)}€
 ${menu.cena.primero[2].descripcion} ... ${menu.cena.primero[2].precio.toFixed(2)}€
-${menu.cena.primero[3].descripcion} ... ${menu.cena.primero[3].precio.toFixed(2)}€\n
-${msgSeleccioneNumero}`;
+${menu.cena.primero[3].descripcion} ... ${menu.cena.primero[3].precio.toFixed(2)}€\n`;
 
 // muestra el menu de cena segundo plato
 const menuCenaSegundoPlato = `${msgMenuSegundo}\n
 ${menu.cena.segundo[1].descripcion} ... ${menu.cena.segundo[1].precio.toFixed(2)}€
 ${menu.cena.segundo[2].descripcion} ... ${menu.cena.segundo[2].precio.toFixed(2)}€
-${menu.cena.segundo[3].descripcion} ... ${menu.cena.segundo[3].precio.toFixed(2)}€\n
-${msgSeleccioneNumero}`;
+${menu.cena.segundo[3].descripcion} ... ${menu.cena.segundo[3].precio.toFixed(2)}€\n`;
 
 // muestra el menu postre
 const menuPostre = `${msgMenuPostre}\n
@@ -308,15 +302,13 @@ ${menu.postre[3].descripcion} ... ${menu.postre[3].precio.toFixed(2)}€
 ${menu.postre[4].descripcion} ... ${menu.postre[4].precio.toFixed(2)}€
 ${menu.postre[5].descripcion} ... ${menu.postre[5].precio.toFixed(2)}€
 ${menu.postre[6].descripcion} ... ${menu.postre[6].precio.toFixed(2)}€
-${menu.postre[7].descripcion} ... ${menu.postre[7].precio.toFixed(2)}€\n
-${msgSeleccioneNumero}`;
+${menu.postre[7].descripcion} ... ${menu.postre[7].precio.toFixed(2)}€\n`;
 
 // muestra el menu bebida
 const menuBebida = `${msgMenuBebida}\n
 ${menu.bebida[1].descripcion} ... ${menu.bebida[1].precio.toFixed(2)}€
 ${menu.bebida[2].descripcion} ... ${menu.bebida[2].precio.toFixed(2)}€
-${menu.bebida[3].descripcion} ... ${menu.bebida[3].precio.toFixed(2)}€\n
-${msgSeleccioneNumero}`;
+${menu.bebida[3].descripcion} ... ${menu.bebida[3].precio.toFixed(2)}€\n`;
 
 
 
@@ -335,7 +327,7 @@ const regexCena = /^([1][8-9]|2[0-3]):[0-5][0-9]|22:00/g; // 18:00 a 22:00
 
 // funcion para desayuno primer plato
 function desayunoPrimerPlato() {
-    const numeroSeleccionado = prompt(`${msgVolverAtras}\n\n${msgTurnoDesayuno}\n\n${menuDesayunoPrimerPlato}`);
+    const numeroSeleccionado = prompt(`${msgVolverAtras}\n${msgSeleccioneNumero}\n\n${msgTurnoDesayuno}\n\n${menuDesayunoPrimerPlato}`);
 
     if (numeroSeleccionado !== null) {
         numeroPrimerPlato = parseInt(numeroSeleccionado);
@@ -358,7 +350,7 @@ function desayunoPrimerPlato() {
 
 // funcion para desayuno segundo plato
 function desayunoSegundoPlato() {
-    const numeroSeleccionado = prompt(`${msgVolverAtras}\n\n${msgTurnoDesayuno}\n\n${menuDesayunoSegundoPlato}`);
+    const numeroSeleccionado = prompt(`${msgVolverAtras}\n${msgSeleccioneNumero}\n\n${msgTurnoDesayuno}\n\n${menuDesayunoSegundoPlato}`);
 
     if (numeroSeleccionado !== null) {
         numeroSegundoPlato = parseInt(numeroSeleccionado);
@@ -381,7 +373,7 @@ function desayunoSegundoPlato() {
 
 // funcion para desayuno postre
 function desayunoPostre() {
-    const numeroSeleccionado = prompt(`${msgVolverAtras}\n\n${msgTurnoDesayuno}\n\n${menuPostre}`);
+    const numeroSeleccionado = prompt(`${msgVolverAtras}\n${msgSeleccioneNumero}\n\n${msgTurnoDesayuno}\n\n${menuPostre}`);
 
     if (numeroSeleccionado !== null) {
         numeroPostre = parseInt(numeroSeleccionado);
@@ -404,7 +396,7 @@ function desayunoPostre() {
 
 // funcion para desayuno bebida
 function desayunoBebida() {
-    const numeroSeleccionado = prompt(`${msgVolverAtras}\n\n${msgTurnoDesayuno}\n\n${menuBebida}`);
+    const numeroSeleccionado = prompt(`${msgVolverAtras}\n${msgSeleccioneNumero}\n\n${msgTurnoDesayuno}\n\n${menuBebida}`);
 
     if (numeroSeleccionado !== null) {
         numeroBebida = parseInt(numeroSeleccionado);
@@ -460,7 +452,7 @@ function desayunoFactura() {
 
 // funcion para comida primer plato
 function comidaPrimerPlato() {
-    const numeroSeleccionado = prompt(`${msgVolverAtras}\n\n${msgTurnoComida}\n\n${menuComidaPrimerPlato}`);
+    const numeroSeleccionado = prompt(`${msgVolverAtras}\n${msgSeleccioneNumero}\n\n${msgTurnoComida}\n\n${menuComidaPrimerPlato}`);
 
     if (numeroSeleccionado !== null) {
         numeroPrimerPlato = parseInt(numeroSeleccionado);
@@ -483,7 +475,7 @@ function comidaPrimerPlato() {
 
 // funcion para comida segundo plato
 function comidaSegundoPlato() {
-    const numeroSeleccionado = prompt(`${msgVolverAtras}\n\n${msgTurnoComida}\n\n${menuComidaSegundoPlato}`);
+    const numeroSeleccionado = prompt(`${msgVolverAtras}\n${msgSeleccioneNumero}\n\n${msgTurnoComida}\n\n${menuComidaSegundoPlato}`);
 
     if (numeroSeleccionado !== null) {
         numeroSegundoPlato = parseInt(numeroSeleccionado);
@@ -506,7 +498,7 @@ function comidaSegundoPlato() {
 
 // funcion para comida postre
 function comidaPostre() {
-    const numeroSeleccionado = prompt(`${msgVolverAtras}\n\n${msgTurnoComida}\n\n${menuPostre}`);
+    const numeroSeleccionado = prompt(`${msgVolverAtras}\n${msgSeleccioneNumero}\n\n${msgTurnoComida}\n\n${menuPostre}`);
 
     if (numeroSeleccionado !== null) {
         numeroPostre = parseInt(numeroSeleccionado);
@@ -529,7 +521,7 @@ function comidaPostre() {
 
 // funcion para comida bebida
 function comidaBebida() {
-    const numeroSeleccionado = prompt(`${msgVolverAtras}\n\n${msgTurnoComida}\n\n${menuBebida}`);
+    const numeroSeleccionado = prompt(`${msgVolverAtras}\n${msgSeleccioneNumero}\n\n${msgTurnoComida}\n\n${menuBebida}`);
 
     if (numeroSeleccionado !== null) {
         numeroBebida = parseInt(numeroSeleccionado);
@@ -585,7 +577,7 @@ function comidaFactura() {
 
 // funcion para cena primer plato
 function cenaPrimerPlato() {
-    const numeroSeleccionado = prompt(`${msgVolverAtras}\n\n${msgTurnoCena}\n\n${menuCenaPrimerPlato}`);
+    const numeroSeleccionado = prompt(`${msgVolverAtras}\n${msgSeleccioneNumero}\n\n${msgTurnoCena}\n\n${menuCenaPrimerPlato}`);
 
     if (numeroSeleccionado !== null) {
         numeroPrimerPlato = parseInt(numeroSeleccionado);
@@ -608,7 +600,7 @@ function cenaPrimerPlato() {
 
 // funcion para cena segundo plato
 function cenaSegundoPlato() {
-    const numeroSeleccionado = prompt(`${msgVolverAtras}\n\n${msgTurnoCena}\n\n${menuCenaSegundoPlato}`);
+    const numeroSeleccionado = prompt(`${msgVolverAtras}\n${msgSeleccioneNumero}\n\n${msgTurnoCena}\n\n${menuCenaSegundoPlato}`);
 
     if (numeroSeleccionado !== null) {
         numeroSegundoPlato = parseInt(numeroSeleccionado);
@@ -631,7 +623,7 @@ function cenaSegundoPlato() {
 
 // funcion para cena postre
 function cenaPostre() {
-    const numeroSeleccionado = prompt(`${msgVolverAtras}\n\n${msgTurnoCena}\n\n${menuPostre}`);
+    const numeroSeleccionado = prompt(`${msgVolverAtras}\n${msgSeleccioneNumero}\n\n${msgTurnoCena}\n\n${menuPostre}`);
 
     if (numeroSeleccionado !== null) {
         numeroPostre = parseInt(numeroSeleccionado);
@@ -654,7 +646,7 @@ function cenaPostre() {
 
 // funcion para cena bebida
 function cenaBebida() {
-    const numeroSeleccionado = prompt(`${msgVolverAtras}\n\n${msgTurnoCena}\n\n${menuBebida}`);
+    const numeroSeleccionado = prompt(`${msgVolverAtras}\n${msgSeleccioneNumero}\n\n${msgTurnoCena}\n\n${menuBebida}`);
 
     if (numeroSeleccionado !== null) {
         numeroBebida = parseInt(numeroSeleccionado);
