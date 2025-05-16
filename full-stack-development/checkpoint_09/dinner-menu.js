@@ -148,9 +148,9 @@ const menu = {
 // mensaje de recepcion
 const msgRecepcion = `¡Hola! 👋 Bienvenido a DevCamp.\n
 Prestamos servicio de lunes a domingo en horario:\n
-Desayuno: 08:00h. a 11:59h.
-Comida: 12:00h. a 17:59h.
-Cena: 18:00h. a 22:00h.\n
+Desayuno: 08:00 a 11:59
+Comida: 12:00 a 17:59
+Cena: 18:00 a 22:00\n
 ¡Gracias por elegirnos para tu próxima comida! 🍷\n
 Por favor, pulse Aceptar para continuar.`;
 
