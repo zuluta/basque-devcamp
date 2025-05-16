@@ -432,7 +432,7 @@ function desayunoFactura() {
     // calcular precio total
     const pagarTotal = miPrimero + miSegundo + miPostre + miBebida;
 
-    const numeroSeleccionado = prompt(`${msgFinalizarPedido}\n\n${menuHoraReserva}\n\n${msgResumenPedido}\n\n${menuReservado}\n\nTotal a pagar: ${pagarTotal.toFixed(2)}€\n\n0. Volver atras\n1. Confirmar pedido\n\n${msgSeleccioneNumero}`);
+    const numeroSeleccionado = prompt(`${msgFinalizarPedido}\n\n${menuHoraReserva}\n\n${msgResumenPedido}\n\n${menuReservado}\n\nTotal a pagar: ${pagarTotal.toFixed(2)}€\n\n${msgSeleccioneNumero}\n\n0. Volver atras\n1. Confirmar pedido`);
 
     if (numeroSeleccionado !== null) {
         numeroFactura = parseInt(numeroSeleccionado);
@@ -557,7 +557,7 @@ function comidaFactura() {
     // calcular precio total
     const pagarTotal = miPrimero + miSegundo + miPostre + miBebida;
 
-    const numeroSeleccionado = prompt(`${msgFinalizarPedido}\n\n${menuHoraReserva}\n\n${msgResumenPedido}\n\n${menuReservado}\n\nTotal a pagar: ${pagarTotal.toFixed(2)}€\n\n0. Volver atras\n1. Confirmar pedido\n\n${msgSeleccioneNumero}`);
+    const numeroSeleccionado = prompt(`${msgFinalizarPedido}\n\n${menuHoraReserva}\n\n${msgResumenPedido}\n\n${menuReservado}\n\nTotal a pagar: ${pagarTotal.toFixed(2)}€\n\n${msgSeleccioneNumero}\n\n0. Volver atras\n1. Confirmar pedido`);
 
     if (numeroSeleccionado !== null) {
         numeroFactura = parseInt(numeroSeleccionado);
@@ -682,7 +682,7 @@ function cenaFactura() {
     // calcular precio total
     const pagarTotal = miPrimero + miSegundo + miPostre + miBebida;
 
-    const numeroSeleccionado = prompt(`${msgFinalizarPedido}\n\n${menuHoraReserva}\n\n${msgResumenPedido}\n\n${menuReservado}\n\nTotal a pagar: ${pagarTotal.toFixed(2)}€\n\n0. Volver atras\n1. Confirmar pedido\n\n${msgSeleccioneNumero}`);
+    const numeroSeleccionado = prompt(`${msgFinalizarPedido}\n\n${menuHoraReserva}\n\n${msgResumenPedido}\n\n${menuReservado}\n\nTotal a pagar: ${pagarTotal.toFixed(2)}€\n\n${msgSeleccioneNumero}\n\n0. Volver atras\n1. Confirmar pedido`);
 
     if (numeroSeleccionado !== null) {
         numeroFactura = parseInt(numeroSeleccionado);
