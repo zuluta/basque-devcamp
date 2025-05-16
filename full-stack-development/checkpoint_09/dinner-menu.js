@@ -173,17 +173,17 @@ Disculpe las molestias.
 // mensaje de no hay servicio
 const msgNoHayServicio = '¡No hay servicio disponible!'
 
+// mensaje de volver atras
+const msgVolverAtras = `0. Volver atrás`;
+
 // mensaje de turno desayuno
-const msgTurnoDesayuno = `0. Volver atrás\n
-El desayuno incluye agua, pan y café.`;
+const msgTurnoDesayuno = `El desayuno incluye agua, pan y café.`;
 
 // mensaje de turno comida
-const msgTurnoComida = `0. Volver atrás\n
-La comida incluye agua, pan y café.`;
+const msgTurnoComida = `La comida incluye agua, pan y café.`;
 
 // mensaje de turno cena
-const msgTurnoCena = `0. Volver atrás\n
-La cena incluye agua, pan y café.`;
+const msgTurnoCena = `La cena incluye agua, pan y café.`;
 
 // mensaje de menu seleccion
 const msgMenuPrimero = 'De primero tenemos lo siguiente:';
@@ -335,7 +335,7 @@ const regexCena = /^([1][8-9]|2[0-3]):[0-5][0-9]|22:00/g; // 18:00 a 22:00
 
 // funcion para desayuno primer plato
 function desayunoPrimerPlato() {
-    numeroSeleccionado = prompt(`${msgTurnoDesayuno}\n\n${menuDesayunoPrimerPlato}`);
+    numeroSeleccionado = prompt(`${msgVolverAtras}\n\n${msgTurnoDesayuno}\n\n${menuDesayunoPrimerPlato}`);
     numeroPrimerPlato = parseInt(numeroSeleccionado);
 
     if (numeroSeleccionado !== null) {
@@ -357,7 +357,7 @@ function desayunoPrimerPlato() {
 
 // funcion para desayuno segundo plato
 function desayunoSegundoPlato() {
-    numeroSeleccionado = prompt(`${msgTurnoDesayuno}\n\n${menuDesayunoSegundoPlato}`);
+    numeroSeleccionado = prompt(`${msgVolverAtras}\n\n${msgTurnoDesayuno}\n\n${menuDesayunoSegundoPlato}`);
     numeroSegundoPlato = parseInt(numeroSeleccionado);
 
     if (numeroSeleccionado !== null) {
@@ -379,7 +379,7 @@ function desayunoSegundoPlato() {
 
 // funcion para desayuno postre
 function desayunoPostre() {
-    numeroSeleccionado = prompt(`${msgTurnoDesayuno}\n\n${menuPostre}`);
+    numeroSeleccionado = prompt(`${msgVolverAtras}\n\n${msgTurnoDesayuno}\n\n${menuPostre}`);
     numeroPostre = parseInt(numeroSeleccionado);
 
     if (numeroSeleccionado !== null) {
@@ -401,7 +401,7 @@ function desayunoPostre() {
 
 // funcion para desayuno bebida
 function desayunoBebida() {
-    numeroSeleccionado = prompt(`${msgTurnoDesayuno}\n\n${menuBebida}`);
+    numeroSeleccionado = prompt(`${msgVolverAtras}\n\n${msgTurnoDesayuno}\n\n${menuBebida}`);
     numeroBebida = parseInt(numeroSeleccionado);
 
     if (numeroSeleccionado !== null) {
@@ -455,7 +455,7 @@ function desayunoFactura() {
 
 // funcion para comida primer plato
 function comidaPrimerPlato() {
-    numeroSeleccionado = prompt(`${msgTurnoComida}\n\n${menuComidaPrimerPlato}`);
+    numeroSeleccionado = prompt(`${msgVolverAtras}\n\n${msgTurnoComida}\n\n${menuComidaPrimerPlato}`);
     numeroPrimerPlato = parseInt(numeroSeleccionado);
 
     if (numeroSeleccionado !== null) {
@@ -477,7 +477,7 @@ function comidaPrimerPlato() {
 
 // funcion para comida segundo plato
 function comidaSegundoPlato() {
-    numeroSeleccionado = prompt(`${msgTurnoComida}\n\n${menuComidaSegundoPlato}`);
+    numeroSeleccionado = prompt(`${msgVolverAtras}\n\n${msgTurnoComida}\n\n${menuComidaSegundoPlato}`);
     numeroSegundoPlato = parseInt(numeroSeleccionado);
 
     if (numeroSeleccionado !== null) {
@@ -499,7 +499,7 @@ function comidaSegundoPlato() {
 
 // funcion para comida postre
 function comidaPostre() {
-    numeroSeleccionado = prompt(`${msgTurnoComida}\n\n${menuPostre}`);
+    numeroSeleccionado = prompt(`${msgVolverAtras}\n\n${msgTurnoComida}\n\n${menuPostre}`);
     numeroPostre = parseInt(numeroSeleccionado);
 
     if (numeroSeleccionado !== null) {
@@ -521,7 +521,7 @@ function comidaPostre() {
 
 // funcion para comida bebida
 function comidaBebida() {
-    numeroSeleccionado = prompt(`${msgTurnoComida}\n\n${menuBebida}`);
+    numeroSeleccionado = prompt(`${msgVolverAtras}\n\n${msgTurnoComida}\n\n${menuBebida}`);
     numeroBebida = parseInt(numeroSeleccionado);
 
     if (numeroSeleccionado !== null) {
@@ -575,7 +575,7 @@ function comidaFactura() {
 
 // funcion para cena primer plato
 function cenaPrimerPlato() {
-    numeroSeleccionado = prompt(`${msgTurnoCena}\n\n${menuCenaPrimerPlato}`);
+    numeroSeleccionado = prompt(`${msgVolverAtras}\n\n${msgTurnoCena}\n\n${menuCenaPrimerPlato}`);
     numeroPrimerPlato = parseInt(numeroSeleccionado);
 
     if (numeroSeleccionado !== null) {
@@ -597,7 +597,7 @@ function cenaPrimerPlato() {
 
 // funcion para cena segundo plato
 function cenaSegundoPlato() {
-    numeroSeleccionado = prompt(`${msgTurnoCena}\n\n${menuCenaSegundoPlato}`);
+    numeroSeleccionado = prompt(`${msgVolverAtras}\n\n${msgTurnoCena}\n\n${menuCenaSegundoPlato}`);
     numeroSegundoPlato = parseInt(numeroSeleccionado);
 
     if (numeroSeleccionado !== null) {
@@ -619,7 +619,7 @@ function cenaSegundoPlato() {
 
 // funcion para cena postre
 function cenaPostre() {
-    numeroSeleccionado = prompt(`${msgTurnoCena}\n\n${menuPostre}`);
+    numeroSeleccionado = prompt(`${msgVolverAtras}\n\n${msgTurnoCena}\n\n${menuPostre}`);
     numeroPostre = parseInt(numeroSeleccionado);
 
     if (numeroSeleccionado !== null) {
@@ -641,7 +641,7 @@ function cenaPostre() {
 
 // funcion para cena bebida
 function cenaBebida() {
-    numeroSeleccionado = prompt(`${msgTurnoCena}\n\n${menuBebida}`);
+    numeroSeleccionado = prompt(`${msgVolverAtras}\n\n${msgTurnoCena}\n\n${menuBebida}`);
     numeroBebida = parseInt(numeroSeleccionado);
 
     if (numeroSeleccionado !== null) {
