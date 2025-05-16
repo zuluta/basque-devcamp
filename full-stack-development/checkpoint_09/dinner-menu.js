@@ -186,10 +186,10 @@ const msgTurnoComida = `La comida incluye agua, pan y café.`;
 const msgTurnoCena = `La cena incluye agua, pan y café.`;
 
 // mensaje de menu seleccion
-const msgMenuPrimero = 'De primero tenemos lo siguiente:';
-const msgMenuSegundo = 'De segundo tenemos lo siguiente:';
-const msgMenuPostre = 'De postre tenemos lo siguiente:';
-const msgMenuBebida = 'Para beber tenemos lo siguiente:';
+const msgMenuPrimero = 'De primero tenemos:';
+const msgMenuSegundo = 'De segundo tenemos:';
+const msgMenuPostre = 'De postre tenemos:';
+const msgMenuBebida = 'Para beber tenemos:';
 
 // mensaje de seleccione numero
 const msgSeleccioneNumero = 'Seleccione un número y pulse Aceptar.';
