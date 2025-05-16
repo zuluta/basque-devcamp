@@ -721,10 +721,10 @@ function restauranteDevcamp() {
             horarioComida = horaReserva.match(regexComida);
             horarioCena = horaReserva.match(regexCena);
 
-            // condicion horaria 06:00 a 23:59
+            // condicion horaria 08:00 a 22:00
             if (restauranteAbierto) {
 
-                // condicion horaria 06:00 a 11:59
+                // condicion horaria 08:00 a 11:59
                 if (horarioDesayuno) {
                     desayunoPrimerPlato();
 
@@ -732,7 +732,7 @@ function restauranteDevcamp() {
                 } else if (horarioComida) {
                     comidaPrimerPlato();
 
-                // condicion horaria 18:00 a 23:59
+                // condicion horaria 18:00 a 22:00
                 } else if (horarioCena) {
                     cenaPrimerPlato();
 
