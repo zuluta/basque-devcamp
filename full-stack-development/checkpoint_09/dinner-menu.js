@@ -700,7 +700,7 @@ function restauranteDevcamp() {
     // recepcion y hora de reserva
     alert(msgRecepcion);
     const horaSeleccionada = prompt(msgReservaHora);
-    horaReserva = horaSeleccionada.substring(0, 5);
+    horaReserva = horaSeleccionada.slice(0, 5);
 
     if (horaReserva !== null) {
         // validar formato horario
