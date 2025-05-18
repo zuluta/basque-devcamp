@@ -710,10 +710,12 @@ function restauranteDevcamp() {
 
     if (horaSeleccionada !== null) {
         // validar formato horario
-        horaReserva = horaSeleccionada.slice(0, 5);
-        const formatoHorarioCorrecto = horaReserva.match(regexValidarFormatoHorario);
-
-        if (formatoHorarioCorrecto) {
+        const formatoHorarioCorrecto = horaSeleccionada.match(regexValidarFormatoHorario);
+        const strHoraSeleccionada = horaSeleccionada.toString();
+      
+        if (formatoHorarioCorrecto && strHoraSeleccionada.length === 5) {
+            // formato de horario validado
+            horaReserva = horaSeleccionada;
             // horario de restaurante
             const restauranteAbierto = horaReserva.match(regexAbierto);
             // horario de servicio
