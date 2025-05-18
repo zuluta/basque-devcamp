@@ -709,7 +709,7 @@ function restauranteDevcamp() {
     const horaSeleccionada = prompt(msgReservaHora);
 
     if (horaSeleccionada !== null) {
-        // validar formato horario
+        // validar formato de horario
         const formatoHorarioCorrecto = horaSeleccionada.match(regexValidarFormatoHorario);
         const strHoraSeleccionada = horaSeleccionada.toString();
 
