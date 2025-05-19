@@ -275,7 +275,7 @@ function gestionarTurno() {
     }
 }
 
-//funcion para seleccionar el primer plato
+// funcion para seleccionar el primer plato
 function seleccionarPrimerPlato() {
     gestionarTurno();
 
@@ -309,7 +309,7 @@ function seleccionarPrimerPlato() {
     }
 }
 
-//funcion para seleccionar el segundo plato
+// funcion para seleccionar el segundo plato
 function seleccionarSegundoPlato() {
     gestionarTurno();
 
@@ -343,7 +343,7 @@ function seleccionarSegundoPlato() {
     }
 }
 
-//funcion para seleccionar el postre
+// funcion para seleccionar el postre
 function seleccionarPostre() {
     gestionarTurno();
 
@@ -377,7 +377,7 @@ function seleccionarPostre() {
     }
 }
 
-//funcion para seleccionar la bebida
+// funcion para seleccionar la bebida
 function seleccionarBebida() {
     gestionarTurno();
 
