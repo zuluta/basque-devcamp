@@ -263,8 +263,8 @@ const regexCena = /^([1][8-9]|2[0-3]):[0-5][0-9]|22:00/g; // 18:00 a 22:00
 
 
 
-// funcion para detectar el turno
-function detectarTurno() {
+// funcion para gestionar el turno
+function gestionarTurno() {
     // horario de servicio
     const horarioDesayuno = horaReserva.match(regexDesayuno);
     const horarioComida = horaReserva.match(regexComida);
@@ -283,7 +283,7 @@ function detectarTurno() {
 
 //funcion para seleccionar el primer plato
 function seleccionarPrimerPlato() {
-    detectarTurno();
+    gestionarTurno();
 
     const listaPrimerPlato = Object.keys(menu[turno].primero);
 
@@ -317,7 +317,7 @@ function seleccionarPrimerPlato() {
 
 //funcion para seleccionar el segundo plato
 function seleccionarSegundoPlato() {
-    detectarTurno();
+    gestionarTurno();
 
     const listaSegundoPlato = Object.keys(menu[turno].segundo);
 
@@ -351,7 +351,7 @@ function seleccionarSegundoPlato() {
 
 //funcion para seleccionar el postre
 function seleccionarPostre() {
-    detectarTurno();
+    gestionarTurno();
 
     const listaPostre = Object.keys(menu.postre);
 
@@ -385,7 +385,7 @@ function seleccionarPostre() {
 
 //funcion para seleccionar la bebida
 function seleccionarBebida() {
-    detectarTurno();
+    gestionarTurno();
 
     const listaBebida = Object.keys(menu.bebida);
 
