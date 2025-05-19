@@ -399,7 +399,7 @@ function seleccionarBebida() {
             descripcionBebida = menu.bebida[numeroBebida].descripcion;
             precioBebida = menu.bebida[numeroBebida].precio.toFixed(2);
             alert(`Ha seleccionado:\n${descripcionBebida} ... ${precioBebida}€`);
-            factura();
+            facturarMenu();
         } else if (numeroBebida === 0) {
             seleccionarPostre();
         } else {
@@ -411,8 +411,8 @@ function seleccionarBebida() {
     }
 }
 
-// funcion para desayuno factura
-function factura() {
+// funcion para facturar menu
+function facturarMenu() {
     // muestra el resumen de pedido
     const menuHoraReserva = `Hora de reserva: ${horaReserva}`;
     const menuReservado = `${descripcionPrimerPlato} ... ${precioPrimerPlato}€\n${descripcionSegundoPlato} ... ${precioSegundoPlato}€\n${descripcionPostre} ... ${precioPostre}€\n${descripcionBebida} ... ${precioBebida}€`;
@@ -437,7 +437,7 @@ function factura() {
             seleccionarBebida();
         } else {
             alert(msgNumeroIncorrecto);
-            factura();
+            facturarMenu();
         }
     } else {
         alert(msgPedidoCancelado);
