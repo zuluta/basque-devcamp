@@ -287,7 +287,6 @@ function seleccionarPrimerPlato() {
         menuPrimerPlato.push(primerPlato);
     }
 
-    // muestra el menu primer plato
     const msgMenuPrimerPlato = `${menuPrimerPlato[0]}€\n${menuPrimerPlato[1]}€\n${menuPrimerPlato[2]}€`;
     const numeroSeleccionado = prompt(`${msgVolverAtras}\n${msgSeleccioneNumero}\n\nMenú ${turno} ${msgMenuIncluye}\n\n${msgMenuPrimerPlato}`);
 
@@ -322,7 +321,6 @@ function seleccionarSegundoPlato() {
         menuSegundoPlato.push(segundoPlato);
     }
 
-    // muestra el menu segundo plato
     const msgMenuSegundoPlato = `${menuSegundoPlato[0]}€\n${menuSegundoPlato[1]}€\n${menuSegundoPlato[2]}€`;
     const numeroSeleccionado = prompt(`${msgVolverAtras}\n${msgSeleccioneNumero}\n\nMenú ${turno} ${msgMenuIncluye}\n\n${msgMenuSegundoPlato}`);
 
@@ -357,7 +355,6 @@ function seleccionarPostre() {
         menuPostre.push(postre);
     }
 
-    // muestra el menu postre
     const msgMenuPostre = `${menuPostre[0]}€\n${menuPostre[1]}€\n${menuPostre[2]}€\n${menuPostre[3]}€\n${menuPostre[4]}€\n${menuPostre[5]}€\n${menuPostre[6]}€`;
     const numeroSeleccionado = prompt(`${msgVolverAtras}\n${msgSeleccioneNumero}\n\nMenú ${turno} ${msgMenuIncluye}\n\n${msgMenuPostre}`);
 
@@ -392,7 +389,6 @@ function seleccionarBebida() {
         menuBebida.push(bebida);
     }
 
-    // muestra el menu bebida
     const msgMenuBebida = `${menuBebida[0]}€\n${menuBebida[1]}€\n${menuBebida[2]}€`;
     const numeroSeleccionado = prompt(`${msgVolverAtras}\n${msgSeleccioneNumero}\n\nMenú ${turno} ${msgMenuIncluye}\n\n${msgMenuBebida}`);
 
@@ -452,19 +448,15 @@ function factura() {
 
 // funcion para restaurante devcamp
 function restauranteDevcamp() {
-    // recepcion y hora de reserva
     alert(msgRecepcion);
     const horaSeleccionada = prompt(msgReservaHora);
 
     if (horaSeleccionada !== null) {
-        // validar formato de horario
         const formatoHorarioCorrecto = horaSeleccionada.match(regexValidarFormatoHorario);
         const strHoraSeleccionada = horaSeleccionada.toString();
       
         if (formatoHorarioCorrecto && strHoraSeleccionada.length === 5) {
-            // formato de horario validado
             horaReserva = horaSeleccionada;
-            // horario de restaurante
             const restauranteAbierto = horaReserva.match(regexAbierto);
 
             // condicion horaria 08:00 a 22:00
