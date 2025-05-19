@@ -444,8 +444,6 @@ function factura() {
     }
 }
 
-
-
 // funcion para restaurante devcamp
 function restauranteDevcamp() {
     alert(msgRecepcion);
