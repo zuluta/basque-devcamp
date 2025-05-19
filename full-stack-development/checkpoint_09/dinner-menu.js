@@ -411,7 +411,7 @@ function seleccionarBebida() {
     }
 }
 
-// funcion para facturar menu
+// funcion para facturar el menu
 function facturarMenu() {
     // muestra el resumen de pedido
     const menuHoraReserva = `Hora de reserva: ${horaReserva}`;
