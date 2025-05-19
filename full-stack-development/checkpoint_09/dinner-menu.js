@@ -224,7 +224,7 @@ const msgFraseAleatoria_3 = arrayFrases[Math.floor(Math.random() * arrayFrases.l
 
 
 // hora seleccionada
-let horaReserva = '';
+let horaReservada = '';
 
 // turno seleccionado
 let turno = '';
@@ -259,9 +259,9 @@ const regexCena = /^([1][8-9]|2[0-3]):[0-5][0-9]|22:00/g; // 18:00 a 22:00
 // funcion para gestionar el turno
 function gestionarTurno() {
     // horario de servicio
-    const horarioDesayuno = horaReserva.match(regexDesayuno);
-    const horarioComida = horaReserva.match(regexComida);
-    const horarioCena = horaReserva.match(regexCena);
+    const horarioDesayuno = horaReservada.match(regexDesayuno);
+    const horarioComida = horaReservada.match(regexComida);
+    const horarioCena = horaReservada.match(regexCena);
     // accede a la clave desayuno, comida y cena del objeto menu
     const arrayTurno = Object.keys(menu);
 
@@ -415,7 +415,7 @@ function seleccionarBebida() {
 // funcion para facturar el menu
 function facturarMenu() {
     // muestra el resumen de pedido
-    const menuHoraReserva = `Hora de reserva: ${horaReserva}`;
+    const menuHoraReserva = `Hora reservada: ${horaReservada}`;
     const menuReservado = `${descripcionPrimerPlato} ... ${precioPrimerPlato}€\n${descripcionSegundoPlato} ... ${precioSegundoPlato}€\n${descripcionPostre} ... ${precioPostre}€\n${descripcionBebida} ... ${precioBebida}€`;
 
     // convertir string en numero
@@ -433,7 +433,7 @@ function facturarMenu() {
         numeroFactura = parseInt(numeroSeleccionado);
 
         if (numeroFactura === 1) {
-            alert(`${msgPedidoRegistrado}\n\nNos vemos a las ${horaReserva} horas.\n\n${msgCancelarReserva}`);
+            alert(`${msgPedidoRegistrado}\n\nNos vemos a las ${horaReservada} horas.\n\n${msgCancelarReserva}`);
         } else if (numeroFactura === 0) {
             seleccionarBebida();
         } else {
@@ -455,8 +455,8 @@ function restauranteDevcamp() {
         const strHoraSeleccionada = horaSeleccionada.toString();
       
         if (formatoHorarioCorrecto && strHoraSeleccionada.length === 5) {
-            horaReserva = horaSeleccionada;
-            const restauranteAbierto = horaReserva.match(regexAbierto);
+            horaReservada = horaSeleccionada;
+            const restauranteAbierto = horaReservada.match(regexAbierto);
 
             // condicion horaria 08:00 a 22:00
             if (restauranteAbierto) {
