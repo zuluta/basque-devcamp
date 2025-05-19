@@ -223,11 +223,10 @@ const msgFraseAleatoria_3 = arrayFrases[Math.floor(Math.random() * arrayFrases.l
 
 
 
-// hora reservada
+// hora seleccionada
 let horaReserva = '';
 
-// accede a la clave desayuno, comida y cena del objeto menu
-const arrayTurno = Object.keys(menu);
+// turno seleccionado
 let turno = '';
 
 // descripcion de menu seleccionado
@@ -263,7 +262,9 @@ function gestionarTurno() {
     const horarioDesayuno = horaReserva.match(regexDesayuno);
     const horarioComida = horaReserva.match(regexComida);
     const horarioCena = horaReserva.match(regexCena);
-    
+    // accede a la clave desayuno, comida y cena del objeto menu
+    const arrayTurno = Object.keys(menu);
+
     if (horarioDesayuno) {
         turno = arrayTurno[0];
     } else if (horarioComida) {
