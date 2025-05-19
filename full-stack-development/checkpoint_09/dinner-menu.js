@@ -223,7 +223,7 @@ const msgFraseAleatoria_3 = arrayFrases[Math.floor(Math.random() * arrayFrases.l
 
 
 
-// hora reserva
+// hora reservada
 let horaReserva = '';
 
 // accede a la clave desayuno, comida y cena del objeto menu
