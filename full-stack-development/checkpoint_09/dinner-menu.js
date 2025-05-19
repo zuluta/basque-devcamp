@@ -269,16 +269,11 @@ function detectarTurno() {
     const horarioDesayuno = horaReserva.match(regexDesayuno);
     const horarioComida = horaReserva.match(regexComida);
     const horarioCena = horaReserva.match(regexCena);
-
-    // condicion horaria 08:00 a 11:59
+    
     if (horarioDesayuno) {
         turno = arrayTurno[0];
-
-    // condicion horaria 12:00 a 17:59
     } else if (horarioComida) {
         turno = arrayTurno[1];
-
-    // condicion horaria 18:00 a 22:00
     } else if (horarioCena) {
         turno = arrayTurno[2];
     } else {
@@ -293,12 +288,12 @@ function seleccionarPrimerPlato() {
     const listaPrimerPlato = Object.keys(menu[turno].primero);
 
     for (let i = 1; i <= listaPrimerPlato.length; i++) {
-        let primerPlato = [menu[turno].primero[i].descripcion, menu[turno].primero[i].precio].join(' ... ');
+        let primerPlato = [menu[turno].primero[i].descripcion, menu[turno].primero[i].precio.toFixed(2)].join(' ... ');
         menuPrimerPlato.push(primerPlato);
     }
 
     // muestra el menu primer plato
-    const msgMenuPrimerPlato = `${menuPrimerPlato[0]}\n${menuPrimerPlato[1]}\n${menuPrimerPlato[2]}`;
+    const msgMenuPrimerPlato = `${menuPrimerPlato[0]}€\n${menuPrimerPlato[1]}€\n${menuPrimerPlato[2]}€`;
     const numeroSeleccionado = prompt(`${msgVolverAtras}\n${msgSeleccioneNumero}\n\nMenú ${turno} ${msgMenuIncluye}\n\n${msgMenuPrimerPlato}`);
 
     if (numeroSeleccionado !== null) {
@@ -327,12 +322,12 @@ function seleccionarSegundoPlato() {
     const listaSegundoPlato = Object.keys(menu[turno].segundo);
 
     for (let i = 1; i <= listaSegundoPlato.length; i++) {
-        let segundoPlato = [menu[turno].segundo[i].descripcion, menu[turno].segundo[i].precio].join(' ... ');
+        let segundoPlato = [menu[turno].segundo[i].descripcion, menu[turno].segundo[i].precio.toFixed(2)].join(' ... ');
         menuSegundoPlato.push(segundoPlato);
     }
 
     // muestra el menu segundo plato
-    const msgMenuSegundoPlato = `${menuSegundoPlato[0]}\n${menuSegundoPlato[1]}\n${menuSegundoPlato[2]}`;
+    const msgMenuSegundoPlato = `${menuSegundoPlato[0]}€\n${menuSegundoPlato[1]}€\n${menuSegundoPlato[2]}€`;
     const numeroSeleccionado = prompt(`${msgVolverAtras}\n${msgSeleccioneNumero}\n\nMenú ${turno} ${msgMenuIncluye}\n\n${msgMenuSegundoPlato}`);
 
     if (numeroSeleccionado !== null) {
@@ -361,12 +356,12 @@ function seleccionarPostre() {
     const listaPostre = Object.keys(menu.postre);
 
     for (let i = 1; i <= listaPostre.length; i++) {
-        let postre = [menu.postre[i].descripcion, menu.postre[i].precio].join(' ... ');
+        let postre = [menu.postre[i].descripcion, menu.postre[i].precio.toFixed(2)].join(' ... ');
         menuPostre.push(postre);
     }
 
     // muestra el menu postre
-    const msgMenuPostre = `${menuPostre[0]}\n${menuPostre[1]}\n${menuPostre[2]}\n${menuPostre[3]}\n${menuPostre[4]}\n${menuPostre[5]}\n${menuPostre[6]}`;
+    const msgMenuPostre = `${menuPostre[0]}€\n${menuPostre[1]}€\n${menuPostre[2]}€\n${menuPostre[3]}€\n${menuPostre[4]}€\n${menuPostre[5]}€\n${menuPostre[6]}€`;
     const numeroSeleccionado = prompt(`${msgVolverAtras}\n${msgSeleccioneNumero}\n\nMenú ${turno} ${msgMenuIncluye}\n\n${msgMenuPostre}`);
 
     if (numeroSeleccionado !== null) {
@@ -395,12 +390,12 @@ function seleccionarBebida() {
     const listaBebida = Object.keys(menu.bebida);
 
     for (let i = 1; i <= listaBebida.length; i++) {
-        let bebida = [menu.bebida[i].descripcion, menu.bebida[i].precio].join(' ... ');
+        let bebida = [menu.bebida[i].descripcion, menu.bebida[i].precio.toFixed(2)].join(' ... ');
         menuBebida.push(bebida);
     }
 
     // muestra el menu bebida
-    const msgMenuBebida = `${menuBebida[0]}\n${menuBebida[1]}\n${menuBebida[2]}`;
+    const msgMenuBebida = `${menuBebida[0]}€\n${menuBebida[1]}€\n${menuBebida[2]}€`;
     const numeroSeleccionado = prompt(`${msgVolverAtras}\n${msgSeleccioneNumero}\n\nMenú ${turno} ${msgMenuIncluye}\n\n${msgMenuBebida}`);
 
     if (numeroSeleccionado !== null) {
