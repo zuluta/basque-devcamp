@@ -230,12 +230,6 @@ let horaReserva = '';
 const arrayTurno = Object.keys(menu);
 let turno = '';
 
-// almacena menu de turno en un array
-let menuPrimerPlato = [];
-let menuSegundoPlato = [];
-let menuPostre = [];
-let menuBebida = [];
-
 // descripcion de menu seleccionado
 let descripcionPrimerPlato = '';
 let descripcionSegundoPlato = '';
@@ -286,6 +280,7 @@ function seleccionarPrimerPlato() {
     gestionarTurno();
 
     const listaPrimerPlato = Object.keys(menu[turno].primero);
+    let menuPrimerPlato = [];
 
     for (let i = 1; i <= listaPrimerPlato.length; i++) {
         let primerPlato = [menu[turno].primero[i].descripcion, menu[turno].primero[i].precio.toFixed(2)].join(' ... ');
@@ -320,6 +315,7 @@ function seleccionarSegundoPlato() {
     gestionarTurno();
 
     const listaSegundoPlato = Object.keys(menu[turno].segundo);
+    let menuSegundoPlato = [];
 
     for (let i = 1; i <= listaSegundoPlato.length; i++) {
         let segundoPlato = [menu[turno].segundo[i].descripcion, menu[turno].segundo[i].precio.toFixed(2)].join(' ... ');
@@ -354,6 +350,7 @@ function seleccionarPostre() {
     gestionarTurno();
 
     const listaPostre = Object.keys(menu.postre);
+    let menuPostre = [];
 
     for (let i = 1; i <= listaPostre.length; i++) {
         let postre = [menu.postre[i].descripcion, menu.postre[i].precio.toFixed(2)].join(' ... ');
@@ -388,6 +385,7 @@ function seleccionarBebida() {
     gestionarTurno();
 
     const listaBebida = Object.keys(menu.bebida);
+    let menuBebida = [];
 
     for (let i = 1; i <= listaBebida.length; i++) {
         let bebida = [menu.bebida[i].descripcion, menu.bebida[i].precio.toFixed(2)].join(' ... ');
