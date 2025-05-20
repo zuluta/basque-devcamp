@@ -294,7 +294,7 @@ function seleccionarPrimerPlato() {
     if (numeroSeleccionado !== null) {
         numeroPrimerPlato = parseInt(numeroSeleccionado);
 
-        if (numeroPrimerPlato >= 1 && numeroPrimerPlato <= 3) {
+        if (numeroPrimerPlato >= 1 && numeroPrimerPlato <= listaPrimerPlato.length) {
             descripcionPrimerPlato = menu[turno].primero[numeroPrimerPlato].descripcion;
             precioPrimerPlato = menu[turno].primero[numeroPrimerPlato].precio.toFixed(2);
             alert(`Ha seleccionado:\n${descripcionPrimerPlato} ... ${precioPrimerPlato}€\n\n${msgFraseAleatoria_1}`);
@@ -328,7 +328,7 @@ function seleccionarSegundoPlato() {
     if (numeroSeleccionado !== null) {
         numeroSegundoPlato = parseInt(numeroSeleccionado);
 
-        if (numeroSegundoPlato >= 1 && numeroSegundoPlato <= 3) {
+        if (numeroSegundoPlato >= 1 && numeroSegundoPlato <= listaSegundoPlato.length) {
             descripcionSegundoPlato = menu[turno].segundo[numeroSegundoPlato].descripcion;
             precioSegundoPlato = menu[turno].segundo[numeroSegundoPlato].precio.toFixed(2);
             alert(`Ha seleccionado:\n${descripcionSegundoPlato} ... ${precioSegundoPlato}€\n\n${msgFraseAleatoria_2}`);
@@ -362,7 +362,7 @@ function seleccionarPostre() {
     if (numeroSeleccionado !== null) {
         numeroPostre = parseInt(numeroSeleccionado);
 
-        if (numeroPostre >= 1 && numeroPostre <= 7) {
+        if (numeroPostre >= 1 && numeroPostre <= listaPostre.length) {
             descripcionPostre = menu.postre[numeroPostre].descripcion;
             precioPostre = menu.postre[numeroPostre].precio.toFixed(2);
             alert(`Ha seleccionado:\n${descripcionPostre} ... ${precioPostre}€\n\n${msgFraseAleatoria_3}`);
@@ -396,7 +396,7 @@ function seleccionarBebida() {
     if (numeroSeleccionado !== null) {
         numeroBebida = parseInt(numeroSeleccionado);
 
-        if (numeroBebida >= 1 && numeroBebida <= 3) {
+        if (numeroBebida >= 1 && numeroBebida <= listaBebida.length) {
             descripcionBebida = menu.bebida[numeroBebida].descripcion;
             precioBebida = menu.bebida[numeroBebida].precio.toFixed(2);
             alert(`Ha seleccionado:\n${descripcionBebida} ... ${precioBebida}€`);
