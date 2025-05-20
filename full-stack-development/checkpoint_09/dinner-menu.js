@@ -179,11 +179,11 @@ const msgVolverAtras = `0. Volver atrás`;
 // mensaje de menu incluye
 const msgMenuIncluye = `incluye agua, pan y café.`;
 
-// mensaje de turno seleccionar menu
-const msgTurnoPrimerPlato = 'De primero tenemos:';
-const msgTurnoSegundoPlato = 'De segundo tenemos:';
-const msgTurnoPostre = 'De postre tenemos:';
-const msgTurnoBebida = 'Para beber tenemos:';
+// mensaje de ofrecer menu
+const msgOfrecerPrimerPlato = 'De primero tenemos:';
+const msgOfrecerSegundoPlato = 'De segundo tenemos:';
+const msgOfrecerPostre = 'De postre tenemos:';
+const msgOfrecerBebida = 'Para beber tenemos:';
 
 // mensaje de seleccione numero
 const msgSeleccioneNumero = 'Seleccione un número y pulse Aceptar.';
@@ -289,7 +289,7 @@ function seleccionarPrimerPlato() {
     }
 
     const msgMenuPrimerPlato = `${menuPrimerPlato[0]}€\n${menuPrimerPlato[1]}€\n${menuPrimerPlato[2]}€`;
-    const numeroSeleccionado = prompt(`${msgVolverAtras}\n${msgSeleccioneNumero}\n\nMenú ${turno} ${msgMenuIncluye}\n\n${msgMenuPrimerPlato}`);
+    const numeroSeleccionado = prompt(`${msgVolverAtras}\n${msgSeleccioneNumero}\n\nMenú ${turno} ${msgMenuIncluye}\n\n${msgOfrecerPrimerPlato}\n\n${msgMenuPrimerPlato}`);
 
     if (numeroSeleccionado !== null) {
         numeroPrimerPlato = parseInt(numeroSeleccionado);
@@ -323,7 +323,7 @@ function seleccionarSegundoPlato() {
     }
 
     const msgMenuSegundoPlato = `${menuSegundoPlato[0]}€\n${menuSegundoPlato[1]}€\n${menuSegundoPlato[2]}€`;
-    const numeroSeleccionado = prompt(`${msgVolverAtras}\n${msgSeleccioneNumero}\n\nMenú ${turno} ${msgMenuIncluye}\n\n${msgMenuSegundoPlato}`);
+    const numeroSeleccionado = prompt(`${msgVolverAtras}\n${msgSeleccioneNumero}\n\nMenú ${turno} ${msgMenuIncluye}\n\n${msgOfrecerSegundoPlato}\n\n${msgMenuSegundoPlato}`);
 
     if (numeroSeleccionado !== null) {
         numeroSegundoPlato = parseInt(numeroSeleccionado);
@@ -357,7 +357,7 @@ function seleccionarPostre() {
     }
 
     const msgMenuPostre = `${menuPostre[0]}€\n${menuPostre[1]}€\n${menuPostre[2]}€\n${menuPostre[3]}€\n${menuPostre[4]}€\n${menuPostre[5]}€\n${menuPostre[6]}€`;
-    const numeroSeleccionado = prompt(`${msgVolverAtras}\n${msgSeleccioneNumero}\n\nMenú ${turno} ${msgMenuIncluye}\n\n${msgMenuPostre}`);
+    const numeroSeleccionado = prompt(`${msgVolverAtras}\n${msgSeleccioneNumero}\n\nMenú ${turno} ${msgMenuIncluye}\n\n${msgOfrecerPostre}\n\n${msgMenuPostre}`);
 
     if (numeroSeleccionado !== null) {
         numeroPostre = parseInt(numeroSeleccionado);
@@ -391,7 +391,7 @@ function seleccionarBebida() {
     }
 
     const msgMenuBebida = `${menuBebida[0]}€\n${menuBebida[1]}€\n${menuBebida[2]}€`;
-    const numeroSeleccionado = prompt(`${msgVolverAtras}\n${msgSeleccioneNumero}\n\nMenú ${turno} ${msgMenuIncluye}\n\n${msgMenuBebida}`);
+    const numeroSeleccionado = prompt(`${msgVolverAtras}\n${msgSeleccioneNumero}\n\nMenú ${turno} ${msgMenuIncluye}\n\n${msgOfrecerBebida}\n\n${msgMenuBebida}`);
 
     if (numeroSeleccionado !== null) {
         numeroBebida = parseInt(numeroSeleccionado);
