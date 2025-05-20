@@ -191,7 +191,7 @@ const msgNumeroIncorrecto = '¡El número seleccionado no es correcto! vuelva a 
 
 // mensaje de finalizar pedido
 const msgFinalizarPedido = `¡Enhorabuena!
-Estas a un paso de completar el pedido.`;
+Estas a un paso de completar tu pedido.`;
 
 // mensaje de resumen pedido
 const msgResumenPedido = `Resumen del pedido:`;
